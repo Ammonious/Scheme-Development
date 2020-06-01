@@ -1,14 +1,19 @@
-# schemecreative
+# Scheme Development
 
-Scheme Creative Packages for better distribution
+![Scheme%20Development%20e913fc41ecf7429cb22d6ab655950337/2770-developer-animation.gif](Scheme%20Development%20e913fc41ecf7429cb22d6ab655950337/2770-developer-animation.gif)
 
-## Getting Started
+A Flutter Repository to manage various utilities and often used services for better code management. The goal is to provide high level items with good customizability while removing boilerplate code (As regarded by Scheme Creative's Development Team).
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+# Contents
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- Development Docs
+- Scheme Packages
+- Flutter Repos
+
+# Packages
+
+- Components
+- Theme Management
+- Icons
+- Navigation
+-
