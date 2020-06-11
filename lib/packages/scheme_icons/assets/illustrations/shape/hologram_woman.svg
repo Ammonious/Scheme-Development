@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1155" height="700" fill="none" viewBox="0 0 1155 700">
+  <g class="hologram_woman">
+    <path fill="#fff" d="M0 0h1155v700H0z"/>
+    <g class="Group 10">
+      <g class="Group 6">
+        <g class="Group 5">
+          <path fill="#68609A" fill-rule="evenodd" d="M431.17 502.772c2.183-20.249 66.377-36.491 145.248-36.491 79.556 0 144.179 16.525 145.292 37.018.174-.414.328-.831.461-1.252L787 560.616c0 101.044-449.331 80.925-418.481-3.576l62.651-54.268z" class="Union" clip-rule="evenodd"/>
+          <path fill="#000" fill-opacity=".09" d="M787 560.624c0 62.146-158.272 67.511-174.367 67.511v-88.078c85.484-4.649 108.644-27.272 109.538-38.003L787 560.624z" class="Vector"/>
+          <path stroke="#000" stroke-dasharray="4.47 4.47" stroke-opacity=".17" stroke-width="1.788" d="M686.85 528.876l55.887 77.795" class="Vector 2"/>
+          <ellipse cx="576.418" cy="503.837" fill="#fff" fill-opacity=".01" class="Ellipse" rx="145.306" ry="37.556"/>
+        </g>
+        <g class="Group 4">
+          <ellipse cx="576.418" cy="502.204" fill="#3EA2FF" class="Ellipse_2" rx="83.607" ry="21.609"/>
+          <ellipse cx="576.416" cy="502.083" fill="#fff" fill-opacity=".29" class="Ellipse_3" rx="69.3" ry="17.911"/>
+          <ellipse cx="576.864" cy="501.616" fill="#fff" fill-opacity=".29" class="Ellipse_4" rx="53.651" ry="13.867"/>
+          <ellipse cx="576.865" cy="501.923" fill="#fff" fill-opacity=".29" class="Ellipse_5" rx="37.556" ry="9.707"/>
+        </g>
+      </g>
+      <g class="Group 3">
+        <ellipse cx="578.205" cy="444.981" stroke="#30E5FE" stroke-dasharray="8.94 8.94" stroke-linecap="round" stroke-width=".894" class="Ellipse_6" rx="83.607" ry="21.609"/>
+        <ellipse cx="578.207" cy="397.995" stroke="#30E5FE" stroke-dasharray="11.33 11.33" stroke-linecap="round" stroke-width=".894" class="Ellipse_7" rx="105.962" ry="27.387"/>
+        <ellipse cx="579.099" cy="352.777" stroke="#30E5FE" stroke-dasharray="13.34 13.34" stroke-linecap="round" stroke-width=".834" class="Ellipse_8" rx="124.74" ry="32.24"/>
+      </g>
+      <g class="Group 7">
+        <path fill="#2FB5D2" fill-opacity=".19" d="M506.223 494.456l-84.501-231.148c47.094-20.864 175.887-50.075 314.308 0l-91.654 231.148s-35.321 16.99-67.959 16.99c-36.566 0-70.194-16.99-70.194-16.99z" class="Vector_2"/>
+        <path fill="#26F2FF" fill-opacity=".15" d="M493.636 288.637l35 213.818 18.455 5.727L535 297.546l-41.364-8.909z" class="Vector 3"/>
+        <path fill="#26F2FF" fill-opacity=".15" d="M444.636 273.364l61.728 220.182L516.545 498l-38.818-215.091-33.091-9.545z" class="Vector 3.3"/>
+        <path fill="#26F2FF" fill-opacity=".15" d="M659.727 291.182l-35 213.818-18.454 5.727 12.09-210.636 41.364-8.909z" class="Vector 3.1"/>
+        <path fill="#26F2FF" fill-opacity=".15" d="M718.272 272.727l-70.636 220.819-12.091 7 44.546-216.364 38.181-11.455z" class="Vector 3.2"/>
+      </g>
+      <g class="Group 9">
+        <path stroke="#000" stroke-dasharray="3.58 3.58" stroke-opacity=".08" stroke-width="1.788" d="M424.854 607.577l53.204-76.453" class="Vector 2_2"/>
+        <g class="Group 8">
+          <circle cx="481.186" cy="544.987" r="2.683" fill="#FFEFEF" fill-opacity=".1" class="Ellipse_9"/>
+          <circle cx="471.351" cy="558.401" r="2.683" fill="#FFEFEF" fill-opacity=".1" class="Ellipse_10"/>
+          <circle cx="461.514" cy="571.814" r="2.683" fill="#FFEFEF" fill-opacity=".1" class="Ellipse_11"/>
+          <circle cx="451.677" cy="585.227" r="2.683" fill="#FFEFEF" fill-opacity=".1" class="Ellipse_12"/>
+          <circle cx="441.842" cy="598.636" r="2.683" fill="#FFEFEF" fill-opacity=".1" class="Ellipse_13"/>
+        </g>
+      </g>
+      <g class="Group 3_2">
+        <g class="Group 2.2">
+          <path fill="#26BFF1" fill-opacity=".37" fill-rule="evenodd" d="M611.944 137.559a72.197 72.197 0 00-.106-1.353c0-23.698-10.212-47.46-32.833-47.46s-35.758 23.762-35.758 47.46c0 .42.004.842.011 1.265-1.753-2.281-4.164-4.511-6.502-3.695-1.131.394-2.066 3.25-1.95 5.526.111 2.203 3.116 20.926 12.986 23.528 1.751 4.864 4.022 9.426 6.833 13.363v23.077l-45.185 13.003c-7.368 1.083-22.235 7.541-22.755 24.705v14.303s22.813 31.521 90.236 36.835c65.45 5.158 95.706-34.234 95.706-34.234s1.95-32.603-12.028-36.733c-28.606-8.452-61.439-17.879-61.439-17.879v-20.54c4.186-4.696 7.828-10.804 10.174-18.138 9.548-2.999 12.471-21.238 12.581-23.411.116-2.276-.819-5.132-1.95-5.526-3.125-1.09-6.381 3.261-8.021 5.904z" class="Union_2" clip-rule="evenodd"/>
+          <path fill="#26BFF1" fill-opacity=".37" d="M611.838 136.209c2.926 33.116-18.571 53.523-32.832 53.523-24.664 0-35.758-29.825-35.758-53.523 0-23.698 13.137-47.46 35.758-47.46 22.621 0 32.832 23.762 32.832 47.46z" class="Ellipse_14"/>
+          <path fill="#26BFF1" fill-opacity=".37" d="M555.27 198.807s1.731 6.981 4.551 10.403c4.814 5.84 10.312 7.381 17.879 7.476 7.803.098 13.947-1.161 18.53-7.476 2.522-3.477 3.575-10.403 3.575-10.403s55.785 12.252 64.49 21.28C673 229.114 673 252.006 673 252.006s-22.808 35.465-95.3 35.465c-55.587 0-91.7-35.465-91.7-35.465l2.257-18.378c.521-17.164 16.813-20.196 24.181-21.279l42.832-13.542z" class="Vector 5.2"/>
+          <path stroke="#fff" stroke-linecap="round" stroke-opacity=".17" stroke-width="2.511" d="M586.483 128.731c4.009-.108 11.182-.455 14.303 4.226" class="Vector_3"/>
+          <path stroke="#fff" stroke-linecap="round" stroke-opacity=".17" stroke-width="2.511" d="M570.554 129.107c-4.009-.109-11.182-.456-14.303 4.225" class="Vector_4"/>
+          <g class="Group">
+            <ellipse cx="587.783" cy="142.386" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2" rx="3.576" ry="4.226"/>
+            <ellipse cx="588.108" cy="142.417" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2.1" rx="1.95" ry="2.305"/>
+            <ellipse cx="589.084" cy="142.345" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2.2" rx=".975" ry="1.3"/>
+          </g>
+          <g class="Group_2">
+            <ellipse cx="568.93" cy="142.386" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2_2" rx="3.576" ry="4.226"/>
+            <ellipse cx="569.255" cy="142.417" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2.1_2" rx="1.95" ry="2.305"/>
+            <ellipse cx="570.23" cy="142.345" fill="#26BFF1" fill-opacity=".37" class="Ellipse 2.2_2" rx=".975" ry="1.3"/>
+          </g>
+          <path stroke="#fff" stroke-opacity=".17" stroke-width="1.256" d="M578.827 148.294l-3.722 13.92c1.409.542 4.746 1.3 6.827 0" class="Vector 2_3"/>
+          <path stroke="#fff" stroke-linecap="round" stroke-opacity=".17" stroke-width="1.256" d="M568.782 171.524c4.395 3.139 11.929 5.022 19.463-.628" class="Vector 3_2"/>
+          <path fill="#26BFF1" fill-opacity=".37" d="M546.114 126.155c0 3.142-.759 17.946-1.301 25.965 7.927 13.653 10.403 25.086 10.403 29.581v17.446l-37.384 10.673s-1.329-12.406 0-23.243c1.618-13.191 10.512-22.486 9.812-35.758-.384-7.288 1.992-13.621 1.585-20.908-.866-15.472 6.278-24.31 6.278-24.31 15.928-35.758 34.071-30.302 53.901-30.302l.296.143c9.322 4.528 21.086 10.242 25.975 23.366 3.251 8.004 2.039 26.61 6.177 34.132 3.576 6.502.975 9.752 5.526 16.254 4.551 6.501-2.988 9.986-3.251 16.579-.491 12.306 9.279 17.642 10.403 29.906.648 7.08-1.714 11.002-1.714 11.002l-34.044-7.534v-20.974c4.226-9.833 7.476-13.701 11.052-27.354 1.533-5.851 0-15.187 0-20.908 0-5.721-1.891-11.378-3.841-14.303l-22.138-11.89s-7.78 11.301-18.207 15.695c-10.426 4.395-19.528-3.377-19.528 6.742z" class="Vector 4.1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

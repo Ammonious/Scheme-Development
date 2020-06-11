@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="700" fill="none" viewBox="0 0 1152 700">
+  <g class="notes">
+    <path fill="#fff" d="M0 0h1152v700H0z"/>
+    <g class="Group 3">
+      <circle cx="498.5" cy="349" r="199.5" fill="#FABC74" class="Ellipse"/>
+      <path fill="#199F95" fill-rule="evenodd" d="M700.5 117.5l72.5 90v170.783l29.624 66.537c2.246 5.045-.023 10.956-5.068 13.203L773 468.956V495.5c0 5.523-4.477 10-10 10h-72.08l-166.971 74.34c-5.045 2.247-10.956-.022-13.203-5.068L479.904 505.5H463.5c-5.523 0-10-4.477-10-10v-49.305l-92.433-207.607c-2.246-5.046.023-10.957 5.068-13.203l87.365-38.897V127.5c0-5.523 4.477-10 10-10h237z" class="Union" clip-rule="evenodd"/>
+      <path fill="#000" fill-opacity=".3" d="M700 117l73 90h-73v-90z" class="Vector 2"/>
+      <rect width="159" height="7" x="498" y="246.5" fill="#fff" class="Rectangle 2" rx="3.5"/>
+      <rect width="67" height="7" x="661" y="246.5" fill="#fff" class="Rectangle 2.7" rx="3.5"/>
+      <rect width="56" height="7" x="498" y="274.5" fill="#fff" class="Rectangle 2.1" rx="3.5"/>
+      <rect width="100" height="7" x="557" y="274.5" fill="#fff" class="Rectangle 2.8" rx="3.5"/>
+      <rect width="67" height="7" x="661" y="274.5" fill="#fff" class="Rectangle 2.9" rx="3.5"/>
+      <rect width="101" height="7" x="498" y="302.5" fill="#fff" class="Rectangle 2.2" rx="3.5"/>
+      <rect width="126" height="7" x="602" y="302.5" fill="#fff" class="Rectangle 2.10" rx="3.5"/>
+      <rect width="159" height="7" x="498" y="330.5" fill="#fff" class="Rectangle 2.11" rx="3.5"/>
+      <rect width="67" height="7" x="661" y="330.5" fill="#fff" class="Rectangle 2.12" rx="3.5"/>
+      <rect width="56" height="7" x="498" y="358.5" fill="#fff" class="Rectangle 2.13" rx="3.5"/>
+      <rect width="100" height="7" x="557" y="358.5" fill="#fff" class="Rectangle 2.14" rx="3.5"/>
+      <rect width="67" height="7" x="661" y="358.5" fill="#fff" class="Rectangle 2.15" rx="3.5"/>
+      <rect width="101" height="7" x="498" y="386.5" fill="#fff" class="Rectangle 2.16" rx="3.5"/>
+      <rect width="126" height="7" x="602" y="386.5" fill="#fff" class="Rectangle 2.17" rx="3.5"/>
+      <rect width="56" height="7" x="498" y="414.5" fill="#fff" class="Rectangle 2.18" rx="3.5"/>
+      <rect width="100" height="7" x="557" y="414.5" fill="#fff" class="Rectangle 2.19" rx="3.5"/>
+      <rect width="67" height="7" x="661" y="414.5" fill="#fff" class="Rectangle 2.20" rx="3.5"/>
+      <g class="Group 2">
+        <path fill="#000" fill-opacity=".43" d="M453 447V186l-88.319 40.229a7.998 7.998 0 00-4.008 10.496L453 447z" class="Vector 3"/>
+        <path fill="#000" fill-opacity=".43" d="M511.714 575.826L479.5 505.5h211l-168.281 74.312a8 8 0 01-10.505-3.986z" class="Vector 4"/>
+        <path fill="#000" fill-opacity=".43" d="M798.225 457.582L773 468.5V377l29.903 68.732a9 9 0 01-4.678 11.85z" class="Vector 5"/>
+      </g>
+    </g>
+  </g>
+</svg>

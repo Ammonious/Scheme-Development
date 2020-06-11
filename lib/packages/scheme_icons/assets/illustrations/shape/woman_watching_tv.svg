@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1155" height="700" fill="none" viewBox="0 0 1155 700">
+  <g class="woman_watching_tv">
+    <path fill="#fff" d="M0 0h1155v700H0z"/>
+    <g class="Group 18.1">
+      <path fill="#201DA7" fill-opacity=".95" d="M145.82 613.822V334.933c0-205.888 184.639-262.696 236.646-244.85 183.74 63.049 228.034-54.957 287.503 35.272 19.185 29.107-22.147 57.828 12.714 79.565 51.647 32.203 116.863-46.736 155.851 0 32.524 38.988-50.773 130.012 0 130.012s92.279-66.852 150.108 11.073c57.828 77.925-20.096 267.817-20.096 267.817H145.82z" class="Vector"/>
+      <g class="tv">
+        <path fill="#fff" fill-opacity=".02" d="M380.005 88.442L145.82 333.291V575.68l416.694-475.344-182.509-11.894z" class="Vector 2"/>
+        <path fill="#30237B" fill-rule="evenodd" d="M663.956 322.849a6.374 6.374 0 016.374-6.374h190.061a6.374 6.374 0 016.374 6.374v124.582a6.374 6.374 0 01-6.374 6.374H670.33a6.374 6.374 0 01-6.374-6.374V322.849zm94.451 130.957h22.599v12.167h109.516c.96 0 1.739.778 1.739 1.738v75.329c0 .96-.779 1.738-1.739 1.738H641.357c-.96 0-1.738-.778-1.738-1.738v-75.329c0-.96.778-1.738 1.738-1.738h117.05v-12.167z" class="Union" clip-rule="evenodd"/>
+        <path fill="#000" fill-opacity=".09" d="M723.06 544.492l94.161-78.516h66.637a8.112 8.112 0 018.113 8.112v62.291a8.113 8.113 0 01-8.113 8.113H723.06z" class="Vector 2_2"/>
+        <path fill="#3A57F2" d="M673.227 324.588h185.425v121.106H673.227z" class="Rectangle"/>
+        <path fill="#fff" fill-opacity=".08" d="M713.442 324.268l-40.192 53.318v59.469l78.335-112.787h-38.143z" class="Vector 3"/>
+        <path fill="#fff" fill-opacity=".08" d="M815.156 323.858l-40.193 53.318-47.986 68.082H768.4l84.898-121.4h-38.142z" class="Vector 3.1"/>
+        <g class="Group">
+          <rect width="75.908" height="21.44" x="646.573" y="479.88" fill="#fff" fill-opacity=".1" class="Rectangle 2" rx="3.477"/>
+          <rect width="75.908" height="21.44" x="729.435" y="479.88" fill="#fff" fill-opacity=".1" class="Rectangle 2.1" rx="3.477"/>
+          <rect width="75.908" height="21.44" x="646.573" y="509.433" fill="#fff" fill-opacity=".1" class="Rectangle 2.2" rx="3.477"/>
+          <rect width="75.908" height="21.44" x="729.435" y="509.433" fill="#fff" fill-opacity=".1" class="Rectangle 2.3" rx="3.477"/>
+          <rect width="75.908" height="21.44" x="809.399" y="479.88" fill="#fff" fill-opacity=".1" class="Rectangle 2.4" rx="3.477"/>
+          <rect width="75.908" height="21.44" x="809.399" y="509.433" fill="#fff" fill-opacity=".1" class="Rectangle 2.5" rx="3.477"/>
+        </g>
+      </g>
+      <g class="Group 13">
+        <g class="Group 4">
+          <path fill="#398CEE" fill-rule="evenodd" d="M616.533 524.239a3.981 3.981 0 00-3.981 3.981v3.412a3.98 3.98 0 003.981 3.981h19.335v57.437h9.099v-57.437h117.717v56.867h9.099v-56.867h14.785a3.98 3.98 0 003.981-3.981v-3.412a3.981 3.981 0 00-3.981-3.981H616.533z" class="Union_2" clip-rule="evenodd"/>
+          <rect width="177.997" height="5.687" x="612.552" y="529.926" fill="#000" fill-opacity=".09" class="Rectangle_2" rx="2.843"/>
+        </g>
+        <path fill="#000" fill-opacity=".06" d="M763.252 536.182l3.981 6.824v49.475h-3.981v-56.299z" class="Rectangle_3"/>
+        <path fill="#000" fill-opacity=".06" d="M644.967 535.615h-3.981v57.721h3.981v-57.721z" class="Rectangle_4"/>
+        <g class="Group 5">
+          <path fill="#242955" d="M741.967 472.238h29.572l-3.981 51.75h-21.894l-3.697-51.75z" class="Rectangle 2_2"/>
+          <path fill="#000" fill-opacity=".16" d="M770.97 479.062l-25.022 45.211h21.61l3.412-45.211z" class="Vector_2"/>
+          <path fill="#5840EC" d="M743.105 488.161h27.297l-1.138 12.795h-25.306l-.853-12.795z" class="Rectangle 2.1_2"/>
+          <path fill="#FF8282" d="M755.616 446.079h1.706v29.572h-1.706z" class="Rectangle 4"/>
+          <rect width="34.121" height="7.962" x="739.693" y="471.101" fill="#38418C" class="Rectangle 3" rx="2.843"/>
+          <rect width="23.316" height="3.981" x="744.811" y="468.257" fill="#38418C" class="Rectangle 3.2" rx="1.476"/>
+          <path fill="#FFE1E1" fill-opacity=".06" d="M739.693 473.945h34.121v3.412h-34.121z" class="Rectangle 3.1"/>
+        </g>
+        <g class="Group 12">
+          <g class="Group 6">
+            <rect width="93.24" height="6.907" x="650.284" y="517.139" fill="#EFE7E7" class="Rectangle 2_3" rx="2.072"/>
+            <rect width="93.24" height="2.072" x="650.284" y="521.974" fill="#000" fill-opacity=".07" class="Rectangle 2.1_3" rx="1.036"/>
+          </g>
+          <g class="Group 7.1">
+            <rect width="24.173" height="4.835" x="693.105" y="512.303" fill="#FFB877" class="Rectangle 2_4" rx="2.417"/>
+            <path fill="#000" fill-opacity=".07" d="M703.811 514.72a2.417 2.417 0 012.417-2.417h8.979a2.417 2.417 0 110 4.835h-8.979a2.418 2.418 0 01-2.417-2.418z" class="Rectangle 2.4_2"/>
+            <path fill="#FFB877" d="M693.106 503.36c0-.907.364-1.778 1.132-2.259 1.629-1.023 5.101-2.61 10.955-2.61 5.853 0 9.326 1.587 10.955 2.61.768.481 1.131 1.352 1.131 2.259a3.418 3.418 0 01-3.418 3.419h-17.336a3.42 3.42 0 01-3.419-3.419z" class="Rectangle 2.3_2"/>
+            <path fill="#000" fill-opacity=".1" d="M711.063 499.18l-7.943 7.597h11.741s2.174-1.35 2.418-2.762c.189-1.096-.691-2.763-.691-2.763s-1.629-.968-2.763-1.381c-1.044-.382-2.762-.691-2.762-.691z" class="Vector_3"/>
+            <rect width="24.173" height="2.763" x="693.105" y="509.541" fill="#A84E32" class="Rectangle 2.1_4" rx="1.381"/>
+            <rect width="24.173" height="2.763" x="693.105" y="506.778" fill="#4A2216" class="Rectangle 2.2_2" rx="1.381"/>
+          </g>
+          <g class="Group 7.2">
+            <rect width="24.173" height="4.835" x="664.789" y="512.303" fill="#FFB877" class="Rectangle 2_5" rx="2.417"/>
+            <path fill="#000" fill-opacity=".07" d="M675.494 514.72a2.417 2.417 0 012.417-2.417h8.979a2.417 2.417 0 110 4.835h-8.979a2.418 2.418 0 01-2.417-2.418z" class="Rectangle 2.4_3"/>
+            <path fill="#FFB877" d="M664.788 503.36c0-.907.364-1.778 1.132-2.259 1.629-1.023 5.101-2.61 10.955-2.61 5.853 0 9.326 1.587 10.955 2.61.768.481 1.131 1.352 1.131 2.259a3.418 3.418 0 01-3.418 3.419h-17.336a3.42 3.42 0 01-3.419-3.419z" class="Rectangle 2.3_3"/>
+            <path fill="#000" fill-opacity=".1" d="M682.746 499.18l-7.943 7.597h11.742s2.173-1.35 2.417-2.762c.189-1.096-.691-2.763-.691-2.763s-1.629-.968-2.762-1.381c-1.045-.382-2.763-.691-2.763-.691z" class="Vector_4"/>
+            <rect width="24.173" height="2.763" x="664.789" y="509.541" fill="#A84E32" class="Rectangle 2.1_5" rx="1.381"/>
+            <rect width="24.173" height="2.763" x="664.789" y="506.778" fill="#4A2216" class="Rectangle 2.2_3" rx="1.381"/>
+          </g>
+          <g class="Group 11">
+            <g class="Group 9.1">
+              <g class="Group 8">
+                <path fill="#ECB16B" d="M725.566 494.343h1.381v11.051h-1.381z" class="Rectangle 3_2"/>
+                <path fill="#F9BA71" d="M726.948 495.032h1.381v11.051h-1.381z" class="Rectangle 3.1_2"/>
+              </g>
+              <g class="Group 8.1">
+                <path fill="#ECB16B" d="M728.329 494.343h1.381v11.051h-1.381z" class="Rectangle 3_3"/>
+                <path fill="#F9BA71" d="M729.71 495.032h1.381v11.051h-1.381z" class="Rectangle 3.1_3"/>
+              </g>
+              <g class="Group 8.2">
+                <path fill="#ECB16B" d="M731.092 493.656h1.381v11.051h-1.381z" class="Rectangle 3_4"/>
+                <path fill="#F9BA71" d="M732.474 494.345h1.381v11.051h-1.381z" class="Rectangle 3.1_4"/>
+              </g>
+              <g class="Group 8.3">
+                <path fill="#ECB16B" d="M733.854 493.656h1.381v11.051h-1.381z" class="Rectangle 3_5"/>
+                <path fill="#F9BA71" d="M735.236 494.345h1.381v11.051h-1.381z" class="Rectangle 3.1_5"/>
+              </g>
+              <g class="Group 8.4">
+                <path fill="#ECB16B" d="M736.617 495.729h1.381v11.051h-1.381z" class="Rectangle 3_6"/>
+                <path fill="#F9BA71" d="M737.998 496.42h1.381v11.051h-1.381z" class="Rectangle 3.1_6"/>
+              </g>
+            </g>
+            <g class="Group 9">
+              <g class="Group 8_2">
+                <path fill="#ECB16B" d="M722.804 496.418h1.381v11.051h-1.381z" class="Rectangle 3_7"/>
+                <path fill="#F9BA71" d="M724.186 497.107h1.381v11.051h-1.381z" class="Rectangle 3.1_7"/>
+              </g>
+              <g class="Group 8.1_2">
+                <path fill="#ECB16B" d="M725.566 496.418h1.381v11.051h-1.381z" class="Rectangle 3_8"/>
+                <path fill="#F9BA71" d="M726.948 497.107h1.381v11.051h-1.381z" class="Rectangle 3.1_8"/>
+              </g>
+              <g class="Group 8.2_2">
+                <path fill="#ECB16B" d="M728.33 495.728h1.381v11.051h-1.381z" class="Rectangle 3_9"/>
+                <path fill="#F9BA71" d="M729.71 496.419h1.381v11.051h-1.381z" class="Rectangle 3.1_9"/>
+              </g>
+              <g class="Group 8.3_2">
+                <path fill="#ECB16B" d="M731.092 495.728h1.381v11.051h-1.381z" class="Rectangle 3_10"/>
+                <path fill="#F9BA71" d="M732.474 496.419h1.381v11.051h-1.381z" class="Rectangle 3.1_10"/>
+              </g>
+              <g class="Group 8.4_2">
+                <path fill="#ECB16B" d="M733.854 497.8h1.381v11.051h-1.381z" class="Rectangle 3_11"/>
+                <path fill="#F9BA71" d="M735.236 498.492h1.381v11.051h-1.381z" class="Rectangle 3.1_11"/>
+              </g>
+            </g>
+            <g class="Group 10">
+              <path fill="#F05656" d="M721.422 500.563h18.648l-1.726 16.577h-15.195l-1.727-16.577z" class="Rectangle 2_6"/>
+              <path fill="#000" fill-opacity=".03" d="M735.581 500.563h4.49l-1.727 16.577h-9.324l6.561-16.577z" class="Rectangle 2.1_6"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <path fill="#FFF5F5" fill-opacity=".09" d="M145.82 314.015s4.921-91.049 60.699-151.339c40.601-43.884 111.556-70.132 111.556-70.132V544.51H145.82V314.015z" class="Rectangle_5"/>
+      <path fill="#000" fill-opacity=".08" d="M155.664 256.597s15.758-43.249 39.782-79.976c35.682-54.548 110.326-79.566 110.326-79.566V544.51H155.664V256.597z" class="Rectangle_6"/>
+      <path fill="#fff" fill-opacity=".1" d="M145.82 544.51h846.513s-6.409 21.334-11.074 34.838c-4.632 13.41-12.714 34.064-12.714 34.064H145.82V544.51z" class="Rectangle_7"/>
+      <g class="person">
+        <g class="Group_2">
+          <path fill="#F2BCBC" fill-rule="evenodd" d="M483.059 320.54c.351-.975.735-2.722.735-2.722s8.036-.618 10.818-5.563c2.782-4.946 1.791-31.973 0-38.017-2.473-8.346-19.473-30.909-40.799-8.037-9.913 15.094-7.51 22.963-2.966 37.848 1.627 5.326 3.527 11.551 5.236 19.326-.919 4.52-4.626 10.709-6.885 14.481-.358.599-.68 1.137-.949 1.597l-6.491 4.636 31.218 18.545 33.999-17.617-11.127-5.564c-8.245-.97-12.623-11.229-12.789-18.913z" class="Union_3" clip-rule="evenodd"/>
+          <path fill="red" fill-opacity=".06" d="M460.802 347.646l4.511-24.198s-3.023-.07-4.921-.41c-1.798-.322-4.512-1.23-4.512-1.23 1.231 3.691-4.921 13.124-9.023 19.686l13.945 6.152z" class="Vector 3_2"/>
+          <path fill="#FF4747" fill-opacity=".06" d="M481.718 321.809c.411-1.231-.136-1.914 2.051-3.691-2.871 6.152 3.281 19.686 11.484 21.327l-10.664 4.101c-3.007-5.879-3.182-20.803-2.871-21.737z" class="Vector 2_3"/>
+          <path fill="#000" d="M498.08 263.111c-.495 7.665-2.318 10.908-7.676 12.969 2.31 12.625 7.676 38.144 7.676 41.687 0 3.542-11.451 5.24-17.725 4.428 0 0-9.305 1.298-13.811 1.255-2.993-.029-7.236-.78-9.638-1.255l-9.677-.386c-6.878-11.508-12.655-25.63-4.839-44.24 0 0 5.734-11.122 7.444-13.028 5.209-5.805 8.933-8.561 8.933-8.561 3.4-6.49 39.931-2.451 39.313 7.131z" class="Vector 4"/>
+          <path fill="#EA8A1A" d="M495.54 339.147c-24.974 12.364-42.139 5.152-47.599 0 0 0-30.139 9.951-34.466 12.114-11.388 5.694-10.043 35.485-10.043 35.485h134.143s5.038-30.87-5.959-33.673c-18.482-4.711-36.076-13.926-36.076-13.926z" class="Vector_5"/>
+          <path fill="#000" fill-opacity=".05" d="M495.54 339.147c-24.974 12.364-42.139 5.152-47.599 0l-13.809 5.229-30.699 42.37 81.434 1.117 34.428-38.414c-16.308-6.16-23.755-10.302-23.755-10.302z" class="Vector_6"/>
+          <path fill="#000" fill-opacity=".03" d="M479.257 376.768l24.608-33.631 11.894 4.921-20.507 28.71h-15.995z" class="Vector 2_4"/>
+        </g>
+        <g class="Group 2">
+          <path fill="#4755D3" fill-rule="evenodd" d="M565.796 363.495H145v249.098h533.992V471.725c0-16.309-13.221-29.53-29.529-29.53h-54.138v-49.171c0-16.308-13.221-29.529-29.529-29.529z" class="Union_4" clip-rule="evenodd"/>
+          <path fill="#000" fill-opacity=".06" d="M145.41 611.872h451.966s-254.734-8.529-355.175-96.39c-64.152-56.118-96.791-153.069-96.791-153.069v249.459z" class="Vector_7"/>
+          <path fill="#000" fill-opacity=".09" d="M595.325 442.919h55.778c15.403 0 27.889 12.487 27.889 27.889v141.787h-83.667V442.919z" class="Rectangle_8"/>
+        </g>
+      </g>
+      <g class="Group 17">
+        <g class="Group 15">
+          <g class="Group 14">
+            <path fill="#49F1FC" fill-opacity=".15" d="M510.018 195.076h51.677v59.059h-51.677z" class="Rectangle_9"/>
+            <path fill="#49F1FC" fill-opacity=".15" d="M515.76 202.46h39.373v44.997H515.76z" class="Rectangle_10"/>
+            <path fill="#fff" fill-opacity=".1" d="M527.654 225.837l27.069 11.074v10.663H516.17v-15.995l11.484-5.742z" class="Vector_8"/>
+            <path fill="#fff" fill-opacity=".1" d="M543.239 225.837l-27.069 11.074v10.663h38.553v-15.995l-11.484-5.742z" class="Vector_9"/>
+          </g>
+          <g class="Group 14.1">
+            <path fill="#49F1FC" fill-opacity=".15" d="M569.897 236.09h45.935v52.497h-45.935z" class="Rectangle_11"/>
+            <path fill="#49F1FC" fill-opacity=".15" d="M575.762 243.769h33.028v37.746h-33.028z" class="Rectangle_12"/>
+          </g>
+          <g class="Group 14.2">
+            <path fill="#49F1FC" fill-opacity=".15" d="M569.897 176.21h45.935v52.497h-45.935z" class="Rectangle_13"/>
+            <path fill="#49F1FC" fill-opacity=".15" d="M575.762 183.888h33.028v37.746h-33.028z" class="Rectangle_14"/>
+          </g>
+        </g>
+        <path fill="#000" fill-opacity=".21" fill-rule="evenodd" d="M593.685 189.336h-.82v4.921h-1.641v8.203h-3.281v18.867h4.922v-.001h2.46v-27.069h-1.64v-4.921z" class="Union_5" clip-rule="evenodd"/>
+        <g class="Group 16">
+          <path fill="#FFF9F9" fill-opacity=".17" fill-rule="evenodd" d="M593.686 254.135h3.281v2.154h4.101v9.33h-12.304v-7.895h3.281v-1.435h1.641v-2.154zm-11.484 1.436h3.281v3.589h3.281v6.46h-3.281v-.001h-3.281v-10.048zm-.001 2.153h-3.281v2.153h-3.28v5.742h6.561v-7.895zm22.968 2.153h-4.101v5.742h4.101v-5.742z" class="Union_6" clip-rule="evenodd"/>
+          <path fill="#000" fill-opacity=".17" fill-rule="evenodd" d="M593.686 277.103h3.281v-2.153h4.101v-9.33h-12.304v7.895h3.281v1.435h1.641v2.153zm-11.484-1.435h3.281v-3.589h3.281v-6.46h-3.281v.001h-3.281v10.048zm-.001-2.153h-3.281v-2.153h-3.28v-5.742h6.561v7.895zm22.968-2.153h-4.101v-5.742h4.101v5.742z" class="Union_7" clip-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

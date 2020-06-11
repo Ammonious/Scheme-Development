@@ -1,0 +1,33 @@
+name: scheme_utilities
+description: Scheme Utility Functions that make life easier
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http:
+  image:
+  share_extend:
+  get:
+  path:
+  path_provider:
+  hive:
+  package_info:
+  device_info:
+  hive_flutter: ^0.3.0+2
+  flutter_cache_manager:
+  streaming_shared_preferences:
+  flutter_hooks:
+  lumberdash:
+  colorize_lumberdash:
+
+dev_dependencies:
+
+
+flutter:
+

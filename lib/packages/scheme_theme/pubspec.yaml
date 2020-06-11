@@ -1,0 +1,36 @@
+name: scheme_theme
+description: Scheme Theme Builder
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get:
+  path_provider:
+  hive: ^1.4.1+1
+  hive_flutter: ^0.3.0+2
+  flutter_statusbarcolor:
+  flutter_screenutil:
+  streaming_shared_preferences: ^1.0.1
+  google_fonts:
+  scheme_utilities:
+    path: "../scheme_utilities/"
+
+  scheme_components:
+    path: "../scheme_components/"
+
+dev_dependencies:
+  hive_generator:
+  injectable_generator:
+  build_runner:
+
+
+
+
+flutter:
+

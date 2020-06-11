@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="700" fill="none" viewBox="0 0 1152 700">
+  <g clip-path="url(#clip0)">
+    <path fill="#fff" d="M0 0h1152v700H0z"/>
+    <g class="book">
+      <path fill="#4C5EFF" fill-rule="evenodd" d="M460.323 272.251L207.797 442.258l37.505 18.295-34.596 23.299 380.681 185.699 249.814-169.817-37.79-18.29 31.091-21.193 1.364 36.827 5.636 2.635-3.077-44.005-378.102-183.457z" class="Union" clip-rule="evenodd"/>
+      <path stroke="#fff" stroke-width="1.209" d="M489.494 342.903L339.303 443.058l216.184 107.246 151.396-100.239-217.389-107.162z" class="Vector"/>
+      <path stroke="#fff" stroke-width="1.384" d="M484.675 328.702L312.674 443.4 560.25 566.22l173.382-114.795-248.957-122.723z" class="Vector_2"/>
+      <g class="paper">
+        <g class="paper_2">
+          <path fill="#FBECEC" stroke="#000" stroke-opacity=".15" stroke-width=".604" d="M218.416 481.496l-2.529-36.169 372.571 182.329 2.529 36.169-372.571-182.329z" class="Vector 2"/>
+          <path fill="#FBECEC" stroke="#000" stroke-opacity=".15" stroke-width=".604" d="M839.398 495.62l-2.634-37.676-248.327 169.41 2.529 36.169L839.398 495.62z" class="Vector 2.1"/>
+        </g>
+        <g class="Group 2">
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M222.051 455.497L573.97 628.366" class="Vector_3"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M222.492 461.827l351.92 172.869" class="Vector_4"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M222.935 468.156l351.92 172.869" class="Vector_5"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M223.378 474.486l351.919 172.869" class="Vector_6"/>
+        </g>
+        <g class="Group 2.1">
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M833.274 473.029L592.825 638.158" class="Vector_7"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M833.608 477.783L593.159 642.912" class="Vector_8"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M833.94 482.537L593.491 647.666" class="Vector_9"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M834.272 487.29L593.824 652.419" class="Vector_10"/>
+        </g>
+      </g>
+    </g>
+    <g class="book_2">
+      <path fill="#303030" fill-rule="evenodd" d="M540.617 189.519l-263.77 151.977 36.137 20.866-36.137 20.83 366.8 211.801 261.051-151.977-36.422-20.881 32.494-18.974-1.208 36.833 5.438 3.022v-44.113L540.617 189.519z" class="Union_2" clip-rule="evenodd"/>
+      <path stroke="#fff" stroke-width="1.209" d="M564.788 262.033l-156.812 89.434 208.176 122.065 158.02-89.434-209.384-122.065z" class="Vector_11"/>
+      <path stroke="#fff" stroke-width="1.384" d="M560.971 247.53L381.388 349.951l238.406 139.791 180.967-102.421-239.79-139.791z" class="Vector_12"/>
+      <g class="paper_3">
+        <g class="paper_4">
+          <path fill="#FBECEC" stroke="#000" stroke-opacity=".08" stroke-width=".604" d="M284.702 381.379v-36.257l358.945 207.873v36.257L284.702 381.379z" class="Vector 2_2"/>
+          <path fill="#FBECEC" stroke="#000" stroke-opacity=".08" stroke-width=".604" d="M903.187 438.786v-37.768l-259.54 151.675v36.257l259.54-150.164z" class="Vector 2.1_2"/>
+        </g>
+        <g class="Group 2_2">
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M290.141 355.697l339.003 196.996" class="Vector_13"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M290.141 362.042l339.003 196.996" class="Vector_14"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M290.141 368.386l339.003 196.997" class="Vector_15"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M290.141 374.732l339.003 196.996" class="Vector_16"/>
+        </g>
+        <g class="Group 2.1_2">
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M898.654 415.823L647.272 563.777" class="Vector_17"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M898.655 420.588L647.272 568.542" class="Vector_18"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M898.655 425.354L647.272 573.308" class="Vector_19"/>
+          <path stroke="#000" stroke-opacity=".12" stroke-width="1.209" d="M898.655 430.119L647.272 578.073" class="Vector_20"/>
+        </g>
+      </g>
+      <path fill="#FF7D61" d="M760.576 653.306c-35.41-33.654-56.829-56.427-84.902-101.822l12.388-6.042s40.185 53.63 42.904 59.219c2.719 5.59 45.019 45.926 45.019 45.926l21.452 13.596-21.452-6.647 8.158 13.899-23.567-18.129z" class="Vector 2_3"/>
+    </g>
+    <g class="Group 2_3">
+      <path fill="#000" stroke="#000" stroke-width="1.223" d="M572.146 389.755c-8.449-6.772 20.79-18.345 20.79-18.345h17.122v11.007s-16.532 12.031-28.128 10.396c-3.964-.559-6.661-.554-9.784-3.058z" class="Vector 5"/>
+      <path fill="#000" stroke="#000" stroke-width="1.223" d="M678.546 389.755c9.244-6.944-23.237-18.345-23.237-18.345h-14.676v11.007s16.533 12.031 28.129 10.396c3.964-.559 6.583-.654 9.784-3.058z" class="Vector 5.1"/>
+      <path fill="#fff" d="M593.548 371.41l-14.676-105.789h75.825V371.41h-14.675l-19.568-80.718-10.396 80.718h-16.51z" class="Vector 4"/>
+      <path fill="#303030" d="M531.787 76.057c.978 22.503 28.292 53.812 41.541 69.711 0 0 8.91 16.743 18.957 22.014 12.688 6.657 28.59 6.101 36.078-6.115 11.618-18.957 49.531-85.61 49.531-85.61 8.316 18.1-28.089 84.387-25.031 118.019 3.057 33.632 4.279 81.763 4.279 81.763-32.751 0-49.594 7.954-83.814 0v-73.202c0-15.287-10.355-34.855-10.355-34.855-26.417-33.266-36.69-74.807-31.186-91.725z" class="Vector 3"/>
+      <path fill="#EEB3A1" d="M672.582 74.186c-2.192 1.461 3.743 5.614 3.743 5.614l3.275 1.404s5.147-10.294 5.147-12.633c0-2.889-2.521-3.077-5.147-1.872-3.062 1.406-3.275 7.487-3.275 7.487s-2.526-.811-3.743 0z" class="Vector 7"/>
+      <path fill="#EEB3A1" d="M536.431 79.8l-3.743 5.614-2.339 1.404s-8.706-9.358-6.551-12.633c2.034-3.09 3.402-4.282 6.551-2.34 2.866 1.77 2.339 7.955 2.339 7.955h3.743z" class="Vector 7.1"/>
+      <path fill="#FFA0A0" d="M603.943 173.285l.612-6.115 10.395.612.612 5.503c-4.538 2.016-7.081 2.005-11.619 0z" class="Vector 6"/>
+      <path fill="#FFB7B7" d="M619.713 157.467c0 8.106-5.615 13.116-10.266 12.633-2.835.483-10.789-4.527-10.789-12.633 0-8.105 4.372-13.568 10.789-13.568 6.416 0 10.266 5.463 10.266 13.568z" class="Ellipse"/>
+      <path fill="#000" stroke="#000" stroke-width=".936" d="M597.722 146.706l.936 14.504.468-9.357 2.339-3.743 6.083-1.872h2.807l6.082.468 1.872 3.743 1.403 8.89.468-1.872V145.77l1.872-4.678-5.615.935-4.678-1.871-7.954 1.403-6.083 5.147z" class="Vector 4_2"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0" class="clip0">
+      <path fill="#fff" d="M0 0h1152v700H0z"/>
+    </clipPath>
+  </defs>
+</svg>

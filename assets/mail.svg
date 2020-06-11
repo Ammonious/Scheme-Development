@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="700" fill="none" viewBox="0 0 1152 700">
+  <g class="mail">
+    <path fill="#fff" d="M0 0h1152v700H0z"/>
+    <path fill="#4356FF" d="M563 405h40v173h-40z" class="Rectangle 3"/>
+    <path fill="#000" fill-opacity=".19" d="M582 405h21v173h-21z" class="Rectangle 3.1"/>
+    <path fill="#4356FF" d="M469 271h170c38.66 0 70 31.34 70 70v87H469V271z" class="Rectangle"/>
+    <path fill="#181746" d="M398 343c0-39.764 32.236-72 72-72 39.765 0 72 32.236 72 72v85H398v-85z" class="Rectangle 2"/>
+    <path fill="#4356FF" d="M390.375 436.259c-22.74 35.823-1.712 83.252 40.104 90.452a59.453 59.453 0 0058.25-23.731L543 428l-144.895-3.919-7.73 12.178z" class="Rectangle 2.1"/>
+    <path fill="#000" fill-opacity=".37" d="M390.375 436.259c-22.74 35.823-1.712 83.252 40.104 90.452a59.453 59.453 0 0058.25-23.731L543 428l-144.895-3.919-7.73 12.178z" class="Rectangle 2.2"/>
+    <g class="Group 7.1">
+      <path fill="#fff" d="M405.408 330H532v80.039a8.168 8.168 0 01-8.167 8.167H413.575a8.168 8.168 0 01-8.167-8.167V330z" class="Rectangle_2"/>
+      <path fill="#000" fill-opacity=".06" d="M468.05 370.641L405 330h127l-54.676 40.348a8.167 8.167 0 01-9.274.293z" class="Vector"/>
+    </g>
+    <g class="Group 8">
+      <circle cx="526.5" cy="329.5" r="11.5" fill="#FF9C9C" class="Ellipse"/>
+      <path fill="#FFF9F9" d="M523.017 332.848h2.762v-7H523v-1.458c.515-.058 1.144-.218 1.887-.481.755-.263 1.43-.566 2.025-.909h1.218v9.848h2.522v1.921h-7.635v-1.921z" class="1"/>
+    </g>
+  </g>
+</svg>

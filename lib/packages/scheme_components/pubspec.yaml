@@ -1,0 +1,43 @@
+name: scheme_components
+description: A Package Containing Scheme Widgets and Styles
+version: 0.0.5
+author:
+homepage:
+
+environment:
+  sdk: ">=2.8.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get:
+  lottie:
+  url_launcher:
+  google_fonts:
+  flare_flutter:
+  flutter_hooks:
+  animations:
+  sa_stateless_animation:
+  flutter_svg:
+  palette_generator:
+  flutter_shine:
+  rxdart:
+  sa_multi_tween:
+  sa_anicoto:
+  responsive_builder:
+  scheme_utilities:
+    path: "../scheme_utilities"
+  scheme_icons:
+    path: "../scheme_icons/"
+  scheme_theme:
+    path: "../scheme_theme/"
+
+dev_dependencies:
+
+flutter:
+  assets:
+    - assets/illustrations/flare/
+    - assets/illustrations/lottie/
+    - assets/illustrations/shape/
+    - assets/other/
+

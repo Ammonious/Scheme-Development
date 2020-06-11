@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1155" height="700" fill="none" viewBox="0 0 1155 700">
+  <g clip-path="url(#clip0)">
+    <path fill="#fff" d="M0 0h1155v700H0z"/>
+    <g class="Group 6">
+      <path fill="#5057FF" fill-opacity=".09" d="M919 542.954c0-45.432-8.846-90.418-26.033-132.391-17.187-41.973-42.379-80.111-74.136-112.235-31.758-32.125-69.46-57.608-110.953-74.994A338.61 338.61 0 00577 197a338.61 338.61 0 00-130.878 26.334c-41.493 17.386-79.195 42.869-110.953 74.994-31.757 32.124-56.949 70.262-74.136 112.235A349.429 349.429 0 00235 542.954h684z" class="Ellipse"/>
+      <g class="Group 2">
+        <rect width="216" height="294.416" x="447" y="247" fill="#284FDB" class="Rectangle" rx="39.208"/>
+        <path fill="#000" fill-opacity=".04" d="M447 286.208C447 264.554 464.554 247 486.208 247H505v294h-18.792C464.554 541 447 523.446 447 501.792V286.208z" class="Rectangle_2"/>
+        <path fill="#000" fill-opacity=".06" d="M662.644 504.703V351.436s-20.186 89.796-59.169 129.386C566.568 518.303 483 541.06 483 541.06h143.287c20.079 0 36.357-16.278 36.357-36.357z" class="Vector"/>
+        <g class="Group">
+          <circle cx="555.589" cy="329.213" r="27.443" fill="#fff" fill-opacity=".13" class="Ellipse_2"/>
+          <circle cx="555.589" cy="329.213" r="15.815" fill="#277A95" stroke="#000" stroke-opacity=".2" stroke-width="3.721" class="Ellipse_3"/>
+          <circle cx="555.357" cy="328.98" r="32.327" stroke="#000" stroke-opacity=".46" stroke-width=".93" class="Ellipse_4"/>
+        </g>
+        <g class="Group_2">
+          <circle cx="555.356" cy="435.911" r="42.059" fill="#fff" fill-opacity=".13" class="Ellipse_5"/>
+          <circle cx="555.356" cy="435.911" r="24.238" fill="#277A95" stroke="#000" stroke-opacity=".2" stroke-width="5.703" class="Ellipse_6"/>
+          <circle cx="555" cy="435.555" r="49.545" stroke="#000" stroke-opacity=".46" stroke-width="1.426" class="Ellipse_7"/>
+        </g>
+        <rect width="69.861" height="4.277" x="523.99" y="510.762" fill="#fff" class="Rectangle 2" rx="2.139"/>
+        <rect width="8.554" height="8.554" x="480.505" y="274.089" fill="#fff" class="Rectangle 2.1" rx="4.277"/>
+      </g>
+      <path stroke="#000" stroke-linecap="round" stroke-width="2" d="M287 541h567" class="Vector_2"/>
+      <g class="Group 5">
+        <g class="Group 3">
+          <path fill="#1A498F" fill-rule="evenodd" d="M668.5 410c-4.265 13.86-3.194 26.015-.355 39.873-10.12-22.535-29.042-39.292-63.145-19.373 6.661 7.537 13.63 9.544 21.293 11.751 13.73 3.953 29.691 8.549 50.112 46.743-.134 2.158-.262 4.17-.405 6.006.403-1.004.802-1.994 1.199-2.97l.077.47c.128-.388.252-.771.373-1.148.283.543.567 1.092.851 1.648a132.028 132.028 0 00-.307-3.374l.035-.114c21.422-52.113 33.79-63.068 44.491-72.546 6.647-5.888 12.651-11.206 19.781-25.466-39.465 4.519-54.728 31.062-61.1 57.536.409-8.294 2.052-19.984 6.876-39.036 4.721-18.64-.727-25.888-6.362-33.386-3.586-4.771-7.247-9.642-8.414-17.614-9.716 20.609-7.445 27.225-5.276 33.542 1.514 4.411 2.978 8.676.276 17.458z" class="Union" clip-rule="evenodd"/>
+          <path fill="#000" fill-opacity=".13" d="M679 403.5c-4.8 9.2-3 53.5-2.5 74.5 0 0 3.352-25.036 6-41 2.469-14.886 7-38 7-38 3.5-16.5-13.226-23-16-39.5 0 13.5 10.3 34.8 5.5 44z" class="Vector 6"/>
+          <path fill="#000" fill-opacity=".15" d="M678.5 493c-2.167-27.834-17-95.5-73.5-62.5 19 21.5 40.5-2 73.5 62.5z" class="Vector 4.3"/>
+          <path fill="#000" fill-opacity=".1" d="M605.5 430.5c50.8-2 68.833 37.833 71.5 58l-2.5-3.5c-4-10.5-23-32.5-35-38.5-35.5-12-29.167-13-34-16z" class="Vector 5"/>
+          <path fill="#000" fill-opacity=".11" d="M676 495c2.167-27.833 1-96 66.5-103.5-19 38-30 12.5-66.5 103.5z" class="Vector 4.3_2"/>
+        </g>
+        <g class="Group 4">
+          <path fill="#FF8989" d="M654.5 540.5l-12-55.5h70l-8.5 55.5h-49.5z" class="Vector 2"/>
+          <path fill="#000" fill-opacity=".04" d="M655 540s29.893-.652 42.5-12.5c6.749-6.342 10.548-17.777 12.634-27.189L712.5 485s-.488 6.836-2.366 15.311L704 540h-49z" class="Vector 3"/>
+        </g>
+        <path fill="#000" fill-opacity=".04" d="M672.5 540L660 485h-17l12.5 55h17z" class="Vector_3"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0" class="clip0">
+      <path fill="#fff" d="M0 0h1155v700H0z"/>
+    </clipPath>
+  </defs>
+</svg>

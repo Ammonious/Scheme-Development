@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="700" fill="none" viewBox="0 0 1152 700">
+  <g class="wallet">
+    <path fill="#fff" d="M0 0h1152v700H0z"/>
+    <g class="Group 2">
+      <rect width="297" height="199" x="483" y="229.433" fill="#FFA6DB" class="Rectangle 2" rx="10" transform="rotate(-28 483 229.433)"/>
+      <g class="Group">
+        <path fill="#fff" fill-opacity=".2" d="M487.695 238.263c-2.593-4.877-.742-10.932 4.134-13.525L745.235 90S624.864 186.762 593.5 245.5c-34.404 64.432-17.075 159.64-17.075 159.64l-88.73-166.877z" class="Rectangle 2.1"/>
+        <rect width="92" height="8" x="669.517" y="169.822" fill="#fff" fill-opacity=".62" class="Rectangle 3" rx="4" transform="rotate(-28 669.517 169.822)"/>
+        <rect width="72" height="8" x="694.218" y="173.677" fill="#fff" fill-opacity=".62" class="Rectangle 3.1" rx="4" transform="rotate(-28 694.218 173.677)"/>
+        <path stroke="#fff" stroke-opacity=".63" d="M730.136 214.605a4.5 4.5 0 011.861-6.086l44.148-23.474a4.498 4.498 0 016.085 1.861l2.817 5.297 4.695 8.83 3.286 6.181a4.499 4.499 0 01-1.86 6.085l-8.83 4.695-13.244 7.042-22.074 11.737a4.5 4.5 0 01-6.086-1.861l-3.286-6.18-7.512-14.127z" class="Rectangle 4"/>
+      </g>
+    </g>
+    <rect width="698" height="329" x="211" y="229" fill="#FF32A1" class="Rectangle" rx="27"/>
+    <path fill="#000" fill-opacity=".11" d="M546 229h339c13.255 0 24 10.745 24 24v281c0 13.255-10.745 24-24 24H546V229z" class="Rectangle_2"/>
+    <g class="Group 3">
+      <path stroke="#000" stroke-linecap="round" stroke-opacity=".22" stroke-width="5" d="M255 350h258.5" class="Vector"/>
+      <path stroke="#000" stroke-linecap="round" stroke-opacity=".22" stroke-width="5" d="M255 314h258.5" class="Vector_2"/>
+      <path fill="#fff" d="M262 288h246v23H262z" class="Rectangle 3_2"/>
+      <path fill="#000" fill-opacity=".37" d="M261 366h246v23H261z" class="Rectangle 3.1_2"/>
+      <path stroke="#000" stroke-linecap="round" stroke-opacity=".22" stroke-width="5" d="M254.5 390H513" class="Vector_3"/>
+    </g>
+    <g class="Group 4">
+      <path stroke="#000" stroke-linecap="round" stroke-opacity=".22" stroke-width="5" d="M576 289h303.5" class="Vector_4"/>
+      <rect width="306" height="174" x="576" y="324" fill="#fff" fill-opacity=".19" class="Rectangle 2_2" rx="10"/>
+      <rect width="306" height="66" x="576" y="324" fill="#fff" fill-opacity=".19" class="Rectangle 2.1_2" rx="10"/>
+      <rect width="23" height="19" x="718" y="364" fill="#000" fill-opacity=".42" class="Rectangle 4_2" rx="9.5"/>
+    </g>
+  </g>
+</svg>

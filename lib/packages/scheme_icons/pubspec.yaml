@@ -1,0 +1,54 @@
+name: scheme_icons
+description: Scheme Custom Icons
+version: 0.0.2
+author: Scheme Creative
+homepage: https://www.schemecreative.com
+
+environment:
+  sdk: ">=2.8.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flare_flutter:
+  lottie:
+  flutter_svg:
+  cached_network_image:
+  sa_stateless_animation:
+  sa_multi_tween:
+  sa_anicoto:
+  get:
+  injectable:
+  scheme_components:
+    path: "../scheme_components/"
+
+dev_dependencies:
+  # service location and dependency injection
+  injectable_generator:
+  build_runner:
+
+
+flutter:
+  assets:
+    - assets/font_icons/bang.ttf
+    - assets/font_icons/boxicons.ttf
+    - assets/illustrations/shape/
+    - assets/lottie_icons/
+    - assets/rive_icons/
+    - assets/svg_icons/dope/
+    - assets/svg_icons/evericons/
+    - assets/svg_icons/logo_icons/
+    - assets/svg_icons/md_color/
+    - assets/svg_icons/twotone/
+    - assets/svg_icons/round/
+    - assets/svg_icons/unicons/
+    - assets/svg_icons/bang/
+
+
+  fonts:
+    - family: Bang
+      fonts:
+        - asset: assets/font_icons/bang.ttf
+    - family: BoxIcons
+      fonts:
+        - asset: assets/font_icons/boxicons.ttf

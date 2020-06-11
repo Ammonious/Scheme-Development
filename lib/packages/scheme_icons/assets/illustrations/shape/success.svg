@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1155" height="700" fill="none" viewBox="0 0 1155 700">
+  <g class="success">
+    <path fill="#fff" d="M0 0h1155v700H0z"/>
+    <g class="Group">
+      <g class="bot">
+        <g class="bot_2">
+          <g class="Group_2">
+            <path fill="#2F70EE" fill-rule="evenodd" d="M708.833 606.171l49.266-3.448c44.5-10.5 42.5-29 20.952-47.5l-104-85s-20.813 3.129-35 4.5c-19.825 1.915-55 0-55 0l1.246 1h-54.698l-112.048 98c-11.452 14 0 33 0 33h288.5c.258-.176.519-.359.782-.552z" class="Union" clip-rule="evenodd"/>
+            <path fill="#000" fill-opacity=".07" d="M437.771 571.831l92.248-80.193a18.004 18.004 0 0111.81-4.415h35.064a18 18 0 0111.777 4.387l92.734 80.224a15.025 15.025 0 015.195 11.363c0 8.299-6.727 15.026-15.026 15.026H447.639c-8.307 0-15.04-6.734-15.04-15.041a15.04 15.04 0 015.172-11.351z" class="Vector 5"/>
+            <path fill="#000" fill-opacity=".06" d="M762.099 602.223l-55 5c19.5-12.5 5.5-28.5-3.048-37l-119-95.5s35.175 1.915 55 0c14.187-1.371 35-4.5 35-4.5l104 85c25.548 22.5 17.048 35.5-16.952 47z" class="Vector 3.1"/>
+            <path stroke="#000" stroke-linecap="round" stroke-opacity=".17" d="M616.099 497.723l82-9m-55.5 29.5l81-8.5m-59.5 27l81-8.5m-44.5 38l78.5-9.5m-62 34l76-11.5" class="Vector 4"/>
+            <path fill="#000" fill-opacity=".06" d="M704.461 569.223l-107.5-86 86-8.5 21.5 94.5z" class="Vector 6"/>
+          </g>
+          <path fill="#000" fill-opacity=".06" d="M531.961 483.223l-115.5 101c-2.4-1.6 1-7.334 3-10l103.5-91h9z" class="Vector 2"/>
+          <g class="Group 4">
+            <path fill="#3072F3" d="M561.099 370.723l-43.5-48 8-10.5h125.5l5.5 10.5-44 48h-51.5z" class="Vector 6_2"/>
+            <path fill="#000" fill-opacity=".02" d="M608.961 312.223l-36.5 58h10.5l45-47-6.5-11h-12.5z" class="Vector 10"/>
+            <path fill="#000" fill-opacity=".23" d="M613.099 370.223h-30.5l45-47.5-6.5-10.5h30l5.5 10.5-43.5 47.5z" class="Vector 8"/>
+            <path fill="#000" fill-opacity=".06" d="M628.099 322.723l-6.5-10.5h29.5l5.5 10.5h-28.5z" class="Vector 9"/>
+            <g class="Group 2">
+              <circle cx="584.599" cy="334.723" r="4" fill="#fff" class="Ellipse"/>
+            </g>
+            <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M561.461 347.223c2.5 3.5 11 5.5 17.5 0" class="Vector 7"/>
+            <g class="Group_3">
+              <circle cx="554.599" cy="334.723" r="4" fill="#fff" class="Ellipse_2"/>
+            </g>
+            <rect width="81" height="12" x="541.599" y="367.723" fill="#1E2D67" class="Rectangle" rx="6"/>
+          </g>
+          <g class="Group 5">
+            <g class="Group 3.1">
+              <path fill="#0988FC" d="M443.961 324.223c0 30.5 36.833 67.666 57.5 82 0 0 3 4.5 0 7.5s-8.5 0-8.5 0c-45.5-39.5-54-65.5-58.5-86 2.8-4.8 6.166-4.167 9.5-3.5z" class="Vector 4_2"/>
+              <path fill="#000" fill-opacity=".11" d="M487.823 398.056c-32.5-24-47-57.5-47-76h3c-.166 12.667 8.7 45 45.5 73l-1.5 3z" class="Vector 6_3"/>
+              <path stroke="#000" d="M492.294 399.556c-.333 2-2.4 6.1-8 6.5" class="Vector 5_2"/>
+              <path stroke="#000" d="M481.794 389.556c-.333 2-2.4 6.1-8 6.5" class="Vector 5.1"/>
+              <path stroke="#000" d="M469.794 377.556c-.333 2-2.4 6.1-8 6.5" class="Vector 5.2"/>
+              <path stroke="#000" d="M458.794 362.556c-.333 2-2.4 6.1-8 6.5" class="Vector 5.3"/>
+              <path stroke="#000" d="M449.794 348.556c-.333 2-2 5.5-7.5 4.5" class="Vector 5.4"/>
+              <path stroke="#000" d="M444.794 335.38c-.333 2-2 5.5-7.5 4.5" class="Vector 5.5"/>
+              <path fill="#00488A" d="M439.484 294.484a17.499 17.499 0 106.56 4.616l-4.68 4.157a11.237 11.237 0 01-.018 14.952 11.243 11.243 0 01-14.854 1.706 11.242 11.242 0 01-3.409-14.557 11.24 11.24 0 0114.068-5.066l2.333-5.808z" class="Ellipse 2"/>
+            </g>
+            <g class="Group 2_2">
+              <g class="Group_4">
+                <path fill="#20D29D" d="M511.961 175.723l-25 45.5 66 9.5-41-55z" class="Vector 2_2"/>
+                <path stroke="#000" stroke-linecap="round" stroke-width="7" d="M387.461 391.723l123.5-213.5" class="Vector 2_3"/>
+              </g>
+              <path fill="#00488A" d="M481.599 483.723v-108h166.5l44 4.5-4 95.5-40 8h-166.5z" class="Vector"/>
+              <path fill="#000" fill-opacity=".08" d="M650.599 483.223v-107l41.5 4-4 95-37.5 8z" class="Vector 8_2"/>
+              <path fill="#000" fill-opacity=".11" d="M681.961 471.723l9-85.5-3 89.5-25.5 4.5 19.5-8.5z" class="Vector 9_2"/>
+              <path fill="#000" fill-opacity=".06" d="M666.461 479.223l-10-102.5h-6v106.5l16-4z" class="Vector 10_2"/>
+            </g>
+            <path fill="#000" fill-opacity=".06" d="M637.961 482.723l10.5-107.5h2v107.5h-12.5z" class="Vector 2_4"/>
+            <path fill="#000" fill-opacity=".09" d="M481.461 400.723v82.5h90l-71.66-5.867a16 16 0 01-14.666-14.995l-3.674-61.638z" class="Vector_2"/>
+            <g class="Group 3">
+              <path fill="#0988FC" d="M731.595 313.223c0 30.5-36.833 67.666-57.5 82 0 0-3 4.5 0 7.5s8.5 0 8.5 0c45.5-39.5 54-65.5 58.5-86-2.8-4.8-6.167-4.167-9.5-3.5z" class="Vector 4_3"/>
+              <path fill="#000" fill-opacity=".09" d="M734.624 314.556c-2.4 39.6-42 73.167-61.5 85-1.2 0-.5-3.333 0-5 48.8-34.4 59.333-69 58.5-82l3 2z" class="Vector 6_4"/>
+              <path stroke="#000" d="M683.262 388.556c.333 2 2.4 6.1 8 6.5" class="Vector 5_3"/>
+              <path stroke="#000" d="M693.762 378.556c.333 2 2.4 6.1 8 6.5" class="Vector 5.1_2"/>
+              <path stroke="#000" d="M705.762 366.556c.333 2 2.4 6.1 8 6.5" class="Vector 5.2_2"/>
+              <path stroke="#000" d="M716.762 351.556c.333 2 2.4 6.1 8 6.5" class="Vector 5.3_2"/>
+              <path stroke="#000" d="M725.762 337.556c.333 2 2 5.5 7.5 4.5" class="Vector 5.4_2"/>
+              <path stroke="#000" d="M730.762 324.38c.333 2 2 5.5 7.5 4.5" class="Vector 5.5_2"/>
+              <path fill="#00488A" d="M759.02 305.761a17.5 17.5 0 11-32.85-12.077l5.875 2.16a11.24 11.24 0 1021.1 7.757l5.875 2.16z" class="Ellipse 2_2"/>
+            </g>
+          </g>
+          <g class="Group 6">
+            <rect width="104" height="63" x="510.461" y="395.223" fill="#FF7971" class="Rectangle_2" rx="8"/>
+          </g>
+          <path fill="#000" fill-opacity=".06" d="M608.102 458.223h-23.141s8.383-14.256 10.5-25.5c2.662-14.139-3-37.5-3-37.5h13.783c5.055 0 9.118 4.161 8.998 9.214l-1.142 47.928a6 6 0 01-5.998 5.858z" class="Vector 2_5"/>
+          <path fill="#000" fill-opacity=".05" d="M510.897 451.152l-.436-47.929c3.2 42.4 19.5 54.5 26.5 54.5l-18.93.364a7 7 0 01-7.134-6.935z" class="Vector_3"/>
+          <g class="Group 15">
+            <circle cx="547.832" cy="450.594" r="2.371" fill="#fff" class="Ellipse_3"/>
+            <circle cx="555.961" cy="450.594" r="2.371" fill="#EDD06C" class="Ellipse_4"/>
+            <circle cx="564.09" cy="450.594" r="2.371" fill="#F995C5" class="Ellipse_5"/>
+          </g>
+          <g class="Group 15_2">
+            <circle cx="452.461" cy="574.223" r="4" fill="#000" fill-opacity=".15" class="Ellipse_6"/>
+            <circle cx="469.461" cy="559.223" r="4" fill="#000" fill-opacity=".15" class="Ellipse_7"/>
+            <circle cx="486.461" cy="544.223" r="4" fill="#000" fill-opacity=".15" class="Ellipse_8"/>
+            <circle cx="503.461" cy="529.223" r="4" fill="#000" fill-opacity=".15" class="Ellipse_9"/>
+            <circle cx="520.461" cy="514.223" r="4" fill="#000" fill-opacity=".15" class="Ellipse_10"/>
+          </g>
+          <g class="Group 15.1">
+            <circle r="4" fill="#000" fill-opacity=".15" class="Ellipse_11" transform="matrix(-1 0 0 1 662.461 574.223)"/>
+            <circle r="4" fill="#000" fill-opacity=".15" class="Ellipse_12" transform="matrix(-1 0 0 1 645.461 559.223)"/>
+            <circle r="4" fill="#000" fill-opacity=".15" class="Ellipse_13" transform="matrix(-1 0 0 1 628.461 544.223)"/>
+            <circle r="4" fill="#000" fill-opacity=".15" class="Ellipse_14" transform="matrix(-1 0 0 1 611.461 529.223)"/>
+            <circle r="4" fill="#000" fill-opacity=".15" class="Ellipse_15" transform="matrix(-1 0 0 1 594.461 514.223)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
