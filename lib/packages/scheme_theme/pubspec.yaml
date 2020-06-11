@@ -22,7 +22,7 @@ dependencies:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
       path: "lib/packages/scheme_utilities/"
-   scheme_icons:
+  scheme_icons:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
       path: "lib/packages/scheme_icons/"
