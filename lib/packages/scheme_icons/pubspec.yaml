@@ -19,8 +19,18 @@ dependencies:
   sa_anicoto:
   get:
   injectable:
+  scheme_utilities:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_utilities/"
+  scheme_theme:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_theme/"
   scheme_components:
-    path: "../scheme_components/"
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_components"
 
 dev_dependencies:
   # service location and dependency injection

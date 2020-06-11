@@ -42,7 +42,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.0"
+    version: "1.0.0"
   charcode:
     dependency: transitive
     description:
@@ -171,7 +171,7 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.11.1"
+    version: "2.12.5"
   google_fonts:
     dependency: "direct main"
     description:
@@ -241,7 +241,7 @@ packages:
       name: lottie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.0"
+    version: "0.4.0+1"
   lumberdash:
     dependency: transitive
     description:
@@ -430,7 +430,7 @@ packages:
       name: share_extend
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.6"
+    version: "1.1.7"
   shared_preferences:
     dependency: transitive
     description:

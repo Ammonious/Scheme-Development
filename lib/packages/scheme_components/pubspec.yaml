@@ -26,11 +26,17 @@ dependencies:
   sa_anicoto:
   responsive_builder:
   scheme_utilities:
-    path: "../scheme_utilities"
-  scheme_icons:
-    path: "../scheme_icons/"
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_utilities/"
   scheme_theme:
-    path: "../scheme_theme/"
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_theme/"
+  scheme_icons:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_icons/"
 
 dev_dependencies:
 

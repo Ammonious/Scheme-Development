@@ -19,10 +19,17 @@ dependencies:
   streaming_shared_preferences: ^1.0.1
   google_fonts:
   scheme_utilities:
-    path: "../scheme_utilities/"
-
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_utilities/"
+   scheme_icons:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_icons/"
   scheme_components:
-    path: "../scheme_components/"
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_components"
 
 dev_dependencies:
   hive_generator:
