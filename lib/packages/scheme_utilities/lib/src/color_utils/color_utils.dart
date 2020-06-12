@@ -241,6 +241,9 @@ _textColor(Color color) {
 }
 
 class TextColor extends Color {
+  static double luminLevelOne = .29;
+  static double luminLevelTwo = .33;
+
   static int _getBrandColorFromString(Color backgroundColor) {
     String shadedHex = _textColor(backgroundColor)
         .hexString
