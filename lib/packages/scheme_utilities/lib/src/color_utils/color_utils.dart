@@ -482,6 +482,7 @@ List<Color>	initColors(){
   List<Color> items = List();
   baseMaterialColors
       .forEach((element) => items.addAll(getMaterialColorShades(element)));
+  accentMaterialColors.forEach((element) => items.addAll(getMaterialColorShades(element)));
   return items;
 }
 
@@ -523,6 +524,11 @@ final List<ColorSwatch> baseMaterialColors = const <ColorSwatch>[
   Colors.brown,
   Colors.grey,
   Colors.blueGrey,
+
+];
+
+final List<ColorSwatch> accentMaterialColors = const <ColorSwatch>[
+
   Colors.redAccent,
   Colors.pinkAccent,
   Colors.purpleAccent,
@@ -539,5 +545,6 @@ final List<ColorSwatch> baseMaterialColors = const <ColorSwatch>[
   Colors.amberAccent,
   Colors.orangeAccent,
   Colors.deepOrangeAccent,
-
 ];
+
+
