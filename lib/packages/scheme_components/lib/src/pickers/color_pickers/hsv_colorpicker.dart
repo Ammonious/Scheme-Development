@@ -6,6 +6,7 @@ library hsv_colorpicker;
 
 import 'package:flutter/material.dart';
 
+import '../../../scheme_components.dart';
 import 'hsv_picker.dart';
 
 

@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../scheme_pickers.dart';
 import 'hsv_picker.dart';
 
 
