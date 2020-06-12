@@ -223,7 +223,7 @@ class HexColor extends Color {
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
 
-_textColor(Color color) {
+Color _textColor(Color color) {
   double amt = .29;
   double amt2 = .33;
   double lumin = color.computeLuminance();
