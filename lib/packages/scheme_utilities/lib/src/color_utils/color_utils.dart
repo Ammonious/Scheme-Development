@@ -226,11 +226,11 @@ class HexColor extends Color {
 
  double _luminLevelOne = .29;
  double _luminLevelTwo = .33;
-Color textColorLevels(Color color,{double luminLevelOne = .22,double luminLevelTwo = .33}) {
-  _luminLevelOne = luminLevelOne;
+Color textColorLevels(Color color,{double luminLevelTwo = .33}) {
+  _luminLevelOne = .29;
   _luminLevelTwo = luminLevelTwo;
   double lumin = color.computeLuminance();
-  if (lumin > luminLevelOne) {
+  if (lumin > _luminLevelOne) {
     if (color == Colors.white) {
       return color.darkenBy(96);
     }
