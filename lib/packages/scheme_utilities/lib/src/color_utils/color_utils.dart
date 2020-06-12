@@ -232,9 +232,9 @@ Color _textColor(Color color) {
       return color.darkenBy(96);
     }
     if (lumin > amt2)
-      return color.darkenBy(70);
+      return color.darkenBy(78);
     else
-      return color.darkenBy(35);
+      return color.darkenBy(88);
   } else {
     return color.lightenBy(95);
   }
