@@ -1,10 +1,9 @@
 /// Block Color Picker
 
-library block_colorpicker;
 
 import 'package:flutter/material.dart';
-
-import 'package:flutter_colorpicker/src/utils.dart';
+import 'package:scheme_components/src/pickers/color_pickers/utils.dart';
+ import 'package:scheme_theme/scheme_theme.dart';
 
 const List<Color> _defaultColors = [
   Colors.red,
@@ -91,7 +90,7 @@ class BlockPicker extends StatefulWidget {
             opacity: isCurrentColor ? 1.0 : 0.0,
             child: Icon(
               Icons.done,
-              color: useWhiteForeground(color) ? Colors.white : Colors.black,
+              color: color.textColor,
             ),
           ),
         ),

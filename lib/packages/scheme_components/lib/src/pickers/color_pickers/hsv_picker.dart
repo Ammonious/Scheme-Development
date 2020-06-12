@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:scheme_theme/scheme_theme.dart';
+import 'utils.dart';
 
-import 'package:flutter_colorpicker/src/utils.dart';
 
 enum PaletteType { hsv, hsl, rgb }
 enum TrackType {
@@ -50,9 +51,7 @@ class HSVColorPainter extends CustomPainter {
           size.width * hsvColor.saturation, size.height * (1 - hsvColor.value)),
       size.height * 0.04,
       Paint()
-        ..color = pointerColor ?? useWhiteForeground(hsvColor.toColor())
-            ? Colors.white
-            : Colors.black
+        ..color = pointerColor ?? hsvColor.toColor().textColor
         ..strokeWidth = 1.5
         ..style = PaintingStyle.stroke,
     );
@@ -96,14 +95,11 @@ class HSLColorPainter extends CustomPainter {
           size.height * (1 - hslColor.lightness)),
       size.height * 0.04,
       Paint()
-        ..color = pointerColor ?? useWhiteForeground(hslColor.toColor())
-            ? Colors.white
-            : Colors.black
+        ..color = pointerColor ?? hslColor.toColor().textColor
         ..strokeWidth = 1.5
         ..style = PaintingStyle.stroke,
     );
   }
-
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

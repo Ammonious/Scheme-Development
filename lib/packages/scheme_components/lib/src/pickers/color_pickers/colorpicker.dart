@@ -2,11 +2,10 @@
 ///
 /// You can create your own layout by importing `hsv_picker.dart`.
 
-library hsv_picker;
-
 import 'package:flutter/material.dart';
 
-import 'package:flutter_colorpicker/src/hsv_picker.dart';
+import 'hsv_picker.dart';
+
 
 class ColorPicker extends StatefulWidget {
   const ColorPicker({

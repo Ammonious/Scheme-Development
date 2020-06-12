@@ -2,18 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/painting.dart';
 
-bool useWhiteForeground(Color color, {double bias: 1.0}) {
-  // Old:
-  // return 1.05 / (color.computeLuminance() + 0.05) > 4.5;
-
-  // New:
-  bias ??= 1.0;
-  int v = sqrt(pow(color.red, 2) * 0.299 +
-          pow(color.green, 2) * 0.587 +
-          pow(color.blue, 2) * 0.114)
-      .round();
-  return v < 130 * bias ? true : false;
-}
 
 /// reference: https://en.wikipedia.org/wiki/HSL_and_HSV#HSV_to_HSL
 HSLColor hsvToHsl(HSVColor color) {

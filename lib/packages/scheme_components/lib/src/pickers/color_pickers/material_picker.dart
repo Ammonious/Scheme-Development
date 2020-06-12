@@ -3,8 +3,9 @@
 library material_colorpicker;
 
 import 'package:flutter/material.dart';
+import 'package:scheme_components/src/pickers/color_pickers/utils.dart';
+import 'package:scheme_theme/scheme_theme.dart';
 
-import 'package:flutter_colorpicker/src/utils.dart';
 
 class MaterialPicker extends StatefulWidget {
   MaterialPicker({
@@ -224,9 +225,7 @@ class _MaterialPickerState extends State<MaterialPicker> {
                                       .toUpperCase() +
                                   '  ',
                               style: TextStyle(
-                                color: useWhiteForeground(_color)
-                                    ? Colors.white
-                                    : Colors.black,
+                                color: _color.textColor,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -243,7 +242,6 @@ class _MaterialPickerState extends State<MaterialPicker> {
         ],
       );
     }
-
     switch (_orientation) {
       case Orientation.portrait:
         return SizedBox(
