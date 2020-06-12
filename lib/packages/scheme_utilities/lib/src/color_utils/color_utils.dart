@@ -477,3 +477,67 @@ Color tweak(Color base, double bf, double df, double lf, double wf,
           Color.lerp(darker, Color.lerp(lighter, base, lf), df), wf),
       bf);
 }
+
+List<Color>	initColors(){
+  List<Color> items = List();
+  baseMaterialColors
+      .forEach((element) => items.addAll(getMaterialColorShades(element)));
+  return items;
+}
+
+List<Color> get materialColors => initColors();
+
+
+List<Color> getMaterialColorShades(ColorSwatch color) {
+  return <Color>[
+    if (color[50] != null) color[50],
+    if (color[100] != null) color[100],
+    if (color[200] != null) color[200],
+    if (color[300] != null) color[300],
+    if (color[400] != null) color[400],
+    if (color[500] != null) color[500],
+    if (color[600] != null) color[600],
+    if (color[700] != null) color[700],
+    if (color[800] != null) color[800],
+    if (color[900] != null) color[900],
+  ];
+}
+
+final List<ColorSwatch> baseMaterialColors = const <ColorSwatch>[
+  Colors.red,
+  Colors.pink,
+  Colors.purple,
+  Colors.deepPurple,
+  Colors.indigo,
+  Colors.blue,
+  Colors.lightBlue,
+  Colors.cyan,
+  Colors.teal,
+  Colors.green,
+  Colors.lightGreen,
+  Colors.lime,
+  Colors.yellow,
+  Colors.amber,
+  Colors.orange,
+  Colors.deepOrange,
+  Colors.brown,
+  Colors.grey,
+  Colors.blueGrey,
+  Colors.redAccent,
+  Colors.pinkAccent,
+  Colors.purpleAccent,
+  Colors.deepPurpleAccent,
+  Colors.indigoAccent,
+  Colors.lightBlueAccent,
+  Colors.blueAccent,
+  Colors.cyanAccent,
+  Colors.tealAccent,
+  Colors.greenAccent,
+  Colors.lightGreenAccent,
+  Colors.limeAccent,
+  Colors.yellowAccent,
+  Colors.amberAccent,
+  Colors.orangeAccent,
+  Colors.deepOrangeAccent,
+
+];
