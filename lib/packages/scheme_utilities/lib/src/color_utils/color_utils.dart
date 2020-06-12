@@ -232,7 +232,7 @@ Color _textColor(Color color) {
       return color.darkenBy(96);
     }
     if (lumin > amt2)
-      return color.darkenBy(75);
+      return color.darkenBy(70);
     else
       return color.darkenBy(85);
   } else {
@@ -249,7 +249,7 @@ class TextColor extends Color {
         .hexString
         .toUpperCase()
         .replaceAll("#",
-            ""); // Color.fromARGB(255, d, d, d).hexString.toUpperCase().replaceAll("#", "");
+            "");
     if (shadedHex.length == 6) {
       shadedHex = "FF" + shadedHex;
     }
