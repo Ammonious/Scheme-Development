@@ -223,15 +223,18 @@ class HexColor extends Color {
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
 
-Color _textColor(Color color) {
-  double amt = .29;
-  double amt2 = .33;
+
+ double _luminLevelOne = .29;
+ double _luminLevelTwo = .33;
+Color textColorLevels(Color color,{double luminLevelOne = .22,double luminLevelTwo = .33}) {
+  _luminLevelOne = luminLevelOne;
+  _luminLevelTwo = luminLevelTwo;
   double lumin = color.computeLuminance();
-  if (lumin > amt) {
+  if (lumin > luminLevelOne) {
     if (color == Colors.white) {
       return color.darkenBy(96);
     }
-    if (lumin > amt2)
+    if (lumin > luminLevelTwo)
       return color.darkenBy(78);
     else
       return color.darkenBy(88);
@@ -241,11 +244,11 @@ Color _textColor(Color color) {
 }
 
 class TextColor extends Color {
-  static double luminLevelOne = .29;
-  static double luminLevelTwo = .33;
+  static double luminLevelOne = _luminLevelOne;
+  static double luminLevelTwo = _luminLevelTwo;
 
   static int _getBrandColorFromString(Color backgroundColor) {
-    String shadedHex = _textColor(backgroundColor)
+    String shadedHex = textColorLevels(backgroundColor)
         .hexString
         .toUpperCase()
         .replaceAll("#",
