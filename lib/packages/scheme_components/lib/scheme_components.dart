@@ -29,6 +29,9 @@ export 'src/compat/scheme_compat.dart';
 export 'src/page_views/scheme_page_views.dart';
 export 'src/pickers/scheme_pickers.dart';
 export 'src/dialogs/scheme_dialogs.dart';
+export 'src/sheets/scheme_bottom_sheets.dart';
+
+
 class SchemeComponentUtils extends GetController{
 static SchemeComponentUtils get to => Get.put(SchemeComponentUtils());
 
