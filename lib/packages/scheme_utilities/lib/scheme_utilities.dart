@@ -19,6 +19,7 @@ export 'package:flutter_hooks/flutter_hooks.dart';
 export 'src/animation_utils.dart';
 export 'package:lumberdash/lumberdash.dart';
 export 'package:colorize_lumberdash/colorize_lumberdash.dart';
+export 'src/text_style_utils.dart';
 class SchemeUtils extends GetController {
 
 	static SchemeFileUtils get file => Get.put(SchemeFileUtils());
