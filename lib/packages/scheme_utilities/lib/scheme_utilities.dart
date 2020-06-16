@@ -5,6 +5,7 @@ import 'package:scheme_utilities/src/animation_utils.dart';
 import 'package:scheme_utilities/src/device_utils.dart';
 import 'package:scheme_utilities/src/file_utils.dart';
 import 'package:scheme_utilities/src/text_style_utils.dart';
+import 'package:scheme_utilities/src/transition_utils.dart';
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
 export 'src/scheme_package_utils.dart';
@@ -20,6 +21,7 @@ export 'src/animation_utils.dart';
 export 'package:lumberdash/lumberdash.dart';
 export 'package:colorize_lumberdash/colorize_lumberdash.dart';
 export 'src/text_style_utils.dart';
+export 'src/transition_utils.dart';
 class SchemeUtils extends GetController {
 
 	static SchemeFileUtils get file => Get.put(SchemeFileUtils());
@@ -27,7 +29,7 @@ class SchemeUtils extends GetController {
 	static _SchemePrefs get prefs => Get.put(_SchemePrefs());
 	static SchemeAnimationUtils get animation => Get.put(SchemeAnimationUtils());
 	static SchemeFontUtils get font => Get.put(SchemeFontUtils());
-
+	static TransitionUtils get transition => Get.put(TransitionUtils());
 }
 
 class _SchemePrefs extends GetController {
