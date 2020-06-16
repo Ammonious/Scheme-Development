@@ -1,5 +1,6 @@
 library scheme_theme;
 
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:scheme_theme/src/get_scheme_theme.dart';
 
@@ -14,3 +15,33 @@ export 'src/picaso/picaso_theme.dart';
 export 'src/picaso/picaso_text_theme.dart';
 export 'src/models/theme_controller.dart';
 
+extension FontWeightExt on FontWeight {
+
+	/// Thin, the least thick
+	static const FontWeight thin = FontWeight.w100;
+
+	/// Extra-light
+	static const FontWeight extraLight = FontWeight.w200;
+
+	/// Light
+	static const FontWeight light = FontWeight.w300;
+
+	/// Normal / regular / plain
+	static const FontWeight normal = FontWeight.w400;
+
+	/// Medium
+	static const FontWeight medium = FontWeight.w500;
+
+	/// Semi-bold
+	static const FontWeight semiBold = FontWeight.w600;
+
+
+	/// Extra-bold
+	static const FontWeight extraBold = FontWeight.w800;
+
+	/// Black, the most thick
+	static const FontWeight black = FontWeight.w900;
+
+
+
+}
