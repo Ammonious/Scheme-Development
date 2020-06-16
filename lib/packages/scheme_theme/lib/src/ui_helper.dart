@@ -31,7 +31,7 @@ enum GradientType { radial, linear, sweep }
 
 
 const List<BoxShadow> flatShadow = [
-	BoxShadow(blurRadius: 0, color: Colors.transparent, offset: Offset(0, 0))
+  BoxShadow(blurRadius: 0, color: Colors.transparent, offset: Offset(0, 0))
 ];
 const List<BoxShadow> normalShadow = [
   BoxShadow(blurRadius: 4.5, color: Colors.black26, offset: Offset(0, 2))
@@ -43,16 +43,16 @@ const List<BoxShadow> liftedShadow = [
   BoxShadow(blurRadius: 7.5, color: Colors.black38, offset: Offset(0, 4))
 ];
 const List<BoxShadow> largeShadow = [
-	BoxShadow(blurRadius: 25.50, color: Colors.black45, offset: Offset(0, 4))
+  BoxShadow(blurRadius: 25.50, color: Colors.black45, offset: Offset(0, 4))
 ];
 const List<BoxShadow> wideShadow = [
-	BoxShadow(blurRadius: 45.50, color: Colors.black26, offset: Offset(0, 4))
+  BoxShadow(blurRadius: 45.50, color: Colors.black26, offset: Offset(0, 4))
 ];
 
 const List<BoxShadow> bottomBarShadow = [
   BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, -4))
 ];
- List<BoxShadow> get neuShadow => [
+List<BoxShadow> get neuShadow => [
   BoxShadow(
       color: Colors.white.withOpacity(0.5), spreadRadius: -5, offset: Offset(-5, -5), blurRadius: 30),
   BoxShadow(
@@ -83,8 +83,8 @@ Widget spacedDivider = Column(
 
 Widget verticalSpace(double height) => SizedBox(height: height);
 
-double get screenWidth => Get.mediaQuery.size.width;
-double get screenHeight => Get.mediaQuery.size.height;
+double get screenWidth => Get.width;
+double get screenHeight => Get.height;
 
 double screenHeightFraction({int dividedBy = 1, double offsetBy = 0}) =>
     (screenHeight - offsetBy) / dividedBy;
@@ -96,18 +96,18 @@ double get halfScreenWidth => screenWidthFraction(dividedBy: 2);
 
 double get thirdScreenWidth => screenWidthFraction(dividedBy: 3);
 
-smallPhone(double screenHeight) => ScreenUtil.screenHeightDp < 600;
+smallPhone(double screenHeight) => Get.height < 600;
 
-screenUtilSmallerThan(double height) => ScreenUtil.screenHeightDp > height;
+screenUtilSmallerThan(double height) => Get.height > height;
 
-screenBiggerThan(double screenWidth) => Get.mediaQuery.size.width > screenWidth;
+screenBiggerThan(double screenWidth) => Get.width > screenWidth;
 
 
 get mobileCardRadius => BorderRadius.only(
     topLeft: Radius.circular(24), topRight: Radius.circular(24));
 
 get desktopCardRadius => BorderRadius.only(topLeft: Radius.circular(24));
- 
+
 
 get topCardRadius => BorderRadius.only(
   topLeft: Radius.circular(32),
