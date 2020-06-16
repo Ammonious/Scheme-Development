@@ -1,0 +1,28 @@
+name: device_storage
+description: Get the devices available storage.
+version: 0.0.1
+author: Ammon Rees <Scheme Creative>
+homepage: https://schemecreative.com
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.schemecreative.device_storage
+        pluginClass: DeviceStoragePlugin
+      ios:
+        pluginClass: DeviceStoragePlugin
+      macos:
+        pluginClass: DeviceStoragePlugin
+

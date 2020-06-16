@@ -1,0 +1,31 @@
+name: device_storage_example
+description: Demonstrates how to use the device_storage plugin.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts:
+  scheme_icons:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_icons/"
+
+  device_storage:
+    path: ../
+
+
+dev_dependencies:
+
+
+flutter:
+
+  uses-material-design: true
+
+
