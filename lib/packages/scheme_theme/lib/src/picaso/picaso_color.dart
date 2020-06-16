@@ -19,10 +19,10 @@ class PicasoColor extends GetController {
   Color secondaryVariant;
 
   /// iconColor is the dynamically set [textColor] atop of [canvas], [bar], [card] backgrounds. Not to be used atop primary color backgrounds. Use [accentIconColor] for that.
-  Color get iconColor => Picaso.to.theme.primaryIconTheme.color;
+  Color get iconColor => canvas.textColor;
 
   /// [accentIconColor] is the dynamically set [textColor] atop of primary color backgrounds. Accesses the [accentIconTheme] of the current set theme.
-  Color get accentIconColor => Picaso.to.theme.accentIconTheme.color;
+  Color get accentIconColor => primary.shade700.textColor;
 
   /********************************************************************************************************************************
 	 ********************************************************************************************************************************
