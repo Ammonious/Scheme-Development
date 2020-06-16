@@ -139,7 +139,10 @@ class Picaso  extends GetController{
     return _theme;
   }
 
+
   Future<void> setThemeMode(ThemeMode themeMode) async {
+	  Get.changeThemeMode(themeMode);
+	  update();
 	  String themeText = themeMode.toString().split('.')[1];
 	  StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 	  await prefs.setString('theme', themeText);
