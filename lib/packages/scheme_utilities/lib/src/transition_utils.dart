@@ -16,7 +16,6 @@ enum TransitionType {
 
 class TransitionUtils extends GetController{
 
-
 	initTransitionType(TransitionType type) {
 		switch (type) {
 			case TransitionType.slideRight:
@@ -43,7 +42,7 @@ class TransitionUtils extends GetController{
 		}
 	}
 
-	const RouteTransitionsBuilder slideRight = _slideRight;
+	  RouteTransitionsBuilder get  slideRight => _slideRight;
 
 	Widget _slideRight(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -56,9 +55,9 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideLeft = _slideLeft;
+	 RouteTransitionsBuilder get slideLeft => _slideLeft;
 
-	Widget _slideLeft(BuildContext context, Animation<double> animation,
+ 	Widget  _slideLeft(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
 		return SlideTransition(
 			position: Tween<Offset>(
@@ -69,7 +68,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideRightWithFade = _slideRightWithFade;
+	 RouteTransitionsBuilder get slideRightWithFade => _slideRightWithFade;
 
 	Widget _slideRightWithFade(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -82,7 +81,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideLeftWithFade = _slideLeftWithFade;
+	 RouteTransitionsBuilder get slideLeftWithFade => _slideLeftWithFade;
 
 	Widget _slideLeftWithFade(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -95,7 +94,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideTop = _slideTop;
+	 RouteTransitionsBuilder get slideTop => _slideTop;
 
 	Widget _slideTop(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -108,7 +107,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideBottom = _slideBottom;
+	 RouteTransitionsBuilder get slideBottom => _slideBottom;
 
 	Widget _slideBottom(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -122,7 +121,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideBottomWithFade = _slideBottomWithFade;
+	 RouteTransitionsBuilder get slideBottomWithFade => _slideBottomWithFade;
 
 	Widget _slideBottomWithFade(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -135,7 +134,7 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder slideTopWithFade = _slideTopWithFade;
+	 RouteTransitionsBuilder  get slideTopWithFade => _slideTopWithFade;
 
 	Widget _slideTopWithFade(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
@@ -148,14 +147,14 @@ class TransitionUtils extends GetController{
 		);
 	}
 
-	const RouteTransitionsBuilder fadeIn = _fadeIn;
+	  RouteTransitionsBuilder get fadeIn => _fadeIn;
 
 	Widget _fadeIn(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {
 		return FadeTransition(opacity: animation, child: child);
 	}
 
-	const RouteTransitionsBuilder zoomIn = _zoomIn;
+	    RouteTransitionsBuilder get zoomIn => _zoomIn;
 
 	Widget _zoomIn(BuildContext context, Animation<double> animation,
 			Animation<double> secondaryAnimation, Widget child) {

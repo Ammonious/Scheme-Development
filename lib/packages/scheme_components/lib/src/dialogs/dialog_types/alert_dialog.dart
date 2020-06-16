@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:scheme_components/locator/locator.dart';
 import 'package:scheme_components/scheme_components.dart';
 import 'package:scheme_components/src/dialogs/models/dialog_model.dart';
 import 'package:scheme_icons/scheme_icons.dart';
@@ -10,8 +9,8 @@ import '../dialog_service.dart';
 
 class CustomAlertDialog extends StatelessWidget {
 	final DialogRequest request;
-	final DialogService _dialogService = locator();
-CustomAlertDialog({Key key, this.request}) : super(key: key);
+	final DialogService dialogService;
+CustomAlertDialog({Key key, this.request,@required this.dialogService}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ CustomAlertDialog({Key key, this.request}) : super(key: key);
 				    label: request.cancelLabel,
 				    color: Colors.grey,
 				    textStyle: Picaso.jot.button,
-				    onTap: () => _dialogService.dialogComplete(request,DialogResponse(confirmed: false)),
+				    onTap: () => dialogService.dialogComplete(request,DialogResponse(confirmed: false)),
 			    ),
 		    SchemeBtn.style(
 			    height: 36,
@@ -43,7 +42,7 @@ CustomAlertDialog({Key key, this.request}) : super(key: key);
 			    color: Picaso.paint.primary,
 			    textStyle: Picaso.jot.button,
 			    label: request.confirmLabel,
-			    onTap: () => _dialogService.dialogComplete(request,DialogResponse(confirmed: true)),
+			    onTap: () => dialogService.dialogComplete(request,DialogResponse(confirmed: true)),
 		    ),
 	    ],
     ),);

@@ -35,7 +35,7 @@ class DialogService {
       case DialogType.currency_input:
       case DialogType.confirmation:
       case DialogType.alert:
-        return Get.dialog(dialogWrapper(CustomAlertDialog(request: request), request.isKiosk));
+        return Get.dialog(dialogWrapper(CustomAlertDialog(request: request,dialogService: this,), request.isKiosk));
       case DialogType.custom:
         return Get.dialog(dialogWrapper(
             CardDialogBuilder(
