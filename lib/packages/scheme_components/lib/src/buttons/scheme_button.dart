@@ -8,122 +8,128 @@ import 'package:scheme_theme/scheme_theme.dart';
 import 'utils/button_constants.dart';
 
 class SchemeBtn extends StatelessWidget {
-  final SchemeBtnStyle schemeBtnStyle;
-  final Function onTap; 
-  final String label;
-  final double height;
-  final double width;
-  final TextStyle textStyle;
-  final List<BoxShadow> boxShadow;
-  final bool superEllipseShape;
-  final IconData iconData;
-  final Widget icon;
-  final Color color;
-  final LinearGradient gradient;
-  final double iconSize;
-  final BorderRadius borderRadius;
-  final Widget child;
-  final bool enabled;
-  final IconAlignment iconAlignment; 
-  SchemeBtn._internal(
-      {Key key,
-      this.onTap,
-      this.icon, 
-      this.label,
-      this.height,
-      this.width,
-      this.textStyle,
-      this.boxShadow,
-      this.superEllipseShape,
-      this.iconData,
-      this.color,
-      this.gradient,
-      this.iconSize,
-      this.borderRadius,
-      this.child,
-      this.enabled,
-      this.schemeBtnStyle, this.iconAlignment, })
-      : super(key: key);
+  SchemeBtnStyle schemeBtnStyle;
+  Function onTap;
+  String label;
+  double height;
+  double width;
+  TextStyle textStyle;
+  List<BoxShadow> boxShadow;
+  bool superEllipseShape;
+  IconData iconData;
+  Widget icon;
+  Color color;
+  LinearGradient gradient;
+  double iconSize;
+  BorderRadius borderRadius;
+  Widget child;
+  bool enabled;
+  IconAlignment iconAlignment;
 
-  factory SchemeBtn.gradient({ 
-    Function onPressed,
-    String label,
-    double height = 60,
-    double width = 120,
-    TextStyle textStyle,
-    IconAlignment iconAlignment = IconAlignment.left,
-    List<BoxShadow> boxShadow = normalShadow,
-    bool superEllipseShape = false,
-    IconData iconData,
-    Color color = Colors.blueAccent,
-    LinearGradient gradient,
-    double iconSize = 24,
-    BorderRadius borderRadius = BorderRadius.zero,
-    Widget child,
-    Widget icon,
-    bool enabled = true,
-  }) =>
-      SchemeBtn._internal(
-        onTap: () => onPressed(), 
-        label: label,
-        height: height,
-        width: width,
-        textStyle: textStyle,
-        boxShadow: boxShadow,
-        superEllipseShape: superEllipseShape,
-        iconData: iconData,
-        iconSize: iconSize,
-        color: color,
-        gradient: gradient,
-        borderRadius: borderRadius,
-        enabled: enabled,
-        icon: icon,
-        iconAlignment: iconAlignment,
-        schemeBtnStyle: SchemeBtnStyle.gradient,
-        child: child,
-      );
+  SchemeBtn.style({
+    this.onTap,
+    this.icon,
+    this.label,
+    this.height = 60,
+    this.width = 120,
+    this.textStyle,
+    this.boxShadow = normalShadow,
+    this.superEllipseShape,
+    this.iconData,
+    this.color = Colors.blueAccent,
+    this.gradient,
+    this.iconSize,
+    this.borderRadius = BorderRadius.zero,
+    this.child,
+    this.enabled = true,
+    this.schemeBtnStyle = SchemeBtnStyle.flat,
+    this.iconAlignment = IconAlignment.left,
+  });
 
-  factory SchemeBtn.flat({
-    Function tap,
-    String label,
-    double height,
-    double width,
-    TextStyle textStyle,
-    IconAlignment iconAlignment,
-    IconData iconData,
-    Color color,
-    double iconSize,
-    Widget child,
-    Widget icon,
-    bool enabled,
-  }) =>
-      SchemeBtn._internal(
-        onTap: () => tap(),
-        label: label,
-        height: height,
-        width: width,
-        textStyle: textStyle,
-        iconData: iconData,
-        iconSize: iconSize,
-        color: color,
-        enabled: enabled,
-        icon: icon,
-        iconAlignment: iconAlignment,
-        schemeBtnStyle: SchemeBtnStyle.flat,
-        child: child,
-      );
+  SchemeBtn.gradient({
+    this.onTap,
+    this.label,
+    this.height = 60,
+    this.width = 120,
+    this.textStyle,
+    this.iconAlignment = IconAlignment.left,
+    this.boxShadow = normalShadow,
+    this.superEllipseShape = false,
+    this.iconData,
+    this.color = Colors.blueAccent,
+    this.gradient,
+    this.iconSize = 24,
+    this.borderRadius = BorderRadius.zero,
+    this.child,
+    this.icon,
+    this.enabled = true,
+  }) : schemeBtnStyle = SchemeBtnStyle.gradient;
+
+
+
+  SchemeBtn.flat({
+    this.onTap,
+    this.label,
+    this.height = 60,
+    this.width = 120,
+    this.textStyle,
+    this.iconAlignment = IconAlignment.left,
+    this.iconData,
+    this.color = Colors.blueAccent,
+    this.iconSize,
+    this.child,
+    this.icon,
+    this.enabled = true,
+  }) : schemeBtnStyle = SchemeBtnStyle.flat;
+
+
+
 
   @override
   Widget build(BuildContext context) {
     return schemeButton();
-     
   }
-  schemeButton(){
+
+  schemeButton() {
     switch (schemeBtnStyle) {
       case SchemeBtnStyle.gradient:
-        return gradientBtn;
+        return SchemeGradientBtn(
+          onTap: () => onTap(),
+          label: label,
+          height: height,
+          width: width,
+          textStyle: textStyle,
+          boxShadow: boxShadow,
+          superEllipseShape: superEllipseShape,
+          iconData: iconData,
+          iconSize: iconSize,
+          icon: icon,
+          gradient: gradient ?? schemeGradient(color: color),
+          borderRadius: borderRadius,
+          enabled: enabled,
+          iconAlignment: iconAlignment,
+          child: child,
+        );
       case SchemeBtnStyle.flat:
-        return flatBtn;
+        return ButtonTheme(
+          height: height,
+          minWidth: width,
+          child: FlatButton(
+              textColor: color ?? (textStyle != null ? textStyle.color : Colors.blueAccent.shade700),
+              child: child == null
+                  ? IconLabelView(
+                icon: icon,
+                iconSize: iconSize,
+                iconData: iconData,
+                label: label,
+                gradient: gradient,
+                iconAlignment: iconAlignment,
+                color: color,
+                textStyle: textStyle,
+              )
+                  : child,
+              onPressed: () => onTap()),
+        );
       case SchemeBtnStyle.raised:
         return Material(
           color: Colors.transparent,
@@ -131,42 +137,6 @@ class SchemeBtn extends StatelessWidget {
     }
   }
 
-  get gradientBtn => SchemeGradientBtn(
-        onTap: () => onTap(),
-        label: label,
-        height: height,
-        width: width,
-        textStyle: textStyle,
-        boxShadow: boxShadow,
-        superEllipseShape: superEllipseShape,
-        iconData: iconData,
-        iconSize: iconSize,
-        icon: icon,
-        gradient: gradient ?? schemeGradient(color: color),
-        borderRadius: borderRadius,
-        enabled: enabled,
-        iconAlignment: iconAlignment,
-        child: child,
-      );
-
-  get flatBtn => ButtonTheme(
-        height: height,minWidth: width,
-        child: FlatButton(
-            textColor: color ?? (textStyle != null ? textStyle.color : Colors.blueAccent.shade700),
-            child: child == null
-                ? IconLabelView(
-                    icon: icon,
-                    iconSize: iconSize,
-                    iconData: iconData,
-                    label: label,
-                    gradient: gradient,
-                    iconAlignment: iconAlignment,
-                    color: color,
-                    textStyle: textStyle,
-                  )
-                : child,
-            onPressed: () => onTap()),
-      );
 
 }
 

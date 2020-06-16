@@ -263,6 +263,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.8"
+  mime_type:
+    dependency: transitive
+    description:
+      name: mime_type
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.1"
   package_info:
     dependency: transitive
     description:
@@ -415,7 +422,7 @@ packages:
     description:
       path: "lib/packages/scheme_components"
       ref: HEAD
-      resolved-ref: "19879ad338fbd0ff6f506b5a0d2c925b647e0263"
+      resolved-ref: ffdf35848f3e6b38c43e73e0dda3be515744a532
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -424,7 +431,7 @@ packages:
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: "19879ad338fbd0ff6f506b5a0d2c925b647e0263"
+      resolved-ref: ffdf35848f3e6b38c43e73e0dda3be515744a532
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
@@ -433,7 +440,7 @@ packages:
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: "19879ad338fbd0ff6f506b5a0d2c925b647e0263"
+      resolved-ref: ffdf35848f3e6b38c43e73e0dda3be515744a532
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -442,7 +449,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "19879ad338fbd0ff6f506b5a0d2c925b647e0263"
+      resolved-ref: ffdf35848f3e6b38c43e73e0dda3be515744a532
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
