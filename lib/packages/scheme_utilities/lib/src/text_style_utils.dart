@@ -20,6 +20,10 @@ class SchemeFontUtils extends GetController{
     }
   }
 
+
+  Future<ByteData> _fetchLocalFont(String fileName) async {
+	  return rootBundle.load(fileName);
+  }
   loadDynamicFont({SchemeFont font}) async {
     FontLoader fontLoader = FontLoader(font.family);
     fontLoader.addFont(_fetchFont(font.path));
