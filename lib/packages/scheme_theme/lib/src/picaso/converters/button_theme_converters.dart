@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-
-import '../utils/constants.dart';
 import 'converter_utils.dart';
 
 String buttonThemeToCode(ButtonThemeData buttonTheme) {
