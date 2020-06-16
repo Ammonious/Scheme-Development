@@ -15,6 +15,7 @@ dependencies:
   share_extend:
   get:
   path:
+  mime_type:
   path_provider:
   hive:
   package_info:
@@ -25,7 +26,10 @@ dependencies:
   flutter_hooks:
   lumberdash:
   colorize_lumberdash:
-
+  scheme_icons:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_icons/"
 dev_dependencies:
 
 
