@@ -1,0 +1,21 @@
+library schemeshared;
+
+export 'package:flutter_svg/flutter_svg.dart';
+export 'package:get_it/get_it.dart';
+export 'package:get/get.dart';
+export 'package:google_fonts/google_fonts.dart';
+export 'package:lottie/lottie.dart';
+export 'package:url_launcher/url_launcher.dart';
+export 'package:animations/animations.dart';
+export 'package:flutter_hooks/flutter_hooks.dart'; 
+export 'package:responsive_builder/responsive_builder.dart';
+export 'package:flare_flutter/flare.dart';
+export 'package:palette_generator/palette_generator.dart';
+export 'package:injectable/injectable.dart';
+
+
+export 'package:scheme_components/scheme_components.dart';
+export 'package:scheme_utilities/scheme_utilities.dart';
+export 'package:scheme_icons/scheme_icons.dart';
+export 'package:scheme_theme/scheme_theme.dart';
+
