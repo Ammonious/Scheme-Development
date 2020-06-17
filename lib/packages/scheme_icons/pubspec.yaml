@@ -10,30 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter:
-  lottie:
-  flutter_svg:
-  cached_network_image:
-  sa_stateless_animation:
-  sa_multi_tween:
-  sa_anicoto:
-  get:
-  injectable:
-  scheme_utilities:
+  scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_utilities/"
-  scheme_theme:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_theme/"
-  scheme_components:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_components"
-
+      path: "lib/packages/scheme_shared/"
 dev_dependencies:
-  # service location and dependency injection
   injectable_generator:
   build_runner:
 

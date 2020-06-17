@@ -12,7 +12,7 @@ export 'package:responsive_builder/responsive_builder.dart';
 export 'package:flare_flutter/flare.dart';
 export 'package:palette_generator/palette_generator.dart';
 export 'package:injectable/injectable.dart';
-
+export 'package:cached_network_image/cached_network_image.dart';
 
 export 'package:scheme_components/scheme_components.dart';
 export 'package:scheme_utilities/scheme_utilities.dart';

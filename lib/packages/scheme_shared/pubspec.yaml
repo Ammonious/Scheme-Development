@@ -18,14 +18,15 @@ dependencies:
   url_launcher:
   google_fonts:
 
+  cached_network_image:
   rxdart:
-  sa_multi_tween:
-  sa_anicoto:
   responsive_builder:
   flare_flutter:
   flutter_hooks:
   animations:
   sa_stateless_animation:
+  sa_multi_tween:
+  sa_anicoto:
   flutter_svg:
   palette_generator:
   scheme_utilities:

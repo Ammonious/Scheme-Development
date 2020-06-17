@@ -16,7 +16,7 @@ packages:
     source: hosted
     version: "0.39.10"
   animations:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: animations
       url: "https://pub.dartlang.org"
@@ -219,7 +219,7 @@ packages:
     source: hosted
     version: "2.3.4"
   flare_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flare_flutter
       url: "https://pub.dartlang.org"
@@ -238,7 +238,7 @@ packages:
     source: hosted
     version: "1.4.1"
   flutter_hooks:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_hooks
       url: "https://pub.dartlang.org"
@@ -266,7 +266,7 @@ packages:
     source: hosted
     version: "0.2.3"
   flutter_svg:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"
@@ -278,14 +278,14 @@ packages:
     source: sdk
     version: "0.0.0"
   get:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.13.1"
   get_it:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: get_it
       url: "https://pub.dartlang.org"
@@ -299,7 +299,7 @@ packages:
     source: hosted
     version: "1.2.0"
   google_fonts:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -362,7 +362,7 @@ packages:
     source: hosted
     version: "2.1.13"
   injectable:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: injectable
       url: "https://pub.dartlang.org"
@@ -411,7 +411,7 @@ packages:
     source: hosted
     version: "0.11.4"
   lottie:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: lottie
       url: "https://pub.dartlang.org"
@@ -430,7 +430,7 @@ packages:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.6"
+    version: "0.12.8"
   meta:
     dependency: transitive
     description:
@@ -481,7 +481,7 @@ packages:
     source: hosted
     version: "0.4.1"
   palette_generator:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: palette_generator
       url: "https://pub.dartlang.org"
@@ -599,6 +599,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.5"
+  quantize_dart:
+    dependency: transitive
+    description:
+      name: quantize_dart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   quiver:
     dependency: transitive
     description:
@@ -607,64 +614,73 @@ packages:
     source: hosted
     version: "2.1.3"
   responsive_builder:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: responsive_builder
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0+2"
   rxdart:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.24.1"
   sa_anicoto:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_anicoto
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
   sa_multi_tween:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_multi_tween
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
   sa_stateless_animation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_stateless_animation
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
   scheme_icons:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: "3fca3c238d4363d7668c85be0fb7c9260f1b8394"
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
-  scheme_theme:
+  scheme_shared:
     dependency: "direct main"
+    description:
+      path: "lib/packages/scheme_shared/"
+      ref: HEAD
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
+    version: "0.0.1"
+  scheme_theme:
+    dependency: transitive
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: "3fca3c238d4363d7668c85be0fb7c9260f1b8394"
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
   scheme_utilities:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "3fca3c238d4363d7668c85be0fb7c9260f1b8394"
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -749,7 +765,7 @@ packages:
       name: sqflite_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.2+1"
   stack_trace:
     dependency: transitive
     description:
@@ -821,7 +837,7 @@ packages:
     source: hosted
     version: "1.1.6"
   url_launcher:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: url_launcher
       url: "https://pub.dartlang.org"
@@ -898,5 +914,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.8.0 <3.0.0"
+  dart: ">=2.9.0-14.0.dev <3.0.0"
   flutter: ">=1.17.0 <2.0.0"

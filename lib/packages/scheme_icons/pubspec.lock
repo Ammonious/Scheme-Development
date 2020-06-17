@@ -106,20 +106,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.1.0"
-  cached_network_image:
-    dependency: "direct main"
-    description:
-      name: cached_network_image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.2.0+1"
   characters:
     dependency: transitive
     description:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.0"
+    version: "1.0.0"
   charcode:
     dependency: transitive
     description:
@@ -219,7 +212,7 @@ packages:
     source: hosted
     version: "2.3.4"
   flare_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flare_flutter
       url: "https://pub.dartlang.org"
@@ -266,7 +259,7 @@ packages:
     source: hosted
     version: "0.2.3"
   flutter_svg:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"
@@ -278,12 +271,19 @@ packages:
     source: sdk
     version: "0.0.0"
   get:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.7.1"
+  get_it:
+    dependency: transitive
+    description:
+      name: get_it
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.2"
   glob:
     dependency: transitive
     description:
@@ -355,7 +355,7 @@ packages:
     source: hosted
     version: "2.1.13"
   injectable:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: injectable
       url: "https://pub.dartlang.org"
@@ -404,12 +404,12 @@ packages:
     source: hosted
     version: "0.11.4"
   lottie:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: lottie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.6"
+    version: "0.4.0+1"
   lumberdash:
     dependency: transitive
     description:
@@ -438,6 +438,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+3"
+  mime_type:
+    dependency: transitive
+    description:
+      name: mime_type
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.1"
   node_interop:
     dependency: transitive
     description:
@@ -571,6 +578,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.5"
+  quantize_dart:
+    dependency: transitive
+    description:
+      name: quantize_dart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   quiver:
     dependency: transitive
     description:
@@ -593,46 +607,61 @@ packages:
     source: hosted
     version: "0.24.1"
   sa_anicoto:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_anicoto
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
   sa_multi_tween:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_multi_tween
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
   sa_stateless_animation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sa_stateless_animation
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
   scheme_components:
+    dependency: transitive
+    description:
+      path: "lib/packages/scheme_components"
+      ref: HEAD
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
+    version: "0.0.5"
+  scheme_shared:
     dependency: "direct main"
     description:
-      path: "../scheme_components"
-      relative: true
-    source: path
-    version: "0.0.5"
+      path: "lib/packages/scheme_shared/"
+      ref: HEAD
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
+    version: "0.0.1"
   scheme_theme:
     dependency: transitive
     description:
-      path: "../scheme_theme"
-      relative: true
-    source: path
+      path: "lib/packages/scheme_theme/"
+      ref: HEAD
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
     version: "0.0.1"
   scheme_utilities:
     dependency: transitive
     description:
-      path: "../scheme_utilities"
-      relative: true
-    source: path
+      path: "lib/packages/scheme_utilities/"
+      ref: HEAD
+      resolved-ref: db771b58e0fbc0425a4c87ccca2e7361cd04fb59
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
     version: "0.0.1"
   share_extend:
     dependency: transitive
@@ -857,5 +886,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.8.0 <3.0.0"
+  dart: ">=2.9.0-14.0.dev <3.0.0"
   flutter: ">=1.17.0 <2.0.0"
