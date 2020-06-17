@@ -10,6 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  animated_theme_switcher:
+
+
 
 dev_dependencies:
   hive_generator:
