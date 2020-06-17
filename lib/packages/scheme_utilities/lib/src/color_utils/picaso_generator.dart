@@ -6,7 +6,6 @@ enum RGB { R, G, B }
 
 enum HSL { H, S, L }
 
-const kSwatchSize = 48.0;
 
 const materialColorNames = [
 	"red",

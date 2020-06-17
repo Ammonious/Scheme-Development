@@ -103,6 +103,8 @@ screenUtilSmallerThan(double height) => Get.height > height;
 screenBiggerThan(double screenWidth) => Get.width > screenWidth;
 
 
+const kSwatchSize = 48.0;
+
 get mobileCardRadius => BorderRadius.only(
     topLeft: Radius.circular(24), topRight: Radius.circular(24));
 
