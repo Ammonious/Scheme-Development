@@ -69,8 +69,8 @@ class Picaso  extends GetController{
       TextTheme primaryTextTheme}) {
   	// Set background colors.
     Picaso.paint.canvas = canvas ?? Colors.white.darkenBy(10);
-    Picaso.paint.card = bar ?? Colors.white;
-    Picaso.paint.bar =  card ?? Colors.white.darkenBy(5);
+    Picaso.paint.card = bar ?? Colors.white.darkenBy(5);
+    Picaso.paint.bar =  card ?? Colors.white;
 
 
     // Set Theme Colors.
