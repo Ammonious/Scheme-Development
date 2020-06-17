@@ -92,6 +92,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.5"
+  csslib:
+    dependency: transitive
+    description:
+      name: csslib
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.1"
+  cupertino_icons:
+    dependency: transitive
+    description:
+      name: cupertino_icons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
   device_info:
     dependency: "direct main"
     description:
@@ -99,6 +113,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.2+4"
+  easy_web_view:
+    dependency: "direct main"
+    description:
+      name: easy_web_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.0"
   file:
     dependency: transitive
     description:
@@ -139,6 +160,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.0"
+  flutter_markdown:
+    dependency: transitive
+    description:
+      name: flutter_markdown
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.5"
   flutter_screenutil:
     dependency: "direct main"
     description:
@@ -207,6 +235,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0+2"
+  html:
+    dependency: transitive
+    description:
+      name: html
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.14.0+3"
+  html2md:
+    dependency: transitive
+    description:
+      name: html2md
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.1"
   http:
     dependency: transitive
     description:
@@ -263,6 +305,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  markdown:
+    dependency: transitive
+    description:
+      name: markdown
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.5"
   meta:
     dependency: transitive
     description:
@@ -277,6 +326,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.1"
+  momentum:
+    dependency: "direct main"
+    description:
+      name: momentum
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.3"
   package_info:
     dependency: "direct main"
     description:
@@ -432,11 +488,11 @@ packages:
     source: hosted
     version: "1.0.1"
   scheme_components:
-    dependency: transitive
+    dependency: "direct main"
     description:
-      path: "lib/packages/scheme_components"
+      path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
+      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -445,7 +501,7 @@ packages:
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
+      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
@@ -454,7 +510,7 @@ packages:
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
+      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -463,10 +519,17 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
+      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
+  share:
+    dependency: "direct main"
+    description:
+      name: share
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.4+3"
   share_extend:
     dependency: "direct main"
     description:
@@ -612,6 +675,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.8"
+  webview_flutter:
+    dependency: transitive
+    description:
+      name: webview_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.22+1"
   xdg_directories:
     dependency: transitive
     description:

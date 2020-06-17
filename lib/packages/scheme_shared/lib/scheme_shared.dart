@@ -26,7 +26,9 @@ export 'package:mime_type/mime_type.dart';
 export 'package:colorize_lumberdash/colorize_lumberdash.dart';
 export 'package:lumberdash/lumberdash.dart';
 export 'package:flutter_cache_manager/flutter_cache_manager.dart';
-
+export 'package:momentum/momentum.dart';
+export 'package:share/share.dart';
+export 'package:easy_web_view/easy_web_view.dart';
 
 export 'package:scheme_components/scheme_components.dart';
 export 'package:scheme_utilities/scheme_utilities.dart';

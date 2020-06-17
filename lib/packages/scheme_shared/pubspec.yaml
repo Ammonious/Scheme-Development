@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  share:
+  easy_web_view:
   lumberdash:
   colorize_lumberdash:
   flutter_cache_manager:
@@ -33,6 +35,7 @@ dependencies:
   url_launcher:
   google_fonts:
 
+  momentum:
   cached_network_image:
   rxdart:
   responsive_builder:
@@ -44,6 +47,10 @@ dependencies:
   sa_anicoto:
   flutter_svg:
   palette_generator:
+  scheme_components:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_components/"
   scheme_utilities:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
