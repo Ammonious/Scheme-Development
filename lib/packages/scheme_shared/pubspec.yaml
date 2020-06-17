@@ -11,6 +11,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  lumberdash:
+  colorize_lumberdash:
+  flutter_cache_manager:
+  package_info:
+  device_info:
+  mime_type:
+  share_extend:
+  quantize_dart:
   flutter_statusbarcolor:
   flutter_screenutil:
   streaming_shared_preferences:

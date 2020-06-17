@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 

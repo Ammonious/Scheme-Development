@@ -244,13 +244,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.0"
-  flutter_shine:
-    dependency: transitive
-    description:
-      name: flutter_shine
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.5"
   flutter_svg:
     dependency: transitive
     description:
@@ -409,7 +402,7 @@ packages:
       name: lottie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.0+1"
   lumberdash:
     dependency: transitive
     description:
@@ -605,7 +598,7 @@ packages:
       name: quiver
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.5"
+    version: "2.1.3"
   responsive_builder:
     dependency: transitive
     description:
@@ -641,21 +634,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-  scheme_components:
-    dependency: transitive
-    description:
-      path: "lib/packages/scheme_components"
-      ref: HEAD
-      resolved-ref: "11c92174eeadd559192603885852687c8b5032a4"
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.5"
   scheme_icons:
     dependency: transitive
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: "11c92174eeadd559192603885852687c8b5032a4"
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
@@ -673,7 +657,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "11c92174eeadd559192603885852687c8b5032a4"
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -758,7 +742,7 @@ packages:
       name: sqflite_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.2+1"
   stack_trace:
     dependency: transitive
     description:

@@ -12,26 +12,10 @@ dependencies:
     sdk: flutter
   http:
   image:
-  share_extend:
-  quantize_dart:
-  get:
-  path:
-  mime_type:
-  path_provider:
-  palette_generator:
-  hive:
-  package_info:
-  device_info:
-  hive_flutter: ^0.3.0+2
-  flutter_cache_manager:
-  streaming_shared_preferences:
-  flutter_hooks:
-  lumberdash:
-  colorize_lumberdash:
-  scheme_icons:
+  scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_icons/"
+      path: "lib/packages/scheme_shared/"
 
 dev_dependencies:
 

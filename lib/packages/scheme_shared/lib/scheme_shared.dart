@@ -18,7 +18,14 @@ export 'package:path/path.dart';
 export 'package:path_provider/path_provider.dart';
 export 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 export 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
-
+export 'package:share_extend/share_extend.dart';
+export 'package:quantize_dart/quantize_dart.dart'; 
+export 'package:device_info/device_info.dart';
+export 'package:package_info/package_info.dart';
+export 'package:mime_type/mime_type.dart';
+export 'package:colorize_lumberdash/colorize_lumberdash.dart';
+export 'package:lumberdash/lumberdash.dart';
+export 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 
 export 'package:scheme_components/scheme_components.dart';
