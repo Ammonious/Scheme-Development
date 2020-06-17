@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scheme_icons/scheme_icons.dart';
-
+import 'package:get/get.dart';
 class SchemeNavData {
   /// Title of the button. Must not be null if using [SchemeNavRail].
   String title;
@@ -144,9 +144,9 @@ class SchemeNavData {
     this.label,
     this.textStyle,
     this.page,
-  }) : iconType = SchemeIconType.color,
-  selectedColor = Colors.transparent,
-  unSelectedColor = Colors.transparent;
+    this.selectedColor,
+    this.unSelectedColor,
+  }) : iconType = SchemeIconType.color;
 
   SchemeNavData.lottie(this.iconPath,{
     this.iconSize = 24,
