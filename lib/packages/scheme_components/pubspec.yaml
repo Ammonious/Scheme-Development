@@ -11,10 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_shine:
-  scheme_shared:
+  scheme_icons:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_shared/"
+      path: "lib/packages/scheme_icons/"
 
 dev_dependencies:
   injectable_generator:

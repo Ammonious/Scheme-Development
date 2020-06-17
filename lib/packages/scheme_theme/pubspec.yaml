@@ -10,10 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  scheme_shared:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_shared/"
 
 dev_dependencies:
   hive_generator:

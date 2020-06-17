@@ -244,13 +244,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  flutter_shine:
-    dependency: transitive
-    description:
-      name: flutter_shine
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.5"
   flutter_statusbarcolor:
     dependency: "direct main"
     description:
@@ -354,13 +347,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.4"
-  image:
-    dependency: transitive
-    description:
-      name: image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.13"
   injectable:
     dependency: "direct main"
     description:
@@ -613,42 +599,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-  scheme_components:
-    dependency: "direct main"
-    description:
-      path: "lib/packages/scheme_components/"
-      ref: HEAD
-      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.5"
-  scheme_icons:
-    dependency: "direct main"
-    description:
-      path: "lib/packages/scheme_icons/"
-      ref: HEAD
-      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.2"
-  scheme_theme:
-    dependency: "direct main"
-    description:
-      path: "lib/packages/scheme_theme/"
-      ref: HEAD
-      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.1"
-  scheme_utilities:
-    dependency: "direct main"
-    description:
-      path: "lib/packages/scheme_utilities/"
-      ref: HEAD
-      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.1"
   scroll_to_index:
     dependency: "direct main"
     description:

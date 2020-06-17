@@ -47,9 +47,5 @@ export 'package:stacked_hooks/stacked_hooks.dart';
 export 'package:fl_chart/fl_chart.dart';
 export 'package:flutter_icons/flutter_icons.dart';
 
-
-export 'package:scheme_components/scheme_components.dart';
-export 'package:scheme_utilities/scheme_utilities.dart';
-export 'package:scheme_icons/scheme_icons.dart';
-export 'package:scheme_theme/scheme_theme.dart';
+ 
 
