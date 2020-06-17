@@ -362,7 +362,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.4"
+    version: "0.18.0"
   flutter_swiper:
     dependency: transitive
     description:
@@ -473,13 +473,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.4"
-  image:
-    dependency: transitive
-    description:
-      name: image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.13"
   injectable:
     dependency: transitive
     description:
@@ -810,38 +803,20 @@ packages:
     source: hosted
     version: "1.0.1"
   scheme_components:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
   scheme_shared:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_shared/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.1"
-  scheme_theme:
-    dependency: transitive
-    description:
-      path: "lib/packages/scheme_theme/"
-      ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-    source: git
-    version: "0.0.1"
-  scheme_utilities:
-    dependency: transitive
-    description:
-      path: "lib/packages/scheme_utilities/"
-      ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -1108,7 +1083,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.7.0"
+    version: "4.2.0"
   yaml:
     dependency: transitive
     description:
@@ -1118,4 +1093,4 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.9.0-14.0.dev <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+  flutter: ">=1.18.0-6.0.pre <2.0.0"

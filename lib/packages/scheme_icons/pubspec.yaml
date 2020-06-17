@@ -10,13 +10,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+
+
+dev_dependencies:
+  scheme_components:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_components/"
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
       path: "lib/packages/scheme_shared/"
-
-
-dev_dependencies:
   injectable_generator:
   build_runner:
 

@@ -810,38 +810,38 @@ packages:
     source: hosted
     version: "1.0.1"
   scheme_icons:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
   scheme_shared:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_shared/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
   scheme_theme:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
   scheme_utilities:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: ac44d947e68fef056a242e7ccbd4d3e93e6488ee
+      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
