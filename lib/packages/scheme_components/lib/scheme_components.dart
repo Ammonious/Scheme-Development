@@ -30,6 +30,7 @@ export 'src/page_views/scheme_page_views.dart';
 export 'src/pickers/scheme_pickers.dart';
 export 'src/dialogs/scheme_dialogs.dart';
 export 'src/sheets/scheme_bottom_sheets.dart';
+export 'src/loading/loader_index.dart';
 
 
 class SchemeComponentUtils extends GetController{
