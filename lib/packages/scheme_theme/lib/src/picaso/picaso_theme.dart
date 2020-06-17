@@ -7,7 +7,7 @@ import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 import 'picaso_color.dart';
 
 class Picaso  extends GetController{
-  static PicasoColor get _paint => Get.put(PicasoColor());
+  static PicasoColor get paint => Get.put(PicasoColor());
   static Picaso get jot => Get.put(Picaso());
   static Picaso get to => Get.find();
 
@@ -64,75 +64,75 @@ class Picaso  extends GetController{
       TextTheme textTheme,
       TextTheme primaryTextTheme}) {
   	// Set background colors.
-    Picaso._paint.canvas = canvas ?? Colors.white.darkenBy(10);
-    Picaso._paint.card = bar ?? Colors.white;
-    Picaso._paint.bar =  card ?? Colors.white.darkenBy(5);
+    Picaso.paint.canvas = canvas ?? Colors.white.darkenBy(10);
+    Picaso.paint.card = bar ?? Colors.white;
+    Picaso.paint.bar =  card ?? Colors.white.darkenBy(5);
 
 
     // Set Theme Colors.
-	  Picaso._paint.primary = primary ?? Colors.blueAccent.shade700;
-	  Picaso._paint.primaryVariant = primaryVariant ?? Colors.blue.shade700;
-	  Picaso._paint.accent = accent ?? Colors.pinkAccent.shade700;
-	  Picaso._paint.secondary = secondary ?? Colors.yellowAccent.shade700;
-	  Picaso._paint.secondaryVariant = secondaryVariant ?? Colors.yellowAccent.shade200;
+	  Picaso.paint.primary = primary ?? Colors.blueAccent.shade700;
+	  Picaso.paint.primaryVariant = primaryVariant ?? Colors.blue.shade700;
+	  Picaso.paint.accent = accent ?? Colors.pinkAccent.shade700;
+	  Picaso.paint.secondary = secondary ?? Colors.yellowAccent.shade700;
+	  Picaso.paint.secondaryVariant = secondaryVariant ?? Colors.yellowAccent.shade200;
 
     _theme = ThemeData(
       brightness: brightness,
       visualDensity: VisualDensity.adaptivePlatformDensity,
-      primarySwatch: generateSwatch(Picaso._paint.primary),
-      primaryColor: Picaso._paint.primary,
-      primaryColorDark: Picaso._paint.primaryVariant ?? Picaso._paint.primary,
-      accentColor: Picaso._paint.accent,
+      primarySwatch: generateSwatch(Picaso.paint.primary),
+      primaryColor: Picaso.paint.primary,
+      primaryColorDark: Picaso.paint.primaryVariant ?? Picaso.paint.primary,
+      accentColor: Picaso.paint.accent,
       colorScheme: ColorScheme(
-          primaryVariant: Picaso._paint.primaryVariant,
-          secondary: Picaso._paint.secondary,
-	        secondaryVariant: Picaso._paint.secondaryVariant,
+          primaryVariant: Picaso.paint.primaryVariant,
+          secondary: Picaso.paint.secondary,
+	        secondaryVariant: Picaso.paint.secondaryVariant,
           onError: Colors.redAccent.shade700,
-          primary: Picaso._paint.primary,
-          onSecondary: Picaso._paint.secondary,
-          onSurface: Picaso._paint.canvas,
-          surface: Picaso._paint.canvas,
+          primary: Picaso.paint.primary,
+          onSecondary: Picaso.paint.secondary,
+          onSurface: Picaso.paint.canvas,
+          surface: Picaso.paint.canvas,
           error: Colors.redAccent.shade700,
-          onBackground: Picaso._paint.canvas,
-          onPrimary: Picaso._paint.primary,
-          background: Picaso._paint.canvas,
+          onBackground: Picaso.paint.canvas,
+          onPrimary: Picaso.paint.primary,
+          background: Picaso.paint.canvas,
           brightness: brightness,),
-      textSelectionHandleColor: Picaso._paint.primary,
-      primaryColorLight: Picaso._paint.primary.shade200,
-      secondaryHeaderColor: Picaso._paint.bar,
+      textSelectionHandleColor: Picaso.paint.primary,
+      primaryColorLight: Picaso.paint.primary.shade200,
+      secondaryHeaderColor: Picaso.paint.bar,
       hintColor: Colors.grey.shade600,
-      canvasColor: Picaso._paint.canvas,
-      cardColor: Picaso._paint.card,
-      scaffoldBackgroundColor: Picaso._paint.canvas,
-      backgroundColor: Picaso._paint.canvas,
+      canvasColor: Picaso.paint.canvas,
+      cardColor: Picaso.paint.card,
+      scaffoldBackgroundColor: Picaso.paint.canvas,
+      backgroundColor: Picaso.paint.canvas,
       dividerColor: Colors.grey.withOpacity(0.45),
-      cursorColor: Picaso._paint.primary,
-      splashColor: Picaso._paint.primary.withOpacity(0.35),
-      hoverColor: Picaso._paint.primary.withOpacity(.35),
-      bottomAppBarColor: Picaso._paint.bar,
+      cursorColor: Picaso.paint.primary,
+      splashColor: Picaso.paint.primary.withOpacity(0.35),
+      hoverColor: Picaso.paint.primary.withOpacity(.35),
+      bottomAppBarColor: Picaso.paint.bar,
       textTheme: textTheme.apply(
-          displayColor: Picaso._paint.canvas.textColor,
-          bodyColor: Picaso._paint.canvas.textColor,
-          decorationColor: Picaso._paint.canvas.textColor),
+          displayColor: Picaso.paint.canvas.textColor,
+          bodyColor: Picaso.paint.canvas.textColor,
+          decorationColor: Picaso.paint.canvas.textColor),
       primaryTextTheme: primaryTextTheme != null
           ? primaryTextTheme.apply(
-              displayColor: Picaso._paint.canvas.textColor,
-              bodyColor: Picaso._paint.canvas.textColor,
-              decorationColor: Picaso._paint.canvas.textColor)
+              displayColor: Picaso.paint.canvas.textColor,
+              bodyColor: Picaso.paint.canvas.textColor,
+              decorationColor: Picaso.paint.canvas.textColor)
           : textTheme.apply(
-              displayColor: Picaso._paint.canvas.textColor,
-              bodyColor: Picaso._paint.canvas.textColor,
-              decorationColor: Picaso._paint.canvas.textColor),
-      iconTheme: IconThemeData(color: Picaso._paint.canvas.textColor),
-      primaryIconTheme: IconThemeData(color: Picaso._paint.canvas.textColor),
-      accentIconTheme: IconThemeData(color: Picaso._paint.primary.shade700.textColor),
+              displayColor: Picaso.paint.canvas.textColor,
+              bodyColor: Picaso.paint.canvas.textColor,
+              decorationColor: Picaso.paint.canvas.textColor),
+      iconTheme: IconThemeData(color: Picaso.paint.canvas.textColor),
+      primaryIconTheme: IconThemeData(color: Picaso.paint.canvas.textColor),
+      accentIconTheme: IconThemeData(color: Picaso.paint.primary.shade700.textColor),
       cardTheme: CardTheme(
-          color: Picaso._paint.card,
+          color: Picaso.paint.card,
           shape: RoundedRectangleBorder(
             borderRadius: mobileCardRadius,
           )),
       buttonTheme:
-          ButtonThemeData(buttonColor: Picaso._paint.primary,
+          ButtonThemeData(buttonColor: Picaso.paint.primary,
 		          shape: RoundedRectangleBorder(
 				          borderRadius: BorderRadius.circular(8))),
     );
