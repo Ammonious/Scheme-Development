@@ -140,7 +140,7 @@ packages:
     source: hosted
     version: "0.9.0"
   flutter_screenutil:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_screenutil
       url: "https://pub.dartlang.org"
@@ -154,7 +154,7 @@ packages:
     source: hosted
     version: "0.0.5"
   flutter_statusbarcolor:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_statusbarcolor
       url: "https://pub.dartlang.org"
@@ -194,14 +194,14 @@ packages:
     source: hosted
     version: "1.1.0"
   hive:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: hive
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1+1"
   hive_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: hive_flutter
       url: "https://pub.dartlang.org"
@@ -292,7 +292,7 @@ packages:
     source: hosted
     version: "0.2.3"
   path:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path
       url: "https://pub.dartlang.org"
@@ -313,7 +313,7 @@ packages:
     source: hosted
     version: "0.1.4"
   path_provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -436,7 +436,7 @@ packages:
     description:
       path: "lib/packages/scheme_components"
       ref: HEAD
-      resolved-ref: eca557a664e49bc59b308f7da85da18bff295388
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -445,7 +445,7 @@ packages:
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: eca557a664e49bc59b308f7da85da18bff295388
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
@@ -454,7 +454,7 @@ packages:
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: eca557a664e49bc59b308f7da85da18bff295388
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -463,7 +463,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: eca557a664e49bc59b308f7da85da18bff295388
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -529,7 +529,7 @@ packages:
     source: hosted
     version: "1.0.2+1"
   streaming_shared_preferences:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: streaming_shared_preferences
       url: "https://pub.dartlang.org"

@@ -13,6 +13,13 @@ export 'package:flare_flutter/flare.dart';
 export 'package:palette_generator/palette_generator.dart';
 export 'package:injectable/injectable.dart';
 export 'package:cached_network_image/cached_network_image.dart';
+export 'package:flutter_screenutil/flutter_screenutil.dart';
+export 'package:path/path.dart';
+export 'package:path_provider/path_provider.dart';
+export 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+export 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
+
+
 
 export 'package:scheme_components/scheme_components.dart';
 export 'package:scheme_utilities/scheme_utilities.dart';

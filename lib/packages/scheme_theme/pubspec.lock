@@ -119,7 +119,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.1"
+    version: "1.0.0"
   charcode:
     dependency: transitive
     description:
@@ -190,13 +190,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.6"
-  dartx:
-    dependency: transitive
-    description:
-      name: dartx
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.0"
   device_info:
     dependency: transitive
     description:
@@ -251,13 +244,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.0"
-  flutter_screenutil:
-    dependency: "direct main"
-    description:
-      name: flutter_screenutil
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   flutter_shine:
     dependency: transitive
     description:
@@ -265,13 +251,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.5"
-  flutter_statusbarcolor:
-    dependency: "direct main"
-    description:
-      name: flutter_statusbarcolor
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.3"
   flutter_svg:
     dependency: transitive
     description:
@@ -285,7 +264,7 @@ packages:
     source: sdk
     version: "0.0.0"
   get:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: get
       url: "https://pub.dartlang.org"
@@ -306,7 +285,7 @@ packages:
     source: hosted
     version: "1.2.0"
   google_fonts:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -320,14 +299,14 @@ packages:
     source: hosted
     version: "0.2.0"
   hive:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: hive
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1+1"
   hive_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: hive_flutter
       url: "https://pub.dartlang.org"
@@ -339,7 +318,7 @@ packages:
       name: hive_generator
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.0+2"
+    version: "0.5.2"
   html:
     dependency: transitive
     description:
@@ -523,7 +502,7 @@ packages:
     source: hosted
     version: "0.1.4"
   path_provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -663,7 +642,7 @@ packages:
     source: hosted
     version: "1.0.1"
   scheme_components:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "lib/packages/scheme_components"
       ref: HEAD
@@ -672,7 +651,7 @@ packages:
     source: git
     version: "0.0.5"
   scheme_icons:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
@@ -680,8 +659,17 @@ packages:
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
-  scheme_utilities:
+  scheme_shared:
     dependency: "direct main"
+    description:
+      path: "lib/packages/scheme_shared/"
+      ref: HEAD
+      resolved-ref: "89f02694228b367b578e3e22dcf65373b10e2340"
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+    source: git
+    version: "0.0.1"
+  scheme_utilities:
+    dependency: transitive
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
@@ -793,7 +781,7 @@ packages:
     source: hosted
     version: "1.2.0"
   streaming_shared_preferences:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: streaming_shared_preferences
       url: "https://pub.dartlang.org"
@@ -827,13 +815,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  time:
-    dependency: transitive
-    description:
-      name: time
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.3.0"
   timing:
     dependency: transitive
     description:
@@ -926,5 +907,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.8.0 <3.0.0"
+  dart: ">=2.9.0-14.0.dev <3.0.0"
   flutter: ">=1.17.0 <2.0.0"
