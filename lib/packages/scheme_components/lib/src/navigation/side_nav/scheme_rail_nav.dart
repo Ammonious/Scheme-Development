@@ -46,17 +46,15 @@ class SchemeNavRail extends StatelessWidget {
         backgroundColor: backgroundColor,
         elevation: elevation,
         labelType: labelType,
-
         extended: extended,
         groupAlignment: initAlignment(),
         unselectedIconTheme: Get.theme.iconTheme ?? IconThemeData.fallback(),
         selectedIconTheme: Get.theme.iconTheme.copyWith(color: items.first.selectedColor ?? Colors.transparent),
-        selectedLabelTextStyle: textStyle ??
-            Get.theme.textTheme.subtitle2
-                .copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor),
+        selectedLabelTextStyle: textStyle.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor) ??
+            Get.theme.textTheme.subtitle2.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor),
         unselectedLabelTextStyle: textStyle != null
-            ? textStyle.copyWith(color: nearlyBlack)
-            : Get.theme.textTheme.subtitle2,
+            ? textStyle.copyWith(color: Get.theme.bottomAppBarColor.textColor)
+            : Get.theme.textTheme.subtitle2.copyWith(color: Get.theme.bottomAppBarColor.textColor),
         minExtendedWidth: minExtendedWidth,
         minWidth: minWidth,
         destinations: items != null

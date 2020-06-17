@@ -362,7 +362,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.18.0"
+    version: "0.17.4"
   flutter_swiper:
     dependency: transitive
     description:
@@ -661,7 +661,7 @@ packages:
       name: path_provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.6.10"
+    version: "1.6.11"
   path_provider_linux:
     dependency: transitive
     description:
@@ -807,7 +807,7 @@ packages:
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
+      resolved-ref: "84660b48d04215e70390d76071447c98a0818d16"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -816,7 +816,7 @@ packages:
     description:
       path: "lib/packages/scheme_shared/"
       ref: HEAD
-      resolved-ref: "259d62b0b8577995dd951d4d28bf03cc04a220ef"
+      resolved-ref: "84660b48d04215e70390d76071447c98a0818d16"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -1083,7 +1083,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.2.0"
+    version: "3.7.0"
   yaml:
     dependency: transitive
     description:
@@ -1092,5 +1092,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.9.0-14.0.dev <3.0.0"
-  flutter: ">=1.18.0-6.0.pre <2.0.0"
+  dart: ">=2.8.0 <3.0.0"
+  flutter: ">=1.17.0 <2.0.0"
