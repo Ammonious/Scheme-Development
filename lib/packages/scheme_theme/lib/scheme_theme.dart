@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 export 'package:scheme_utilities/scheme_utilities.dart';
 export 'src/ui_helper.dart';
 export 'src/models/theme_controller.dart';
+export 'src/picaso/picaso.dart';
 
 
 
