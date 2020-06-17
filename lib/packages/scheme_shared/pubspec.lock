@@ -618,7 +618,7 @@ packages:
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
+      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -627,7 +627,7 @@ packages:
     description:
       path: "lib/packages/scheme_icons/"
       ref: HEAD
-      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
+      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.2"
@@ -636,7 +636,7 @@ packages:
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
+      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -645,7 +645,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "0f5f6112fae5d81b9bfd6537ce71d0c9bcf6c80d"
+      resolved-ref: e27dc6ec065130b232eb7ea563124750ce2b1092
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
