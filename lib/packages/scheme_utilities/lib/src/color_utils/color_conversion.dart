@@ -1,8 +1,7 @@
 import 'dart:math' as Math;
 import 'dart:ui'; 
 import 'package:flutter/painting.dart';
-import 'package:meta/meta.dart'; 
-import 'hsl_color.dart';
+import 'package:meta/meta.dart';
 
 double bound01(double n, double max) {
 	n = max == 360.0 ? n : Math.min(max, Math.max(0.0, n));
@@ -98,4 +97,17 @@ double _hue2rgb(double p, double q, double t) {
 	if (t < 1 / 2) return q;
 	if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
 	return p;
+}
+
+class HslColor {
+	double h;
+	double s;
+	double l;
+	double a;
+
+	HslColor({this.h, this.s, this.l, this.a = 0.0});
+
+	String toString() {
+		return "HSL(h: $h, s: $s, l: $l, a: $a)";
+	}
 }

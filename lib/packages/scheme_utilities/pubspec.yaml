@@ -13,10 +13,12 @@ dependencies:
   http:
   image:
   share_extend:
+  quantize_dart:
   get:
   path:
   mime_type:
   path_provider:
+  palette_generator:
   hive:
   package_info:
   device_info:

@@ -3,6 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'converter_utils.dart';
 
+final enabledRaisedButton = RaisedButton(onPressed: () {});
+
+const disabledRaisedButton = RaisedButton(onPressed: null);
+
 String buttonThemeToCode(ButtonThemeData buttonTheme) {
   final buttonColor =
       colorToCode(buttonTheme.getFillColor(enabledRaisedButton));

@@ -14,14 +14,19 @@ export 'src/int_utils.dart';
 export 'src/duration_utils.dart';
 export 'src/animation_utils.dart';
 export 'src/iterable_utils/iterable_object.dart';
-export 'src/color_utils/color_utils.dart';
+export 'src/color_utils/picaso_utils.dart';
 export 'src/file_utils.dart';
 export 'package:flutter_hooks/flutter_hooks.dart';
 export 'src/animation_utils.dart';
-export 'package:lumberdash/lumberdash.dart';
-export 'package:colorize_lumberdash/colorize_lumberdash.dart';
 export 'src/text_style_utils.dart';
 export 'src/transition_utils.dart';
+export 'src/color_utils/color_thief.dart';
+export 'src/color_utils/color_extensions.dart';
+export 'src/color_utils/color_utils.dart';
+export 'package:lumberdash/lumberdash.dart';
+export 'package:colorize_lumberdash/colorize_lumberdash.dart';
+
+
 class SchemeUtils extends GetController {
 
 	static SchemeFileUtils get file => Get.put(SchemeFileUtils());

@@ -141,19 +141,6 @@ Color getSwatchShade(Color c, int swatchValue) {
 	return hsl.withLightness(1 - (swatchValue / 1000)).toColor();
 }
 
-/// return a list of all color of a materialColor
-List<Color> getMaterialColorShades(MaterialColor color) => [
-	color[50],
-	color[100],
-	color[200],
-	color[300],
-	color[400],
-	color[500],
-	color[600],
-	color[700],
-	color[800],
-	color[900]
-];
 
 String colorToHex32(Color color) =>
 		'#${color.value.toRadixString(16).padLeft(8, '0')}';
