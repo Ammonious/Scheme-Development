@@ -129,7 +129,7 @@ class Picaso  extends GetController{
       cardTheme: CardTheme(
           color: Picaso.paint.card,
           shape: RoundedRectangleBorder(
-            borderRadius: cardRadius,
+            borderRadius: mobileCardRadius,
           )),
       buttonTheme:
           ButtonThemeData(buttonColor: Picaso.paint.primary,

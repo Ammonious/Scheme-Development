@@ -1,9 +1,7 @@
-import 'dart:math';
-
+import 'dart:math'; 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
-import 'converter_utils.dart';
 
 String textThemeToCode(TextTheme textTheme,String googleFont) {
   return '''TextTheme(
