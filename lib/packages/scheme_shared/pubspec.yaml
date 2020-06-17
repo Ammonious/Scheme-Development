@@ -11,6 +11,24 @@ dependencies:
   flutter:
     sdk: flutter
 
+  pedantic:
+  intl:
+  date_format:
+  equatable:
+  provider:
+  stacked:
+  stacked_hooks:
+  flutter_icons:
+  fl_chart:
+
+  badges:
+  scroll_to_index:
+  connectivity:
+  characters:
+  flutter_swiper:
+  device_preview:
+  uuid:
+  keyboard_visibility:
   share:
   easy_web_view:
   lumberdash:

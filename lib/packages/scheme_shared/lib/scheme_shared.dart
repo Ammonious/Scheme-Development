@@ -29,6 +29,24 @@ export 'package:flutter_cache_manager/flutter_cache_manager.dart';
 export 'package:momentum/momentum.dart';
 export 'package:share/share.dart';
 export 'package:easy_web_view/easy_web_view.dart';
+export 'package:flutter_swiper/flutter_swiper.dart';
+export 'package:device_preview/device_preview.dart';
+export 'package:uuid/uuid.dart';
+export 'package:keyboard_visibility/keyboard_visibility.dart';
+export 'package:connectivity/connectivity.dart';
+export 'package:characters/characters.dart';
+export 'package:badges/badges.dart';
+export 'package:scroll_to_index/scroll_to_index.dart';
+export 'package:pedantic/pedantic.dart';
+export 'package:intl/intl.dart';
+export 'package:date_format/date_format.dart';
+export 'package:equatable/equatable.dart';
+export 'package:provider/provider.dart' hide Dispose;
+export 'package:stacked/stacked.dart';
+export 'package:stacked_hooks/stacked_hooks.dart';
+export 'package:fl_chart/fl_chart.dart';
+export 'package:flutter_icons/flutter_icons.dart';
+
 
 export 'package:scheme_components/scheme_components.dart';
 export 'package:scheme_utilities/scheme_utilities.dart';
