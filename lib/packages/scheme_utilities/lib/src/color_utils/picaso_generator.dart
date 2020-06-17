@@ -102,7 +102,7 @@ List<Widget> getMaterialSwatches(ValueChanged<Color> onSelection) {
 		child: Padding(
 				padding: EdgeInsets.all(4.0),
 				child: Container(
-						width: kSwatchSize, height: kSwatchSize, color: c)),
+						width: 48, height: 48, color: c)),
 		onTap: () => onSelection(c),
 	))
 			.toList();

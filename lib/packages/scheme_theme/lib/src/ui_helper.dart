@@ -10,7 +10,7 @@ schemeGradient({Color color, Color colorOne, Color colorTwo, Alignment begin, Al
   Color cOne = colorOne ?? color;
   Color cTwo = colorTwo ?? color;
 
-  if (colorIsBlack(cOne)) {
+  if (cOne.isBlack) {
     cOne = cOne.shade200;
     cTwo = cOne.shade500;
   }
