@@ -6,6 +6,10 @@ import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
 import 'picaso_color.dart';
 
+/// The purpose of [Picaso] is to simplify the process of theming while
+/// granting quick and easy access to commonly used components.
+/// It greatly minimizes the boilerplate required to set things like colors and text styles.
+///
 class Picaso  extends GetController{
   static PicasoColor get paint => Get.put(PicasoColor());
   static Picaso get jot => Get.put(Picaso());

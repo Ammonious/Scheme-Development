@@ -63,7 +63,7 @@ dependencies:
   sa_stateless_animation:
   sa_multi_tween:
   sa_anicoto:
-  flutter_svg:
+  flutter_svg: ^0.17.3
   palette_generator:
 
 
