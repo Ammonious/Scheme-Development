@@ -137,7 +137,7 @@ Map<int, Color> getMaterialColorValues(Color primary) => <int, Color>{
 /// color a color shade for material swatch value
 Color getSwatchShade(Color c, int swatchValue) {
 	final hsl = HSLColor.fromColor(c);
-	return hsl.withLightness(1 - (swatchValue / 1000)).toColor();
+	return hsl.withLightness(1 - ((swatchValue / 1000) * 1.05)).toColor();
 }
 
 
