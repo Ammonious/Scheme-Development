@@ -38,39 +38,38 @@ class SchemeNavRail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-      Expanded(child: NavigationRail(
-        leading: header,
-        trailing: footer,
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        labelType: labelType,
-        extended: extended,
-        groupAlignment: initAlignment(),
-        unselectedIconTheme: Get.theme.iconTheme ?? IconThemeData.fallback(),
-        selectedIconTheme: Get.theme.iconTheme.copyWith(color: items.first.selectedColor ?? Colors.transparent),
-        selectedLabelTextStyle: textStyle.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor) ??
-            Get.theme.textTheme.subtitle2.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor),
-        unselectedLabelTextStyle: textStyle != null
-            ? textStyle.copyWith(color: Get.theme.bottomAppBarColor.textColor)
-            : Get.theme.textTheme.subtitle2.copyWith(color: Get.theme.bottomAppBarColor.textColor),
-        minExtendedWidth: minExtendedWidth,
-        minWidth: minWidth,
-        destinations: items != null
-            ? List.from(items.map((e) => NavigationRailDestination(
-            icon: e.icon ?? NavBtnIcon(data: e, isSelected: false),
-            selectedIcon: e.selectedIcon ?? NavBtnIcon(data: e, isSelected: false),
-            label: e.label ??
-                Text(
-                  e.title,
-                ))))
-            : List<NavigationRailDestination>(),
-        selectedIndex: selectedIndex,
-        onDestinationSelected: (index) => onPositionChanged(index),
-      ),)
-      ],
-    );
+    return SizedBox(height: screenHeight,child: NavigationRail(
+      leading: header,
+      trailing: Column(children: [
+        Expanded(child: SizedBox(),),
+        footer
+      ],),
+      backgroundColor: backgroundColor,
+      elevation: elevation,
+      labelType: labelType,
+      extended: extended,
+      groupAlignment: initAlignment(),
+      unselectedIconTheme: Get.theme.iconTheme ?? IconThemeData.fallback(),
+      selectedIconTheme: Get.theme.iconTheme.copyWith(color: items.first.selectedColor ?? Colors.transparent),
+      selectedLabelTextStyle: textStyle.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor) ??
+          Get.theme.textTheme.subtitle2.copyWith(color: items.first.selectedColor ?? Get.theme.primaryColor),
+      unselectedLabelTextStyle: textStyle != null
+          ? textStyle.copyWith(color: Get.theme.bottomAppBarColor.textColor)
+          : Get.theme.textTheme.subtitle2.copyWith(color: Get.theme.bottomAppBarColor.textColor),
+      minExtendedWidth: minExtendedWidth,
+      minWidth: minWidth,
+      destinations: items != null
+          ? List.from(items.map((e) => NavigationRailDestination(
+          icon: e.icon ?? NavBtnIcon(data: e, isSelected: false),
+          selectedIcon: e.selectedIcon ?? NavBtnIcon(data: e, isSelected: false),
+          label: e.label ??
+              Text(
+                e.title,
+              ))))
+          : List<NavigationRailDestination>(),
+      selectedIndex: selectedIndex,
+      onDestinationSelected: (index) => onPositionChanged(index),
+    ),);
   }
   initAlignment() {
     switch(groupAlignment){
