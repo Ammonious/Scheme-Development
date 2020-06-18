@@ -67,7 +67,7 @@ class SchemeNavRail extends StatelessWidget {
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) => onPositionChanged(index),
       ),),
-      footer
+      footer ?? SizedBox.shrink()
     ],
     );
   }
