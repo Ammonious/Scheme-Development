@@ -89,7 +89,7 @@ class PicasoColorizer {
 		return PicasoColorizer(_color);
 	}
 
-	PicasoColorizer lighten([int amount = 10]) {
+	PicasoColorizer lightenColor([int amount = 10]) {
 		final hsl = this.toHsl();
 		hsl.l += amount / 100;
 		hsl.l = clamp01(hsl.l);
@@ -107,7 +107,7 @@ class PicasoColorizer {
 		return PicasoColorizer(color);
 	}
 
-	PicasoColorizer darken([int amount = 10]) {
+	PicasoColorizer darkenColor([int amount = 10]) {
 		final hsl = this.toHsl();
 		hsl.l -= amount / 100;
 		hsl.l = clamp01(hsl.l);

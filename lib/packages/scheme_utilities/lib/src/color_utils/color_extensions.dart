@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scheme_utilities/src/color_utils/picaso_colorizer.dart';
 import 'dart:math' as math;
 import 'picaso_utils.dart';
-
+import 'picaso_colorizer.dart';
 extension StringToColor on String {
   int _getColorFromHex(String hexColor) {
     if (hexColor == null) hexColor = Colors.white.hexString;
@@ -47,9 +47,9 @@ extension ColorExtension on Color {
       ? Colors.blue.value.toRadixString(16).substring(2, this.value.toRadixString(16).length)
       : this.value.toRadixString(16).substring(2, this.value.toRadixString(16).length);
 
-  lightenBy(int percent) => _lighter(percent);
+  lightenBy(int percent) => PicasoColorizer(this).lightenColor(percent).color;
 
-  darkenBy(int percent) => _darker(percent);
+  darkenBy(int percent) => PicasoColorizer(this).darkenColor(percent).color;
 
   Color get darken => Color.fromARGB(-1, (this.red * this.red) ~/ 255,
       (this.green * this.green) ~/ 255, (this.blue * this.blue) ~/ 255);
