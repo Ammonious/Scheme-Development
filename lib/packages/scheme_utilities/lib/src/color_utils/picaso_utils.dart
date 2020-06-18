@@ -4,6 +4,8 @@ import 'dart:math' as math;
 
 import 'package:scheme_utilities/src/color_utils/color_extensions.dart';
 
+import 'color_utils.dart';
+
 
 
 
@@ -68,8 +70,8 @@ MaterialAccentColor generateAccentSwatch(Color src) =>
 
 Map<int, Color> _generateSwatch(Color base) {
   return {
-    50: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(45),
-    100: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(35),
+    50: getSwatchShade(base,50),
+    100: getSwatchShade(base,100),
     200: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(25),
     300: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(15),
     400: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(5),
