@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:device_info/device_info.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:package_info/package_info.dart';
 
@@ -39,4 +40,7 @@ class SchemeDeviceUtils extends GetController {
 		return supported;
 	}
 
+
+	final isPlatformDark =
+			WidgetsBinding.instance.window.platformBrightness == Brightness.dark;
 }

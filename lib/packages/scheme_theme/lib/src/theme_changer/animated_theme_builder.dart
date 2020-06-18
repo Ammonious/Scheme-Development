@@ -1,9 +1,12 @@
+import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_theme/src/theme_changer/controllers/animated_theme_controller.dart';
+
 import 'clippers/theme_switcher_clipper_bridge.dart';
 import 'clippers/theme_switcher_circle_clipper.dart';
 import 'theme_provider.dart';
 import 'package:flutter/material.dart';
-
-class AnimatedThemeBuilder extends StatefulWidget {
+import 'package:get/get.dart';
+class AnimatedThemeBuilder extends HookWidget {
   AnimatedThemeBuilder({
     Key key,
     @required this.child,
@@ -11,62 +14,33 @@ class AnimatedThemeBuilder extends StatefulWidget {
         super(key: key);
 
   final Widget child;
-
-  @override
-  _AnimatedThemeBuilderState createState() => _AnimatedThemeBuilderState();
-}
-
-class _AnimatedThemeBuilderState extends State<AnimatedThemeBuilder>
-    with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  bool _busy = false;
-
   //one more key to save drawer state
-  final _globalKey = GlobalKey();
+  final _globalKey = Get.key;
+  final ThemeAnimController get = Get.put(ThemeAnimController());
 
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
-  }
 
-  void _afterLayout(_) {
-    _oldTheme = ThemeProvider.of(context);
-    _controller = AnimationController(
-      vsync: this,
-      duration: ThemeProvider.instanceOf(context).duration,
-    );
-    _controller.forward();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  ThemeData _oldTheme;
-  Offset _switcherOffset;
 
   @override
   Widget build(BuildContext context) {
-    var theme = ThemeProvider.of(context);
+    get.controller = useAnimationController(duration: Duration(seconds: 1));
+
+    var theme = Get.theme;
     var children = <Widget>[];
-    if (_oldTheme == null || _oldTheme == theme) {
+    if (get.oldTheme == null || get.oldTheme == theme) {
       children.add(_getPage(theme));
     } else {
       children.addAll([
         RawImage(image: ThemeProvider.instanceOf(context).image),
         AnimatedBuilder(
-          animation: _controller,
+          animation: get.controller,
           child: _getPage(theme),
           builder: (_, child) {
             return ClipPath(
               clipper: ThemeSwitcherClipperBridge(
                 clipper: ThemeProvider.instanceOf(context).clipper ??
                     const ThemeSwitcherCircleClipper(),
-                offset: _switcherOffset,
-                sizeRate: _controller.value,
+                offset: get.switcherOffset,
+                sizeRate: get.controller.value,
               ),
               child: child,
             );
@@ -74,45 +48,35 @@ class _AnimatedThemeBuilderState extends State<AnimatedThemeBuilder>
         )
       ]);
     }
-    return Material(
+    return GetBuilder<ThemeAnimController>(
+      didUpdateWidget: (c,state) {
+        var theme = Get.theme;
+        if(!get.busy && theme != get.oldTheme) {
+        get.busy = true;
+        get.getSwitcherCoordinates(
+              ThemeProvider.instanceOf(context).switcherGlobalKey);
+        get.controller.reset();
+        get.controller.forward().then(
+                (_) {
+        get.busy = false;
+              get.oldTheme = theme;
+            },
+          );
+        }
+    },builder: (c) => Material(
       child: Stack(
         children: children,
       ),
-    );
+    ),);
   }
 
   Widget _getPage(ThemeData brandTheme) {
     return Theme(
       key: _globalKey,
       data: brandTheme,
-      child: widget.child,
+      child: child,
     );
   }
 
-  void _getSwitcherCoordinates(switcherGlobalKey) {
-    RenderBox renderObject =
-        switcherGlobalKey.currentContext.findRenderObject();
-    final size = renderObject.size;
-    _switcherOffset = renderObject
-        .localToGlobal(Offset.zero)
-        .translate(size.width / 2, size.height / 2);
-  }
 
-  @override
-  void didUpdateWidget(Widget oldWidget) {
-    var theme = ThemeProvider.of(context);
-    if (!_busy && theme != _oldTheme) {
-      _busy = true;
-      _getSwitcherCoordinates(
-          ThemeProvider.instanceOf(context).switcherGlobalKey);
-      _controller.reset();
-      _controller.forward().then(
-        (_) {
-          _busy = false;
-          _oldTheme = theme;
-        },
-      );
-    }
-    super.didUpdateWidget(oldWidget);
-  }
 }
