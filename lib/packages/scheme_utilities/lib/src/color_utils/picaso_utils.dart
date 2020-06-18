@@ -68,10 +68,10 @@ MaterialAccentColor generateAccentSwatch(Color src) =>
 
 Map<int, Color> _generateSwatch(Color base) {
   return {
-    50: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(25),
-    100: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(20),
-    200: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(15),
-    300: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(10),
+    50: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(45),
+    100: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(35),
+    200: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(25),
+    300: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(15),
     400: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(5),
     500: Color.fromARGB(255, base.red, base.green, base.blue),
     600: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(5),
