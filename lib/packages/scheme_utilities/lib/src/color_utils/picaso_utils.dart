@@ -72,14 +72,14 @@ Map<int, Color> _generateSwatch(Color base) {
   return {
     50: getSwatchShade(base,50),
     100: getSwatchShade(base,100),
-    200: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(25),
+    200: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(23),
     300: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(15),
     400: Color.fromARGB(255, base.red, base.green, base.blue).lightenBy(5),
     500: Color.fromARGB(255, base.red, base.green, base.blue),
     600: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(5),
     700: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(10),
     800: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(15),
-    900: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(25),
+    900: Color.fromARGB(255, base.red, base.green, base.blue).darkenBy(28),
   };
 }
 
