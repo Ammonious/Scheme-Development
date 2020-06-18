@@ -121,8 +121,8 @@ MaterialColor newColorSwatch(Color color, {bool opaque: true}) {
 /// get list of material color shades from simple [Color]
 ///
 Map<int, Color> getMaterialColorValues(Color primary) => <int, Color>{
-	50: getSwatchShade(primary, 50),
-	100: getSwatchShade(primary, 100),
+	50: getSwatchShade(primary, 55),
+	100: getSwatchShade(primary, 125),
 	200: getSwatchShade(primary, 200),
 	300: getSwatchShade(primary, 300),
 	400: getSwatchShade(primary, 400),
