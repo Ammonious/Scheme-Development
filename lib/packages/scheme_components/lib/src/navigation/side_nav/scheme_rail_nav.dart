@@ -38,13 +38,9 @@ class SchemeNavRail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Positioned(left: 0,top: 0,bottom: 0,child: NavigationRail(
+    return Column(children: [
+      Expanded(child: NavigationRail(
         leading: header,
-        trailing: Column(children: [
-          Expanded(child: SizedBox(),),
-          footer
-        ],),
         backgroundColor: backgroundColor,
         elevation: elevation,
         labelType: labelType,
@@ -70,8 +66,10 @@ class SchemeNavRail extends StatelessWidget {
             : List<NavigationRailDestination>(),
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) => onPositionChanged(index),
-      ),)
-    ],);
+      ),),
+      footer
+    ],
+    );
   }
   initAlignment() {
     switch(groupAlignment){
