@@ -47,9 +47,9 @@ extension ColorExtension on Color {
       ? Colors.blue.value.toRadixString(16).substring(2, this.value.toRadixString(16).length)
       : this.value.toRadixString(16).substring(2, this.value.toRadixString(16).length);
 
-  lightenBy(int percent) => PicasoColorizer(this).lightenColor(percent).color;
+  lightenBy(int percent) => _lighter(percent);
 
-  darkenBy(int percent) => PicasoColorizer(this).darkenColor(percent).color;
+  darkenBy(int percent) => _darker(percent);
 
   Color get darken => Color.fromARGB(-1, (this.red * this.red) ~/ 255,
       (this.green * this.green) ~/ 255, (this.blue * this.blue) ~/ 255);
