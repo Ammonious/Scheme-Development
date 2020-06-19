@@ -1,4 +1,4 @@
-library link_previewer;
+
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
@@ -6,14 +6,12 @@ import 'package:html/parser.dart' as parser;
 import 'package:html/dom.dart' hide Text;
 import 'package:flutter/material.dart' hide Element;
 import 'dart:async';
+import 'parser/web_page_parser.dart';
+import 'content_direction.dart';
+import 'vertical_link_preview.dart';
+import 'horizontal_link_view.dart';
 
-part 'parser/web_page_parser.dart';
 
-part 'package:link_previewer/horizontal_link_view.dart';
-
-part 'package:link_previewer/vertical_link_preview.dart';
-
-part 'package:link_previewer/content_direction.dart';
 
 class LinkPreviewer extends StatefulWidget {
   LinkPreviewer({
@@ -97,7 +95,7 @@ class _LinkPreviewer extends State<LinkPreviewer> {
   }
 
   String _getUriWithPrefix(uri) {
-    return WebPageParser._addWWWPrefixIfNotExists(uri);
+    return WebPageParser.addWWWPrefixIfNotExists(uri);
   }
 
   void _getMetaData(link) async {

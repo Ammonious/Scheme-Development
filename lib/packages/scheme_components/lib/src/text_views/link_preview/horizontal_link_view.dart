@@ -1,4 +1,6 @@
-part of link_previewer;
+
+import 'package:flutter/material.dart';
+
 
 class HorizontalLinkView extends StatelessWidget {
   HorizontalLinkView({

@@ -32,6 +32,7 @@ export 'src/dialogs/scheme_dialogs.dart';
 export 'src/sheets/scheme_bottom_sheets.dart';
 export 'src/loading/loader_index.dart';
 export 'src/scrolling/scrolling_index.dart';
+export 'src/text_views/text_index.dart';
 
 
 class SchemeComponentUtils extends GetController{

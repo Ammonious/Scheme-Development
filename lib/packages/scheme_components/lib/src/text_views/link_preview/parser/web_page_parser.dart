@@ -1,4 +1,11 @@
-part of link_previewer;
+
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
+import 'package:html/parser.dart' as parser;
+import 'package:html/dom.dart' hide Text;
+import 'package:flutter/material.dart' hide Element;
+import 'dart:async';
+
 
 class WebPageParser {
   static Future<Map> getData(String url) async {
@@ -27,7 +34,7 @@ class WebPageParser {
           }
         }
       });
-      _scrapeDataToEmptyValue(data, document, url);
+      scrapeDataToEmptyValue(data, document, url);
     }
     return data;
   }
@@ -37,7 +44,7 @@ class WebPageParser {
     return uri.host;
   }
 
-  static void _scrapeDataToEmptyValue(Map data, Document document, String url) {
+  static void scrapeDataToEmptyValue(Map data, Document document, String url) {
     if (!data.containsKey("title") ||
         data["title"] == null ||
         data["title"] == "") {
@@ -105,7 +112,7 @@ class WebPageParser {
     return document.head.querySelectorAll("[property*='og:']");
   }
 
-  static String _addWWWPrefixIfNotExists(String uri) {
+  static String addWWWPrefixIfNotExists(String uri) {
     if (uri == null || uri == "") {
       return uri;
     }
