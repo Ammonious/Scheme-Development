@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scheme_components/src/text_views/auto_size_text.dart';
 
+import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
 import 'button_constants.dart';

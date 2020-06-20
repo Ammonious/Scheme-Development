@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:scheme_components/src/pickers/color_pickers/utils.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 class MaterialPicker extends StatefulWidget {
   MaterialPicker({

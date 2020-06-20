@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 class ProgressSnackbar extends GetController {
 	static ProgressSnackbar get to => Get.find();

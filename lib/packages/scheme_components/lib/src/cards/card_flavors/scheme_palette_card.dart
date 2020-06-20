@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:scheme_components/src/cards/controller/scheme_card_controller.dart';
 import 'package:scheme_components/src/styles/scheme_styles.dart';
 import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 class SchemePaletteCard extends StatelessWidget {
   final double height;

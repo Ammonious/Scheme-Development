@@ -3,6 +3,8 @@ import 'package:scheme_utilities/src/color_utils/picaso_colorizer.dart';
 import 'dart:math' as math;
 import 'picaso_utils.dart';
 import 'picaso_colorizer.dart';
+
+
 extension StringToColor on String {
   int _getColorFromHex(String hexColor) {
     if (hexColor == null) hexColor = Colors.white.hexString;
