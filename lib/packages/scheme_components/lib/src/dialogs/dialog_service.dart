@@ -74,7 +74,7 @@ class DialogService {
             isDismissible: true,
             shape: RoundedRectangleBorder(borderRadius: topCardRadius));
       default:
-        return Get.dialog(CustomAlertDialog(request: request));
+        return Get.dialog(CustomAlertDialog(request: request,dialogService: this,));
     }
   }
 

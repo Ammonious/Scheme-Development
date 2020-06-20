@@ -8,7 +8,6 @@ import 'package:scheme_components/src/navigation/models/scheme_nav_data.dart';
 import 'package:flutter/material.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 
-import 'package:scheme_theme/scheme_theme.dart';
  
 
 // Handle the transition between selected and de-deselected, by animating it's own width,

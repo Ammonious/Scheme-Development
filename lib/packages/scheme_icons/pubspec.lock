@@ -21,7 +21,7 @@ packages:
       name: animations
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   ansicolor:
     dependency: transitive
     description:
@@ -341,7 +341,7 @@ packages:
       name: flutter_screenutil
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "2.1.0"
   flutter_shine:
     dependency: transitive
     description:
@@ -395,7 +395,7 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.13.1"
+    version: "2.14.1"
   get_it:
     dependency: transitive
     description:
@@ -584,7 +584,7 @@ packages:
       name: momentum
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.3"
+    version: "1.2.5"
   nested:
     dependency: transitive
     description:
@@ -807,7 +807,7 @@ packages:
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: "84660b48d04215e70390d76071447c98a0818d16"
+      resolved-ref: cd869bffe8c4c0af7b87db569f7f8bf8dfe30ac4
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
@@ -816,7 +816,7 @@ packages:
     description:
       path: "lib/packages/scheme_shared/"
       ref: HEAD
-      resolved-ref: "84660b48d04215e70390d76071447c98a0818d16"
+      resolved-ref: cd869bffe8c4c0af7b87db569f7f8bf8dfe30ac4
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -875,7 +875,7 @@ packages:
       name: shelf
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.5"
+    version: "0.7.7"
   shelf_web_socket:
     dependency: transitive
     description:
@@ -978,7 +978,7 @@ packages:
       name: synchronized
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.2.0+1"
   term_glyph:
     dependency: transitive
     description:
@@ -1013,7 +1013,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.4.10"
+    version: "5.4.11"
   url_launcher_macos:
     dependency: transitive
     description:
