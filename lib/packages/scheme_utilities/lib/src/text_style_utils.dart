@@ -9,6 +9,14 @@ import 'package:http/http.dart' as http;
 class SchemeFontUtils extends GetController{
 
 
+  fieldFocusChange(FocusNode currentFocus, FocusNode nextFocus) {
+    currentFocus.unfocus();
+    FocusScope.of(Get.context).requestFocus(nextFocus);
+  }
+
+  dismissKeyboard() =>
+      FocusScope.of(Get.context).requestFocus(FocusNode());
+
   Future<ByteData> _fetchFont(String fontPath) async {
     final response = await http.get(fontPath);
 
