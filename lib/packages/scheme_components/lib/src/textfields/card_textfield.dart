@@ -6,12 +6,10 @@ import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_shared/scheme_shared.dart';
 import 'controllers/currency_controller.dart';
+import 'controllers/scheme_textfield_controller.dart';
 class CardTextField extends HookWidget {
-  final FocusNode textFocus;
-  final FocusNode nextFocus;
-  final TextEditingController controller;
-  final CurrencyTextFieldController currencyController;
-  final Color brandColor;
+  SchemeFieldController controller;
+  final Color color;
   final IconData iconData;
   final String label;
   final bool isPassword;
@@ -24,6 +22,7 @@ class CardTextField extends HookWidget {
   final Color hintColor;
   final Color backgroundColor;
   final TextStyle textStyle;
+  final Widget icon;
   final int maxLength;
   final Function onGainedFocus;
   final TextInputAction inputAction;
@@ -34,11 +33,9 @@ class CardTextField extends HookWidget {
   final List<BoxShadow> boxShadow;
   final double height;
   CardTextField({
-    Key key,
+    this.icon,
     this.label,
-    @required this.textFocus,
-    this.brandColor = Colors.deepPurpleAccent,
-    this.nextFocus,
+    this.color = Colors.deepPurpleAccent,
     this.controller,
     this.boxShadow,
     this.iconData,
@@ -60,8 +57,7 @@ class CardTextField extends HookWidget {
     this.textCapitalization = TextCapitalization.none,
     this.height = 72,
     this.showIcon = false,
-    this.currencyController,
-  }) : super(key: key);
+  });
 
 
 
@@ -70,10 +66,8 @@ class CardTextField extends HookWidget {
   @override
   Widget build(BuildContext context) {
 
-    final textController = currencyController ?? controller;
+    final textController = controller.currencyController ?? controller.textController;
 
-    final mainStream = useStream<bool>(focusNotifier.mainStream(textFocus));
-    final nextStream = useStream<bool>(focusNotifier.nextStream(nextFocus));
 
     Color defaultColor = textStyle != null ? textStyle.color : backgroundColor.textColor;
     TextStyle style = textStyle ?? Get.theme.textTheme.subtitle1 ?? TextStyle(fontSize:16);
@@ -90,11 +84,11 @@ class CardTextField extends HookWidget {
         child: Center(
           child: Theme(
             data: Get.theme.copyWith(
-              primaryColor: brandColor,
+              primaryColor: color,
             ),
             child: TextField(
               enabled: enabled,
-              focusNode: textFocus,
+              focusNode: controller.currentFocus,
               maxLength: maxLength,
               autofocus: autoFocus,
               keyboardType: inputType,
@@ -103,16 +97,16 @@ class CardTextField extends HookWidget {
               textCapitalization: textCapitalization,
               onChanged: (text) => onChange != null ? onChange(text) : null,
               onSubmitted: (text) {
-                if (nextFocus != null && !disableKeyboard) SchemeUtils.font.fieldFocusChange(textFocus, nextFocus);
-                else SchemeUtils.font.dismissKeyboard();
-
+               bool dismiss = Get.focusScope.nextFocus();
+                if(dismiss) SchemeUtils.font.dismissKeyboard();
+                else controller.currentFocus = Get.focusScope.nearestScope.parent;
                 if (onSubmit != null) onSubmit(text);
               },
               style: textStyle == null
                   ? Get.theme.textTheme.subtitle1.copyWith(color: textColor)
                   : textStyle.copyWith(color: backgroundColor.textColor),
               maxLines: 1,
-              cursorColor: brandColor,
+              cursorColor: color,
               controller: textController,
               decoration: showIcon ? inputWithIcon(style,defaultColor) : inputNoIcon(style,defaultColor),
               obscureText: isPassword,
@@ -125,12 +119,12 @@ class CardTextField extends HookWidget {
 
   inputWithIcon(style,defaultColor) {
     return InputDecoration(
-      icon: Icon(
+      icon: icon ?? Icon(
         iconData,
-        color: textFocus.hasFocus ? brandColor : defaultColor,
+        color: Get.focusScope.parent.hasFocus ? color : defaultColor,
       ),
       labelStyle: style.copyWith(
-          color: textFocus.hasFocus ? brandColor : defaultColor ?? backgroundColor.textColor),
+          color: Get.focusScope.parent.hasFocus ? color : defaultColor ?? backgroundColor.textColor),
       border: InputBorder.none,
       contentPadding: EdgeInsets.symmetric(horizontal: 8),
       labelText: label ?? '',
@@ -141,7 +135,7 @@ class CardTextField extends HookWidget {
 
     return InputDecoration(
       labelStyle: style.copyWith(
-          color: textFocus.hasFocus ? brandColor : defaultColor ?? backgroundColor.textColor),
+          color: Get.focusScope.parent.hasFocus ? color : defaultColor ?? backgroundColor.textColor),
       border: InputBorder.none,
       contentPadding: EdgeInsets.symmetric(horizontal: 8),
       labelText: label ?? '',
