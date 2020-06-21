@@ -7,7 +7,7 @@ import 'package:scheme_theme/scheme_theme.dart';
 
 import 'utils/button_constants.dart';
 
-class SchemeBtn extends StatelessWidget {
+class SchemeButton extends StatelessWidget {
   SchemeBtnStyle schemeBtnStyle;
   Function onTap;
   String label;
@@ -26,7 +26,7 @@ class SchemeBtn extends StatelessWidget {
   bool enabled;
   IconAlignment iconAlignment;
 
-  SchemeBtn.style({
+  SchemeButton.style({
     this.onTap,
     this.icon,
     this.label,
@@ -46,7 +46,7 @@ class SchemeBtn extends StatelessWidget {
     this.iconAlignment = IconAlignment.left,
   });
 
-  SchemeBtn.gradient({
+  SchemeButton.gradient({
     this.onTap,
     this.label,
     this.height = 60,
@@ -67,7 +67,7 @@ class SchemeBtn extends StatelessWidget {
 
 
 
-  SchemeBtn.flat({
+  SchemeButton.flat({
     this.onTap,
     this.label,
     this.height = 60,

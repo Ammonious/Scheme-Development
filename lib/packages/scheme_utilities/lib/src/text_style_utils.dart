@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -16,6 +17,48 @@ class SchemeFontUtils extends GetController{
 
   dismissKeyboard() =>
       FocusScope.of(Get.context).requestFocus(FocusNode());
+
+
+  // Adapted these helpful functions from:
+// https://github.com/flutter/flutter/blob/master/packages/flutter/test/material/text_field_test.dart
+
+// Returns first render editable
+  RenderEditable findRenderEditable(RenderObject root) {
+    RenderEditable renderEditable;
+    void recursiveFinder(RenderObject child) {
+      if (child is RenderEditable) {
+        renderEditable = child;
+        return;
+      }
+      child.visitChildren(recursiveFinder);
+    }
+
+    root.visitChildren(recursiveFinder);
+    return renderEditable;
+  }
+
+  List<TextSelectionPoint> globalize(
+      Iterable<TextSelectionPoint> points, RenderBox box) {
+    return points.map<TextSelectionPoint>((TextSelectionPoint point) {
+      return TextSelectionPoint(
+        box.localToGlobal(point.point),
+        point.direction,
+      );
+    }).toList();
+  }
+
+  Offset getCaretPosition(RenderBox box) {
+    final RenderEditable renderEditable = findRenderEditable(box);
+    if (!renderEditable.hasFocus) {
+      return null;
+    }
+    final List<TextSelectionPoint> endpoints = globalize(
+      renderEditable.getEndpointsForSelection(renderEditable.selection),
+      renderEditable,
+    );
+    return endpoints[0].point + const Offset(0.0, -2.0);
+  }
+
 
   Future<ByteData> _fetchFont(String fontPath) async {
     final response = await http.get(fontPath);

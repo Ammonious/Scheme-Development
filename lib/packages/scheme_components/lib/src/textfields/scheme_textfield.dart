@@ -6,43 +6,40 @@ import 'package:scheme_theme/scheme_theme.dart';
 
 import '../../scheme_components.dart';
 import 'controllers/currency_controller.dart';
+import 'package:scheme_icons/scheme_icons.dart';
 
-
-enum SchemeFieldStyle {card,underline,neu,outline}
+enum SchemeFieldType {card,underline,neu,outline}
 
 class SchemeTextField extends HookWidget {
-	final SchemeFieldStyle fieldStyle;
-	final SchemeFieldDecoration decoration;
-	final String label;
-	final FocusNode focusNode;
-	final FocusNode nextFocus;
-	final IconData iconData;
-	final TextEditingController controller;
-	final CurrencyTextFieldController currencyController;
-	final TextInputType inputType;
-	final TextInputAction inputAction;
-	final TextCapitalization textCapitalization;
-	final List<TextInputFormatter> inputFormatters;
-	final TextStyle textStyle;
-	final Color themeColor;
-	final Color textColor;
-	final Color hintColor;
-	final Color backgroundColor;
-	final double width;
-	final double height;
-
+	 SchemeFieldType fieldStyle;
+	 String label;
+	 FocusNode focusNode;
+	 FocusNode nextFocus;
+	 IconData iconData;
+	 TextEditingController controller;
+	 CurrencyTextFieldController currencyController;
+	 TextInputType inputType;
+	 TextInputAction inputAction;
+	 TextCapitalization textCapitalization;
+	 List<TextInputFormatter> inputFormatters;
+	 TextStyle textStyle;
+	 Color themeColor;
+	 Color textColor;
+	 Color hintColor;
+	 Color backgroundColor;
+	 double width;
+	 double height;
 	/// Whether this should animate on [Focus]
-	final bool animateOnFocus;
+	 bool animateOnFocus;
 
-	final int maxLength;
-	final Function(String text) onChange;
-	final Function(String text) onSubmit;
-	final Function onGainedFocus;
-	final bool isPassword;
-	final bool enabled;
-
-
-	SchemeTextField({this.decoration,
+	 int maxLength;
+	 Function(String text) onChange;
+	 Function(String text) onSubmit;
+	 Function onGainedFocus;
+	 bool isPassword;
+	 bool enabled;
+ 
+	SchemeTextField({ 
 		this.animateOnFocus,
 		this.width,
 		this.height = 72,
@@ -52,7 +49,7 @@ class SchemeTextField extends HookWidget {
 		this.inputFormatters,
 		this.onGainedFocus,
 		this.textCapitalization = TextCapitalization.none,
-		this.fieldStyle = SchemeFieldStyle.outline,
+		this.fieldStyle = SchemeFieldType.outline,
 		this.label = '',
 		this.focusNode,
 		this.isPassword = false,
@@ -73,7 +70,7 @@ class SchemeTextField extends HookWidget {
 
 	@override
 	Widget build(BuildContext context) {
-
+		
 
 		return Material(
 			color: Colors.transparent,

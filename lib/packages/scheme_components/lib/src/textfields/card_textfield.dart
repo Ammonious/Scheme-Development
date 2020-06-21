@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:scheme_components/src/textfields/controllers/focus_controller.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:scheme_theme/scheme_theme.dart';
-
+import 'package:scheme_shared/scheme_shared.dart';
 import 'controllers/currency_controller.dart';
 class CardTextField extends HookWidget {
   final FocusNode textFocus;
@@ -35,13 +35,13 @@ class CardTextField extends HookWidget {
   final double height;
   CardTextField({
     Key key,
+    this.label,
     @required this.textFocus,
+    this.brandColor = Colors.deepPurpleAccent,
     this.nextFocus,
     this.controller,
     this.boxShadow,
-    @required this.brandColor,
-    @required this.iconData,
-    @required this.label,
+    this.iconData,
     this.isPassword = false,
     this.enabled = true,
     this.disableKeyboard = false,
@@ -75,18 +75,21 @@ class CardTextField extends HookWidget {
     final mainStream = useStream<bool>(focusNotifier.mainStream(textFocus));
     final nextStream = useStream<bool>(focusNotifier.nextStream(nextFocus));
 
+    Color defaultColor = textStyle != null ? textStyle.color : backgroundColor.textColor;
+    TextStyle style = textStyle ?? Get.theme.textTheme.subtitle1 ?? TextStyle(fontSize:16);
+
     return Material(color: Colors.transparent,
       child: Container(
         height: height,
-        padding: EdgeInsets.only(left: 16, right: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
             color: backgroundColor,
             boxShadow: boxShadow ??
-                wideShadow,
+                normalShadow,
             borderRadius: BorderRadius.circular(8)),
         child: Center(
           child: Theme(
-            data: Theme.of(context).copyWith(
+            data: Get.theme.copyWith(
               primaryColor: brandColor,
             ),
             child: TextField(
@@ -100,18 +103,18 @@ class CardTextField extends HookWidget {
               textCapitalization: textCapitalization,
               onChanged: (text) => onChange != null ? onChange(text) : null,
               onSubmitted: (text) {
-                if (nextFocus != null && !disableKeyboard) fieldFocusChange(context, textFocus, nextFocus);
-                else SchemeUtils.dismissKeyboardWithContext(context);
+                if (nextFocus != null && !disableKeyboard) SchemeUtils.font.fieldFocusChange(textFocus, nextFocus);
+                else SchemeUtils.font.dismissKeyboard();
 
                 if (onSubmit != null) onSubmit(text);
               },
               style: textStyle == null
-                  ? schemeTitle1.copyWith(color: textColor)
+                  ? Get.theme.textTheme.subtitle1.copyWith(color: textColor)
                   : textStyle.copyWith(color: backgroundColor.textColor),
               maxLines: 1,
               cursorColor: brandColor,
               controller: textController,
-              decoration: showIcon ? inputWithIcon() : inputNoIcon(),
+              decoration: showIcon ? inputWithIcon(style,defaultColor) : inputNoIcon(style,defaultColor),
               obscureText: isPassword,
             ),
           ),
@@ -120,9 +123,7 @@ class CardTextField extends HookWidget {
     );
   }
 
-  inputWithIcon() {
-    Color defaultColor = textStyle != null ? textStyle.color : backgroundColor.textColor;
-    TextStyle style = textStyle ?? schemeTitle1;
+  inputWithIcon(style,defaultColor) {
     return InputDecoration(
       icon: Icon(
         iconData,
@@ -131,20 +132,19 @@ class CardTextField extends HookWidget {
       labelStyle: style.copyWith(
           color: textFocus.hasFocus ? brandColor : defaultColor ?? backgroundColor.textColor),
       border: InputBorder.none,
-      contentPadding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
-      labelText: label,
+      contentPadding: EdgeInsets.symmetric(horizontal: 8),
+      labelText: label ?? '',
     );
   }
 
-  inputNoIcon() {
-    Color defaultColor = textStyle != null ? textStyle.color : backgroundColor.textColor;
-    TextStyle style = textStyle ?? Get.theme.textTheme.subtitle1 ?? TextStyle(fontSize:16);
+  inputNoIcon(style,defaultColor) {
+
     return InputDecoration(
       labelStyle: style.copyWith(
           color: textFocus.hasFocus ? brandColor : defaultColor ?? backgroundColor.textColor),
       border: InputBorder.none,
       contentPadding: EdgeInsets.symmetric(horizontal: 8),
-      labelText: label,
+      labelText: label ?? '',
     );
   }
 }
