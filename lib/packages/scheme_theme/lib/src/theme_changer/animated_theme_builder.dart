@@ -1,6 +1,6 @@
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_theme/src/theme_changer/controllers/animated_theme_controller.dart';
-
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'clippers/theme_switcher_clipper_bridge.dart';
 import 'clippers/theme_switcher_circle_clipper.dart';
 import 'theme_provider.dart';

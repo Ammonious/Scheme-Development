@@ -3,6 +3,7 @@ import 'package:scheme_components/src/navigation/models/scheme_nav_data.dart';
 import 'package:scheme_icons/scheme_icons.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
  
 
 class NavBtnIcon extends StatelessWidget {

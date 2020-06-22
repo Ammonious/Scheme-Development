@@ -5,6 +5,7 @@ import 'package:flutter_shine/flutter_shine.dart';
 import 'package:get/get.dart';
 import 'package:scheme_components/src/cards/controller/scheme_card_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 import '../../../scheme_components.dart';
 

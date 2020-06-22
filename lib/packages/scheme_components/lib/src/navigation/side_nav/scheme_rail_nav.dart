@@ -4,8 +4,7 @@ import 'package:scheme_components/scheme_components.dart';
 import 'package:scheme_components/src/navigation/bottom_nav/views/nav_button_icon.dart';
 import 'package:scheme_components/src/navigation/models/scheme_nav_constants.dart';
 import 'package:scheme_components/src/navigation/models/scheme_nav_data.dart';
-import 'package:scheme_icons/scheme_icons.dart';
-import 'package:scheme_theme/scheme_theme.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 class SchemeNavRail extends StatelessWidget {
   final List<SchemeNavData> items;

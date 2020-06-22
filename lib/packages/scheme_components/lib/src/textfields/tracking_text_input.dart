@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:scheme_components/src/textfields/controllers/input_helper.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 typedef void CaretMoved(Offset globalCaretPosition);
 typedef void TextChanged(String text);
@@ -41,7 +41,7 @@ class _TrackingTextInputState extends State<TrackingTextInput> {
         if (_fieldKey.currentContext != null) {
           // Find the render editable in the field.
           final RenderObject fieldBox = _fieldKey.currentContext.findRenderObject();
-          Offset caretPosition = getCaretPosition(fieldBox);
+          Offset caretPosition = SchemeUtils.font.getCaretPosition(fieldBox);
 
           if (widget.onCaretMoved != null) {
             widget.onCaretMoved(caretPosition);

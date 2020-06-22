@@ -63,7 +63,7 @@ class InformationDialog extends StatelessWidget {
             SizedBox(height: 24),
             Container(padding: EdgeInsets.only(right: 12,bottom: 12),
               child: Row(mainAxisSize: MainAxisSize.max, children: [Expanded(child: SizedBox(),),
-                SchemeBtn.style(
+                SchemeButton.style(
                   schemeBtnStyle: request.buttonStyle,
                   color: Picaso.paint.primary,
                   height: 38,

@@ -1,0 +1,6 @@
+
+
+enum ContentDirection {
+  vertical,
+  horizontal,
+}

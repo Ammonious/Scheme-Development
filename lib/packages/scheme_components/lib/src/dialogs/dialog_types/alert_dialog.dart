@@ -28,7 +28,7 @@ CustomAlertDialog({Key key, this.request,@required this.dialogService}) : super(
 	    ),
 	    actions: <Widget>[
 		    if (isConfirmationDialog)
-			    SchemeBtn.style(
+			    SchemeButton.style(
 				    height: 36,
 				    schemeBtnStyle: request.buttonStyle,
 				    label: request.cancelLabel,
@@ -36,7 +36,7 @@ CustomAlertDialog({Key key, this.request,@required this.dialogService}) : super(
 				    textStyle: Picaso.jot.button,
 				    onTap: () => dialogService.dialogComplete(request,DialogResponse(confirmed: false)),
 			    ),
-		    SchemeBtn.style(
+		    SchemeButton.style(
 			    height: 36,
 			    schemeBtnStyle: request.buttonStyle,
 			    color: Picaso.paint.primary,

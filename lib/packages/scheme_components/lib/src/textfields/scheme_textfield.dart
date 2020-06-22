@@ -2,86 +2,103 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:scheme_components/src/hooks/currency_controller_hook.dart';
+import 'package:scheme_components/src/textfields/card_textfield.dart';
+import 'package:scheme_components/src/textfields/controllers/scheme_textfield_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
-import '../../scheme_components.dart';
+import 'package:get/get.dart';
 import 'controllers/currency_controller.dart';
+import 'package:scheme_icons/scheme_icons.dart';
 
+enum SchemeInputStyle { card, underline, neu, outline }
+enum SchemeInputFormatter {text,currency}
 
-enum SchemeFieldStyle {card,underline,neu,outline}
+class SchemeInput extends HookWidget {
+  SchemeInputStyle fieldStyle;
+  SchemeInputFormatter fieldFormatter;
+  String label;
+  FocusNode focusNode;
+  FocusNode nextFocus;
+  IconData iconData;
+  Widget icon;
+  TextInputType inputType;
+  TextInputAction inputAction;
+  TextCapitalization textCapitalization;
+  List<TextInputFormatter> inputFormatters;
+  TextStyle textStyle;
+  Color color;
+  Color textColor;
+  Color hintColor;
+  Color backgroundColor;
+  double width;
+  double height;
 
-class SchemeTextField extends HookWidget {
-	final SchemeFieldStyle fieldStyle;
-	final SchemeFieldDecoration decoration;
-	final String label;
-	final FocusNode focusNode;
-	final FocusNode nextFocus;
-	final IconData iconData;
-	final TextEditingController controller;
-	final CurrencyTextFieldController currencyController;
-	final TextInputType inputType;
-	final TextInputAction inputAction;
-	final TextCapitalization textCapitalization;
-	final List<TextInputFormatter> inputFormatters;
-	final TextStyle textStyle;
-	final Color themeColor;
-	final Color textColor;
-	final Color hintColor;
-	final Color backgroundColor;
-	final double width;
-	final double height;
+  /// Whether this should animate on [Focus]
+  bool animateOnFocus;
 
-	/// Whether this should animate on [Focus]
-	final bool animateOnFocus;
+  int maxLength;
+  Function(String text) onChange;
+  Function(String text) onSubmit;
+  Function onGainedFocus;
+  bool isPassword;
+  bool enabled;
+  SchemeFieldController controller;
 
-	final int maxLength;
-	final Function(String text) onChange;
-	final Function(String text) onSubmit;
-	final Function onGainedFocus;
-	final bool isPassword;
-	final bool enabled;
-
-
-	SchemeTextField({this.decoration,
-		this.animateOnFocus,
-		this.width,
-		this.height = 72,
-		Key key,
-		this.textStyle,
-		this.maxLength,
-		this.inputFormatters,
-		this.onGainedFocus,
-		this.textCapitalization = TextCapitalization.none,
-		this.fieldStyle = SchemeFieldStyle.outline,
-		this.label = '',
-		this.focusNode,
-		this.isPassword = false,
-		this.enabled = true,
-		this.nextFocus,
-		this.iconData,
+  SchemeInput({
 		this.controller,
-		this.currencyController,
-		this.inputType = TextInputType.emailAddress,
-		this.inputAction = TextInputAction.done,
-		this.themeColor = Colors.blue,
-		this.textColor = nearlyBlack,
-		this.hintColor = Colors.grey,
-		this.backgroundColor = Colors.white,
-		this.onChange,
-		this.onSubmit,
-	}) : super(key: key);
+		this.fieldFormatter = SchemeInputFormatter.text,
+    this.animateOnFocus = true,
+		this.icon,
+    this.width,
+    this.height = 72,
+    this.textStyle,
+    this.maxLength,
+    this.inputFormatters,
+    this.onGainedFocus,
+    this.textCapitalization = TextCapitalization.none,
+    this.fieldStyle = SchemeInputStyle.outline,
+    this.label = '',
+    this.isPassword = false,
+    this.enabled = true,
+    this.iconData,
+    this.inputType = TextInputType.emailAddress,
+    this.inputAction = TextInputAction.done,
+    this.color = Colors.blue,
+    this.textColor = nearlyBlack,
+    this.hintColor = Colors.grey,
+    this.backgroundColor = Colors.white,
+  });
 
-	@override
-	Widget build(BuildContext context) {
+
+  @override
+  Widget build(BuildContext context) {
+
+    controller.currentFocus = useFocusNode();
+    controller.currencyController = useCurrencyTextFieldController();
+    controller.textController = useTextEditingController();
 
 
-		return Material(
-			color: Colors.transparent,
-			child: Padding(
-				padding: EdgeInsets.all(kIsWeb ? 4 : 0),
-				child: SizedBox(),
-			),
-		);
-	}
-
+    switch (fieldStyle) {
+      case SchemeInputStyle.card:
+        return CardTextField(
+					label: label,
+					color: color,
+					);
+      case SchemeInputStyle.underline:
+        // TODO: Handle this case.
+        break;
+      case SchemeInputStyle.neu:
+        // TODO: Handle this case.
+        break;
+      case SchemeInputStyle.outline:
+        // TODO: Handle this case.
+        break;
+    }
+  }
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty<SchemeFieldController>('controller', controller));
+  }
 }

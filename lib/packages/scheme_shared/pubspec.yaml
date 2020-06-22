@@ -34,6 +34,7 @@ dependencies:
   lumberdash:
   colorize_lumberdash:
   flutter_cache_manager:
+  flutter_markdown:
   package_info:
   device_info:
   mime_type:

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
-
+import 'package:flutter_hooks/flutter_hooks.dart';
 class FadingAppBar extends HookWidget {
   final SchemeBuilderController controller = Get.find();
   final Color color;

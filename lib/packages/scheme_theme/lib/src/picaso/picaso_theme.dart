@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
+import 'package:scheme_utilities/scheme_utilities.dart';
 
 import 'picaso_color.dart';
 

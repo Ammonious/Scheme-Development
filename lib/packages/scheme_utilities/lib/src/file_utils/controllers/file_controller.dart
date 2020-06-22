@@ -107,7 +107,7 @@ void setLoading(value) {
 
 	getHidden() async {
 		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
-		bool h = prefs.getBool("hidden") == null ? false : prefs.getBool("hidden");
+		bool h = prefs.getBool("hidden",defaultValue: false).getValue();
 		setHidden(h);
 	}
 
@@ -120,7 +120,7 @@ void setLoading(value) {
 
 	getSort() async {
 		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
-		int h = prefs.getInt("sort") == null ? 0 : prefs.getInt("sort");
+		int h = prefs.getInt("sort",defaultValue: 0).getValue();
 		setSort(h);
 	}
 
