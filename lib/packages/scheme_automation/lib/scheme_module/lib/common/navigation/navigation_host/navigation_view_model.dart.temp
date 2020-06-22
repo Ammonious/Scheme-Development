@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import '../../navigation/navbar/model/nav_item_model.dart';
+import '../../landing_page/landing_page.dart';
+import '../../theme/app_theme.dart';
+import 'package:scheme_package/scheme_package.dart';
+
+@lazySingleton
+class NavigationViewModel {
+
+
+
+
+  bottomNavButtons() => [
+        NavBarItemData(
+            title: 'Home',
+            iconData: BoxIcon.bxHomecircle,
+            width: 110,
+            selectedColor: AppTheme.themeColor,
+            child: LandingPage()),
+	  NavBarItemData(
+			  title: 'Services',
+			  iconData: BoxIcon.bxBriefcase,
+			  width: 120,
+			  selectedColor: AppTheme.themeColor,
+			  child: LandingPage()),
+	  NavBarItemData(
+			  title: 'Gallery',
+			  iconData: BoxIcon.bxPhotoalbum,
+			  width: 120,
+			  selectedColor: AppTheme.themeColor,
+			  child: LandingPage()),
+      ];
+
+  initNavItems() => <NavItemModel>[
+        NavItemModel(label: 'Home', child: LandingPage()),
+        NavItemModel(label: 'Services', child: LandingPage()),
+        NavItemModel(label: 'Gallery', child: LandingPage()),
+      ];
+
+  navHeightMobile(BuildContext context) => toolbarWithPadding(context);
+
+  navHeightTablet(BuildContext context) => toolbarWithPadding(context);
+
+  get navHeightDesktop => kToolbarHeight + 16;
+}

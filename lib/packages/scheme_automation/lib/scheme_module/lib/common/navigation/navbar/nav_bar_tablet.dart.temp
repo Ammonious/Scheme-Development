@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+import '../../../common/theme/app_theme.dart';
+import '../../../common/locator/locator.dart';
+import '../../../common/navigation/navigation_host/navigation_view_model.dart.temp';
+import 'package:scheme_package/scheme_package.dart';
+
+import 'model/nav_item_model.dart';
+import 'nav_item/nav_item.dart';
+
+class NavBarTablet extends StatelessWidget {
+	final NavigationViewModel model = locator<NavigationViewModel>();
+	final Function(Widget child) onSelect;
+	NavBarTablet({Key key, this.onSelect}) : super(key: key);
+
+	@override
+	Widget build(BuildContext context) {
+		List<NavItemModel> items = model.initNavItems();
+		return Material(
+			color: Colors.transparent,
+			child: Container(
+				height: model.navHeightTablet(context),
+				margin: EdgeInsets.only(bottom: 16,left: 16,right: 16),
+				width: screenWidth(context),
+				decoration: BoxDecoration(boxShadow: normalShadow,  color: Colors.white,),
+				child: Center(
+					child: Row(
+						mainAxisAlignment: MainAxisAlignment.center,
+						children: <Widget>[
+							Align(
+								alignment: Alignment.centerLeft,
+								child: Row(
+									children: <Widget>[
+										SizedBox(width: 24),
+										Image.asset(
+											AppTheme.logo,
+											height: 32,
+										),
+										SizedBox(
+											width: 24,
+										),
+										CustomDivider(
+											isVertical: true,
+											horizontalPadding: 0,
+											verticalPadding: 0,
+											width: 2,
+											height: 32,
+										),
+									],
+								),
+							),
+
+							Expanded(
+								child: ListView.builder(
+									scrollDirection: Axis.horizontal,
+									shrinkWrap: true,
+									itemCount: items.length,
+									itemBuilder: (context, index) => NavItem(
+										label: items[index].label,
+										child: items[index].child,
+										onTap: (child) => onSelect(child),
+									),
+								),
+							),
+						],
+					),
+				),
+			),
+		);
+	}
+}

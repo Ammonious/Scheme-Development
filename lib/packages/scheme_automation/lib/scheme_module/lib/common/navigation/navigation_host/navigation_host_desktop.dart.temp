@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+import '../../landing_page/landing_page.dart';
+import '../../../common/theme/app_theme.dart';
+import 'package:scheme_package/scheme_package.dart';
+
+class NavigationHostDesktop extends HookWidget {
+  NavigationHostDesktop({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scrollController = useScrollController();
+    return Material(
+      color: AppTheme.background,
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              color: AppTheme.background,
+              height: MediaQuery.of(context).padding.top,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            top: 0,
+            bottom: 0,
+            child: ShapedView(
+              shape: ArcShape(position: ArcPosition.Right),
+              child: Container(
+                width: screenWidth(context) * .5,
+                decoration: BoxDecoration(gradient: AppTheme.themeGradient),
+              ),
+            ),
+          ),
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 350),
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: AnimatedSwitcher(
+                duration: Duration(milliseconds: 350),
+                //Pass the current accent color down as a theme, so our overscroll indicator matches the btn color
+                child: AnimationConfiguration.synchronized(
+                  duration: Duration(milliseconds: 350),
+                  child: FadeInAnimation(
+                      child: SingleChildScrollView(
+                    controller: scrollController,
+                    child: LandingPage(),
+                  )),
+                )),
+          ),
+          AnimatedPositioned(
+              duration: Duration(milliseconds: 350),
+              top: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                height: appbarWithPadding(context) + 24,
+                padding: EdgeInsets.only(left: 16, right: 16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: liftedShadow,
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: CustomImage(
+                        imagePath: AppTheme.logo,
+                        height: 72,
+                        width: 200,
+                      ),
+                    ),
+                    Align(
+                        alignment: Alignment.centerRight,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            FlatButton(
+                              child: Text(
+                                'HOME',
+                                style: buttonStyle,
+                              ),
+                            ),
+                            FlatButton(
+                              child: Text(
+                                'SERVICES',
+                                style: buttonStyle,
+                              ),
+                            ),
+                            FlatButton(
+                              child: Text(
+                                'GALLERY',
+                                style: buttonStyle,
+                              ),
+                            ),
+                            CustomDivider(
+                              isVertical: true,
+                              height: 48,
+                              horizontalPadding: 0,
+                              verticalPadding: 0,
+                            ),
+                            SizedBox(width: 24),
+                            SchemeButton(
+                              width: 120,
+                              decoration: SchemeButtonDecoration(
+                                  boxShadow: liftedShadow,
+                                  borderRadius: BorderRadius.circular(42),
+                                  superEllipseShape: true),
+                              label: 'Sign In',
+                              textStyle: buttonStyle.copyWith(fontSize: 16),
+                              color: AppTheme.themeColor,
+                            ),
+                          ],
+                        ))
+                  ],
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+}

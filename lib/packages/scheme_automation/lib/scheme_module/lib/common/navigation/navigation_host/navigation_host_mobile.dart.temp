@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import '../navbar/nav_bar.dart';
+import '.../../../../locator/locator.dart';
+import '../../landing_page/landing_page.dart';
+
+import 'package:scheme_package/scheme_package.dart';
+
+import 'navigation_view_model.dart.temp';
+
+class NavigationHostMobile extends HookWidget {
+  final NavigationViewModel model = locator<NavigationViewModel>();
+  NavigationHostMobile({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final childNotifier = useState<Widget>(LandingPage());
+    return Material(
+      color: neuBackground,
+      child: Stack(
+        children: <Widget>[
+          Align(
+            alignment: Alignment.topCenter,
+            child: AnimatedSwitcher(
+                duration: Duration(milliseconds: 350),
+                //Pass the current accent color down as a theme, so our overscroll indicator matches the btn color
+                child: AnimationConfiguration.synchronized(
+                  duration: Duration(milliseconds: 350),
+                  child: FadeInAnimation(child: childNotifier.value),
+                )),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: NavBar(
+              onSelect: (child) => childNotifier.value = child,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

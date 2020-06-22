@@ -1,0 +1,86 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+
+import 'dialog_model.dart';
+import '../utils.dart';
+
+@lazySingleton
+class DialogService {
+  Function(DialogRequest) _showDialogListener;
+  Function dismissDialogListener;
+  Completer<DialogResponse> _dialogCompleter;
+
+  /// Registers a callback function. Typically to show the dialog
+  void registerDialogListener(Function(DialogRequest) showDialogListener, Function dismissDialog) {
+    _showDialogListener = showDialogListener;
+    dismissDialogListener = dismissDialog;
+  }
+
+  /// Calls the dialog listener and returns a Future that will wait for dialogComplete.
+  Future<DialogResponse> showDialog(
+      {String title,
+      String body,
+      String buttonLabel = 'OK',
+      DialogType dialogType,
+      DialogStyle dialogStyle}) {
+    _dialogCompleter = Completer<DialogResponse>();
+    _showDialogListener(DialogRequest(
+        title: title,
+        description: body,
+        confirmLabel: buttonLabel,
+        dialogStyle: dialogStyle,
+        dialogType: DialogType.alert));
+    return _dialogCompleter.future;
+  }
+
+  /// Shows a confirmation dialog
+  Future<DialogResponse> showConfirmationDialog(
+      {String title,
+      String body,
+      String confirmationLabel = 'OK',
+      String cancelLabel = 'Cancel',
+      DialogStyle dialogStyle}) {
+    _dialogCompleter = Completer<DialogResponse>();
+    _showDialogListener(DialogRequest(
+        title: title,
+        description: body,
+        confirmLabel: confirmationLabel,
+        dialogType: DialogType.confirmation,
+        cancelLabel: cancelLabel,
+        dialogStyle: dialogStyle));
+    return _dialogCompleter.future;
+  }
+
+  Future<DialogResponse> showCustomDialog({Widget child}) {
+    _dialogCompleter = Completer<DialogResponse>();
+    _showDialogListener(DialogRequest(dialogType: DialogType.custom, customDialog: child));
+    return _dialogCompleter.future;
+  }
+
+  Future<DialogResponse> showProgressDialog(
+      {String title = 'Please wait..',
+      String body = 'Loading information.',
+      DialogStyle dialogStyle}) {
+    _dialogCompleter = Completer<DialogResponse>();
+    _showDialogListener(DialogRequest(
+        dialogType: DialogType.progress,
+        title: title,
+        description: body,
+        dialogStyle: dialogStyle));
+    return _dialogCompleter.future;
+  }
+
+  Future<DialogResponse> hideProgressDialog() {
+    _dialogCompleter = Completer<DialogResponse>();
+    dismissDialogListener();
+    return _dialogCompleter.future;
+  }
+
+  /// Completes the _dialogCompleter to resume the Future's execution call
+  void dialogComplete(DialogResponse response) {
+    navigateBack();
+    _dialogCompleter.complete(response);
+    _dialogCompleter = null;
+  }
+}

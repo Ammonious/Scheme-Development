@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:scheme_package/scheme_package.dart';
+
+class NavItemDesktop extends StatelessWidget {
+	final Widget child;
+	final String label;
+	final Function(Widget child) onTap;
+	NavItemDesktop({Key key, this.child, this.label, this.onTap}) : super(key: key);
+
+	@override
+	Widget build(BuildContext context) {
+		return Material(
+			color: Colors.transparent,
+			child: Padding(
+				padding: const EdgeInsets.all(8.0),
+				child: FlatButton(
+					onPressed: () => onTap(child),
+					child: Text(
+						label,
+						style: GoogleFonts.raleway(fontWeight: FontWeight.w600, color: nearlyBlack),
+					),
+				),
+			),
+		);
+	}
+}

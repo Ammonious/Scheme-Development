@@ -1,0 +1,143 @@
+import '../../../common/theme/app_theme.dart';
+import '../../../common/theme/model/scheme_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:scheme_package/scheme_package.dart';
+import '../dialog_decoration_builder.dart';
+import '../../dialog_utils/dialog_model.dart';
+import '../../locator/locator.dart';
+
+
+class InputDialog extends HookWidget {
+  final SchemeTheme schemeTheme = locator<SchemeTheme>();
+  final DialogStyle dialogStyle;
+  final DialogRequest dialogRequest;
+  final Function(String text) onSubmit;
+  final Function onCancel;
+  InputDialog( {this.onSubmit, this.onCancel,
+    Key key,
+    @required this.dialogStyle,
+    this.dialogRequest,
+
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final textEditingController = useTextEditingController();
+    final currencyTextFieldController = useCurrencyTextFieldController();
+
+    final focusNode = useFocusNode();
+    if (dialogRequest.initialValue != null) {
+      textEditingController.text = dialogRequest.initialValue;
+      if (!dialogRequest.initialValue.contains('.'))
+        currencyTextFieldController.text = '${dialogRequest.initialValue}.00';
+      else
+        currencyTextFieldController.text = dialogRequest.initialValue;
+    }
+    return Container(
+      height: dialogRequest.height,
+      width: dialogRequest.width,
+      constraints:
+          BoxConstraints(maxWidth: dialogRequest.width, minWidth: dialogRequest.width, maxHeight: dialogRequest.height, minHeight: 400),
+      decoration: BoxDecoration(
+          boxShadow: largeShadow, borderRadius: BorderRadius.circular(12), color: Colors.white),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Material(
+          color: Colors.transparent,
+          child: Stack(
+            children: <Widget>[
+              DialogDecoration(children: dialogStyle.dialogDecorations,),
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          dialogRequest.title ?? 'Enter Info',
+                          style: dialogStyle.titleStyle ?? h6Style,
+                        ),
+                        Text(
+                          dialogRequest.description ?? '',
+                          style: dialogStyle.descriptionStyle ?? body1Style,
+                        ),
+                      ],
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        width: dialogRequest.textFieldWidth,
+                        margin: EdgeInsets.only(bottom: 24),
+                        child: SchemeTextField(
+                          fieldStyle: dialogStyle.formFieldStyle,
+                          focusNode: focusNode,
+                          controller: textEditingController,
+                          currencyController: dialogRequest.dialogType == DialogType.currency_input
+                              ? currencyTextFieldController
+                              : null,
+                          themeColor: AppTheme.themeColor,
+                          inputType: dialogRequest.inputType,
+                          iconData: dialogRequest.iconData ?? Boxicons.bxEdit,
+                          label: dialogRequest.inputLabel,
+                          textStyle: sub1Style,
+                          inputAction: TextInputAction.done,
+                          backgroundColor: AppTheme.white,
+                          hintColor: AppTheme.nearlyBlack,
+                          textColor: AppTheme.nearlyBlack,
+                          textCapitalization: dialogRequest.textCapitalization,
+                          onSubmit: (text) => dismissKeyboardWithContext(context),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Visibility(
+                            visible: dialogRequest.cancelLabel != null,
+                            child: SchemeButton(
+                              buttonStyle: dialogStyle.cancelButtonStyle,
+                              gradient: AppTheme.darkCardGradient,
+                              height: 50,
+                              width: 130,
+                              decoration: dialogStyle.decoration,
+                              textStyle: dialogStyle.buttonLabelStyle ?? buttonStyle,
+                              onTap: () => onCancel != null ? onCancel() : Navigator.pop(context),
+                              label: dialogRequest.cancelLabel ?? '',
+                            ),
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          SchemeButton(
+                            buttonStyle: dialogStyle.cancelButtonStyle,
+                            height: 50,
+                            width: 120,
+                            color: AppTheme.themeColor,
+                            decoration: dialogStyle.decoration,
+                            textStyle: dialogStyle.buttonLabelStyle ?? buttonStyle,
+                            label: dialogRequest.confirmLabel,
+                            onTap: () => onSubmit(
+                                dialogRequest.dialogType == DialogType.currency_input
+                                    ? currencyTextFieldController.doubleValue.toString()
+                                    : textEditingController.text),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:scheme_package/scheme_package.dart';
+
+import '../app_theme.dart';
+import 'theme_model.dart';
+
+@lazySingleton
+class SchemeTheme {
+  Color themeColor;
+  String buttonStyle;
+  String fieldStyle;
+  String bottomBarStyle;
+  SchemeButtonStyle schemeButtonStyle;
+  SchemeBarStyle schemeBarStyle;
+  SchemeFieldStyle schemeFieldStyle;
+  ThemeModel model;
+
+  initScheme(){
+  	fieldStyle = model.fieldStyle;
+  	bottomBarStyle = model.bottomBarStyle;
+  	buttonStyle = model.buttonStyle;
+  	themeColor = setThemeColor();
+  	schemeButtonStyle = buttonTheme();
+  	schemeFieldStyle = fieldTheme();
+  	schemeBarStyle = bottomBarTheme();
+  }
+
+  setThemeColor() {
+    themeColor = model != null ? model.color.toColor : AppTheme.themeColor;
+  }
+
+  buttonTheme() {
+    if (model.buttonStyle == 'neu') {
+      schemeButtonStyle = SchemeButtonStyle.neu;
+    } else if (model.buttonStyle == 'outline') {
+      schemeButtonStyle = SchemeButtonStyle.outline;
+    } else if (model.buttonStyle == 'gradient') {
+      schemeButtonStyle = SchemeButtonStyle.gradient;
+    } else if (model.buttonStyle == 'loading') {
+      schemeButtonStyle = SchemeButtonStyle.loading;
+    }
+    return schemeButtonStyle;
+  }
+
+  fieldTheme() {
+    if (model.fieldStyle == 'neu') {
+      schemeFieldStyle = SchemeFieldStyle.Neu;
+    } else if (model.buttonStyle == 'outline') {
+      schemeFieldStyle = SchemeFieldStyle.Outline;
+    } else if (model.buttonStyle == 'card') {
+      schemeFieldStyle = SchemeFieldStyle.Card;
+    }
+    return schemeFieldStyle;
+  }
+
+  bottomBarTheme() {
+    if (model.bottomBarStyle == 'neu') {
+      schemeBarStyle = SchemeBarStyle.Neu;
+    } else if (model.bottomBarStyle == 'normal') {
+      schemeBarStyle = SchemeBarStyle.Normal;
+    }
+    return schemeBarStyle;
+  }
+}

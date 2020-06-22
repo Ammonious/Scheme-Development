@@ -1,0 +1,160 @@
+import 'package:flutter/material.dart';
+import 'package:scheme_package/scheme_package.dart';
+import '../../common/theme/model/scheme_theme.dart';
+import '../../common/theme/app_theme.dart';
+import '../../common/locator/locator.dart';
+import 'dialog_model.dart';
+import 'dialog_service.dart';
+import 'dialog_types/input_dialog.dart';
+
+class DialogManager extends StatefulWidget {
+  final Widget child;
+  DialogManager({Key key, this.child}) : super(key: key);
+
+  _DialogManagerState createState() => _DialogManagerState();
+}
+
+class _DialogManagerState extends State<DialogManager> {
+  DialogService _dialogService = locator<DialogService>();
+  final SchemeTheme theme = locator<SchemeTheme>();
+  Flushbar progressDialog;
+
+  @override
+  void initState() {
+    super.initState();
+    _dialogService.registerDialogListener(_dialogHandler, _hideProgressDialog);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.child;
+  }
+
+  void _dialogHandler(DialogRequest request) {
+    if (request.dialogStyle == null) request.dialogStyle = DialogStyle().schemeStyle();
+    final style = request.dialogStyle;
+    request.dialogStyle = DialogStyle().schemeStyle(
+        titleStyle: style.titleStyle,
+        descriptionStyle: style.descriptionStyle,
+        buttonLabelStyle: style.buttonLabelStyle,
+        confirmButtonStyle: style.confirmButtonStyle,
+        cancelButtonStyle: style.cancelButtonStyle,
+        decoration: style.decoration,
+        formFieldStyle: style.formFieldStyle,
+        dialogDecorations: style.dialogDecorations);
+
+    switch (request.dialogType) {
+      case DialogType.input:
+      case DialogType.currency_input:
+        _showCustomDialog(InputDialog(
+            dialogRequest: request,
+            dialogStyle: request.dialogStyle,
+            onCancel: () => _dialogService.dialogComplete(DialogResponse(confirmed: false)),
+            onSubmit: (text) =>
+                _dialogService.dialogComplete(DialogResponse(confirmed: true, fieldOne: text))));
+        break;
+      case DialogType.alert:
+        _showDialog(request);
+        break;
+      case DialogType.confirmation:
+        _showDialog(request);
+        break;
+      case DialogType.custom:
+        _showCustomDialog(request.customDialog);
+        break;
+      case DialogType.progress:
+        _showProgressDialog();
+        break;
+    }
+  }
+
+  void _showDialog(DialogRequest request) {
+    var isConfirmationDialog = request.cancelLabel != null;
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              title: Text(
+                request.title,
+                style: request.dialogStyle.titleStyle ?? h6Style,
+              ),
+              content: Text(
+                request.description,
+                style: request.dialogStyle.descriptionStyle ?? body1Style,
+              ),
+              actions: <Widget>[
+                if (isConfirmationDialog)
+                  SchemeButton(
+                    height: 36,
+                    buttonStyle: request.dialogStyle.cancelButtonStyle,
+                    label: request.cancelLabel,
+                    textStyle: request.dialogStyle.buttonLabelStyle ?? buttonStyle,
+                    onTap: () => _dialogService.dialogComplete(DialogResponse(confirmed: false)),
+                  ),
+                SchemeButton(
+                  height: 36,
+                  buttonStyle: request.dialogStyle.confirmButtonStyle,
+                  textStyle: request.dialogStyle.buttonLabelStyle ?? buttonStyle,
+                  label: request.confirmLabel,
+                  onTap: () => _dialogService.dialogComplete(DialogResponse(confirmed: true)),
+                ),
+              ],
+            ));
+  }
+
+  void _showCustomDialog(Widget child,
+          {TransitionType transitionType = TransitionType.SlideBottom,
+          double maxWidth = 500,
+          double maxHeight,
+          EdgeInsets padding = const EdgeInsets.all(0)}) =>
+      showSchemeDialog(
+          context: context,
+          transitionType: transitionType,
+          barrierDismissible: true,
+          builder: (buildContext) => CardDialogParent(
+                child: child,
+                maxWidth: maxWidth,
+                maxHeight: maxHeight,
+                padding: padding,
+              )).then((value) => _dialogService.dialogComplete(DialogResponse(confirmed: true)));
+
+  _showProgressDialog() {
+    progressDialog = Flushbar(
+      animationDuration: Duration(milliseconds: 350),
+      maxWidth: 400,
+      flushbarPosition: FlushbarPosition.TOP,
+      dismissDirection: FlushbarDismissDirection.HORIZONTAL,
+      overlayBlur: 0.1,
+      progressIndicatorBackgroundColor: AppTheme.themeColor.withOpacity(0.2),
+      progressIndicatorValueColor:
+          AlwaysStoppedAnimation(theme != null ? theme.themeColor : AppTheme.themeColor),
+      flushbarStyle: FlushbarStyle.FLOATING,
+      overlayColor: Colors.black.withOpacity(0.15),
+      isDismissible: false,
+      margin: EdgeInsets.all(8),
+      borderRadius: 8.0,
+      boxShadows: [BoxShadow(blurRadius: 2.50, color: Colors.black38, offset: Offset.zero)],
+      titleText: Text(
+        'Please wait..',
+        style: TextStyle(color: Colors.black, fontFamily: h6Style, fontSize: 18),
+      ),
+      messageText: Row(
+        children: <Widget>[
+          Text(
+            'Loading information.',
+            style: TextStyle(color: Colors.black, fontFamily: body1Style, fontSize: 16),
+          ),
+        ],
+      ),
+      showProgressIndicator: true,
+      backgroundColor: Colors.white,
+    );
+    if (progressDialog != null && context != null) {
+      progressDialog.show(context);
+    }
+  }
+
+  _hideProgressDialog() => progressDialog
+      .dismiss()
+      .then((value) => _dialogService.dialogComplete(DialogResponse(confirmed: true)));
+}

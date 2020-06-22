@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import '../../../common/locator/locator.dart';
+import '../../../common/navigation/navigation_host/navigation_view_model.dart.temp';
+import 'package:scheme_package/scheme_package.dart';
+
+class NavBarMobile extends StatelessWidget {
+  final NavigationViewModel model = locator<NavigationViewModel>();
+  final Function(Widget child) onSelect;
+  NavBarMobile({
+    Key key,
+    this.onSelect,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: SchemeNavBar(navBarStyle: SchemeBarStyle.Neu,
+        items: model.bottomNavButtons(),
+        backgroundColor: neuBackground,
+        itemTapped: (child) => onSelect(child),
+      ),
+    );
+  }
+}

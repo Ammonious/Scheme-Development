@@ -1,0 +1,119 @@
+import '../../common/locator/locator.dart';
+import '../../common/theme/model/scheme_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:scheme_package/scheme_package.dart';
+import '../theme/app_theme.dart';
+
+class DialogRequest {
+  String title;
+  String description;
+  String confirmLabel;
+  String cancelLabel;
+  DialogType dialogType;
+  DialogStyle dialogStyle;
+  Widget customDialog;
+
+  /// CustomDialog Properties
+  TransitionType transitionType;
+  double maxWidth;
+
+  double maxHeight;
+  EdgeInsets padding;
+
+  /// [InputDialog] Properties
+
+  IconData iconData;
+  String inputLabel;
+  double height;
+  double width;
+  double textFieldWidth;
+  TextCapitalization textCapitalization;
+  TextInputType inputType;
+  String initialValue;
+
+  DialogRequest(
+      {this.title = '',
+      this.description = '',
+      this.confirmLabel = 'OK',
+      this.cancelLabel,
+      this.dialogType = DialogType.alert,
+      this.dialogStyle,
+      this.iconData,
+      this.inputLabel,
+      this.initialValue,
+      this.height = 400,
+      this.width = 500,
+      this.textFieldWidth = 500,
+      this.inputType = TextInputType.text,
+      this.textCapitalization = TextCapitalization.none,
+      this.customDialog,
+      this.transitionType = TransitionType.SlideBottom,
+      this.maxWidth = 500,
+      this.maxHeight,
+      this.padding = const EdgeInsets.all(0)});
+}
+
+class DialogResponse {
+  final String fieldOne;
+  final String fieldTwo;
+  final bool confirmed;
+
+  DialogResponse({
+    this.fieldOne,
+    this.fieldTwo,
+    this.confirmed,
+  });
+}
+
+class DialogStyle {
+  final SchemeTheme theme = locator<SchemeTheme>();
+  final TextStyle titleStyle;
+  final TextStyle descriptionStyle;
+  final TextStyle buttonLabelStyle;
+  final SchemeButtonStyle confirmButtonStyle;
+  final SchemeButtonStyle cancelButtonStyle;
+  final SchemeButtonDecoration decoration;
+  final SchemeFieldStyle formFieldStyle;
+  final List<Widget> dialogDecorations;
+
+  DialogStyle schemeStyle({
+                          TextStyle titleStyle,
+                          TextStyle descriptionStyle,
+                          TextStyle buttonLabelStyle,
+                          SchemeButtonStyle confirmButtonStyle,
+                          SchemeButtonStyle cancelButtonStyle,
+                          SchemeButtonDecoration decoration,
+                          SchemeFieldStyle formFieldStyle,
+                          List<Widget> dialogDecorations,
+                      }) =>
+      DialogStyle(
+          titleStyle: titleStyle ?? h6Style,
+          descriptionStyle: descriptionStyle ?? body1Style,
+          buttonLabelStyle: buttonLabelStyle ?? buttonStyle,
+          confirmButtonStyle: theme.schemeButtonStyle ?? confirmButtonStyle ?? SchemeButtonStyle.flat,
+          cancelButtonStyle: theme.schemeButtonStyle ?? cancelButtonStyle ?? SchemeButtonStyle.flat,
+          formFieldStyle: theme.schemeFieldStyle ?? formFieldStyle ?? SchemeFieldStyle.Card,
+          dialogDecorations: <Widget>[]);
+
+
+  factory DialogStyle.defaultStyle() => DialogStyle(
+      titleStyle: h6Style,
+      descriptionStyle: body1Style,
+      buttonLabelStyle: buttonStyle,
+      confirmButtonStyle: SchemeButtonStyle.flat,
+      cancelButtonStyle: SchemeButtonStyle.flat,
+      formFieldStyle: SchemeFieldStyle.Card,
+      dialogDecorations: <Widget>[]);
+
+  DialogStyle(
+      {this.cancelButtonStyle = SchemeButtonStyle.flat,
+      this.dialogDecorations,
+      this.titleStyle,
+      this.descriptionStyle,
+      this.buttonLabelStyle,
+      this.decoration,
+      this.formFieldStyle = SchemeFieldStyle.Card,
+      this.confirmButtonStyle = SchemeButtonStyle.flat});
+}
+
+enum DialogType { input, currency_input, alert, confirmation, custom, progress }

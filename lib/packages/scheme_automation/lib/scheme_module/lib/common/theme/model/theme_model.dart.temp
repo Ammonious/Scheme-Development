@@ -1,0 +1,49 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:scheme_package/scheme_package.dart';
+import '../app_theme.dart';
+
+ThemeModel themeModelFromJson(String str) => ThemeModel.fromJson(json.decode(str));
+
+String themeModelToJson(ThemeModel data) => json.encode(data.toJson());
+
+class ThemeModel {
+  final String buttonStyle;
+  final String color;
+  final String fieldStyle;
+  final String bottomBarStyle;
+  ThemeModel({
+               this.buttonStyle,
+               this.color,
+               this.fieldStyle,
+               this.bottomBarStyle,
+             });
+
+  ThemeModel copyWith({
+                        String buttonStyle,
+                        String fieldStyle,
+                        String bottomBarStyle,
+                        String color,
+                      }) =>
+      ThemeModel(
+        buttonStyle: buttonStyle ?? this.buttonStyle,
+        bottomBarStyle: bottomBarStyle ?? this.bottomBarStyle,
+        fieldStyle: fieldStyle ?? this.fieldStyle,
+        color: color ?? this.color,
+      );
+
+  factory ThemeModel.fromJson(Map<dynamic, dynamic> json) => ThemeModel(
+    buttonStyle: json["button_style"] == null ? 'gradient' : json["button_style"],
+    bottomBarStyle: json["bottom_bar_style"] == null ? 'neu' : json["bottom_bar_style"],
+    fieldStyle: json["field_style"] == null ? 'neu' : json["field_style"],
+    color: json["color"] == null ? AppTheme.themeColor.hexString : json["color"],
+  );
+
+  Map<dynamic, dynamic> toJson() => {
+    "button_style": buttonStyle == null ? 'gradient' : buttonStyle,
+    "field_style": buttonStyle == null ? 'neu' : buttonStyle,
+    "bottom_bar_style": buttonStyle == null ? 'neu' : buttonStyle,
+    "color": color == null ? AppTheme.themeColor.hexString : color,
+  };
+}

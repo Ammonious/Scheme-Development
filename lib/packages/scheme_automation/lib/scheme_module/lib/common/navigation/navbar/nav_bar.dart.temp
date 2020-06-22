@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'nav_bar_mobile.dart.temp';
+import 'nav_bar_desktop.dart.temp';
+import 'nav_bar_tablet.dart.temp';
+
+class NavBar extends StatelessWidget {
+  final Function(Widget child) onSelect;
+  NavBar({Key key, this.onSelect,}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      mobile: OrientationLayoutBuilder(
+        portrait: (context) => mobile(),
+        landscape: (context) => mobile(),
+      ),
+      tablet: OrientationLayoutBuilder(
+        portrait: (context) => tablet(),
+        landscape: (context) => desktop(),
+      ),
+      desktop: desktop(),
+    );
+  }
+
+  mobile() {
+    return NavBarMobile(
+      onSelect: (child) => onSelect(child),);
+  }
+
+  tablet() {
+    return NavBarTablet(
+      onSelect: (child) => onSelect(child),);
+  }
+
+  desktop() {
+    return NavBarDesktop(
+
+      onSelect: (child) => onSelect(child),
+    );
+  }
+}

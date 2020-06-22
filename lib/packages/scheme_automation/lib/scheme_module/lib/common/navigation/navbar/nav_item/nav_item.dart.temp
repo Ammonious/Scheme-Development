@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'nav_item_mobile.dart';
+import 'nav_item_desktop.dart.temp';
+import 'nav_item_tablet.dart.temp';
+
+class NavItem extends StatelessWidget {
+  final Widget child;
+  final String label;
+  final Function(Widget child) onTap;
+  NavItem({Key key, this.child, this.label, this.onTap}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      mobile: OrientationLayoutBuilder(
+        portrait: (context) => mobile(),
+        landscape: (context) => mobile(),
+      ),
+      tablet: OrientationLayoutBuilder(
+        portrait: (context) => tablet(),
+        landscape: (context) => desktop(),
+      ),
+      desktop: OrientationLayoutBuilder(
+	      portrait: (context) => desktop(),
+	      landscape: (context) => desktop(),
+      ),
+    );
+  }
+
+  mobile() {
+    return NavItemMobile(
+      child: child,
+      label: label,
+      onTap: (child) => onTap(child),
+    );
+  }
+
+  tablet() {
+    return NavItemTablet(
+      child: child,
+      label: label,
+      onTap: (child) => onTap(child),
+    );
+  }
+
+  desktop() {
+    return NavItemDesktop(
+      child: child,
+      label: label,
+      onTap: (child) => onTap(child),
+    );
+  }
+}

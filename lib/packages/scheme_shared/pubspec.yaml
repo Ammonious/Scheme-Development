@@ -52,7 +52,6 @@ dependencies:
   lottie:
   url_launcher:
   google_fonts:
-
   momentum:
   cached_network_image:
   rxdart:
@@ -65,7 +64,8 @@ dependencies:
   sa_anicoto:
   flutter_svg:
   palette_generator:
-
+  scheme_automation:
+    path: "../scheme_automation/"
 
 
 dev_dependencies:

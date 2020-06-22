@@ -46,6 +46,6 @@ export 'package:stacked/stacked.dart';
 export 'package:stacked_hooks/stacked_hooks.dart';
 export 'package:fl_chart/fl_chart.dart';
 export 'package:flutter_icons/flutter_icons.dart';
-
+export 'package:scheme_automation/scheme_automation.dart';
  
 
