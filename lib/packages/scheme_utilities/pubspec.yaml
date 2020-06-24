@@ -11,14 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
   http:
-  image:
   flutter_bluetooth_serial:
 
 
 dev_dependencies:
-  args:
-  yaml:
-  process_run:
+  image:
   scheme_icons:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"

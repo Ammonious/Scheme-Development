@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:image/image.dart' as i;
 import 'package:path/path.dart' as p;
 import 'package:share_extend/share_extend.dart';
 import 'package:intl/intl.dart';
