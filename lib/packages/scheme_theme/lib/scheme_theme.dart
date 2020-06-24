@@ -5,7 +5,7 @@ export 'src/ui_helper.dart';
 export 'src/models/theme_controller.dart';
 export 'src/picaso/picaso.dart';
 export 'src/constant_presets.dart';
-export 'src/theme_changer/theme_changer_index.dart';
+// export 'src/theme_changer/theme_changer_index.dart';
 
 abstract class Weight   {
 
