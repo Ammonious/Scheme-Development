@@ -21,5 +21,5 @@ getInputFromUser(){
 writeFile(String input,String file){
 	String fileName = file.split('.').first;
 	String mainTemp = getFileAsString('$studioPath$file');
-	mainTemp.repl
+	mainTemp.replaceAll('', '');
 }
