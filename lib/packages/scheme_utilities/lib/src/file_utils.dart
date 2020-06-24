@@ -9,6 +9,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 import 'package:share_extend/share_extend.dart';
 import 'package:intl/intl.dart';
+import 'package:image/image.dart' as i;
 import 'package:mime_type/mime_type.dart';
 import 'package:path/path.dart';
 
