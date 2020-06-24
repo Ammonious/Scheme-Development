@@ -11,7 +11,7 @@ getInputFromUser(){
 	stdout.writeln('Enter the name of the page.');
 	String input = stdin.readLineSync();
 	stdout.writeln('Creating ${input}Page in ${input}_page folder.');
-	writeFile(input, 'page.dart');
+	writeFile(input, 'page.dart.temp');
 	writeFile(input, 'page_mobile.dart');
 	writeFile(input, 'page_desktop.dart');
 	writeFile(input, 'page_tablet.dart');

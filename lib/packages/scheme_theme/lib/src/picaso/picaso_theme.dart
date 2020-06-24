@@ -14,7 +14,7 @@ import 'picaso_color.dart';
 class Picaso  extends GetController{
   static PicasoColor get paint => Get.put(PicasoColor());
   static Picaso get jot => Get.put(Picaso());
-  static Picaso get to => Get.find();
+  static Picaso get to => Get.put(Picaso());
 
 
 
