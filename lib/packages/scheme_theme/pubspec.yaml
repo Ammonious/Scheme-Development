@@ -11,21 +11,20 @@ dependencies:
   flutter:
     sdk: flutter
   animated_theme_switcher:
-
+  flutter_hooks:
+  google_fonts:
+  scheme_utilities:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_utilities/"
 
 
 dev_dependencies:
   hive_generator:
   injectable_generator:
   build_runner:
-  scheme_utilities:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_utilities/"
-  scheme_shared:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_shared/"
+
+
 
 
 
