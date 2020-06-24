@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 import 'package:scheme_components/src/textfields/controllers/focus_controller.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:scheme_theme/scheme_theme.dart';
-import 'package:scheme_shared/scheme_shared.dart';
 import 'controllers/currency_controller.dart';
 import 'controllers/scheme_textfield_controller.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+
+
 class CardTextField extends HookWidget {
   SchemeFieldController controller;
   final Color color;

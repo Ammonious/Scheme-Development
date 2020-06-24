@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 import 'package:share_extend/share_extend.dart';
@@ -12,6 +10,7 @@ import 'package:intl/intl.dart';
 import 'package:image/image.dart' as i;
 import 'package:mime_type/mime_type.dart';
 import 'package:path/path.dart';
+import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
 import 'image_utils/image_cache_manager.dart';
 
@@ -20,7 +19,7 @@ class SchemeFileUtils  extends GetController{
 	static SchemeFileUtils get to => Get.put(SchemeFileUtils());
 
 	Future<File> saveFile(String filename,{String pathKey}) async {
-		await Hive.initFlutter();
+		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 		Directory dir = await getApplicationDocumentsDirectory();
 		String pathName = p.join(dir.path, filename);
 		await saveToPrefs(pathKey ?? filename, pathName);
@@ -35,7 +34,7 @@ class SchemeFileUtils  extends GetController{
 
 	Future<File> saveImage(String url,String imageType) async {
 
-		await Hive.initFlutter();
+		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 		final file = await getImageFromNetwork(url);
 		Directory dir = await getApplicationDocumentsDirectory();
 		String pathName = p.join(dir.path, imageType);
@@ -48,19 +47,16 @@ class SchemeFileUtils  extends GetController{
 	}
 
 	saveToPrefs(imageType,pathName) async {
-		await Hive.initFlutter();
+		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 
-		var box = Hive.box('scheme_file_storage');
-	await	Hive.openBox('scheme_file_storage');
-		box.put(imageType, '$pathName.png');
+		prefs.setString(imageType, '$pathName.png');
 	}
 
 	Future<File> getFile({String fileName}) async {
+		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 		final directory = await getApplicationDocumentsDirectory();
-		await Hive.initFlutter();
-		var box = await Hive.openBox('scheme_file_storage');
 
-		return File(box.get(fileName,defaultValue: directory.path));
+		return File(prefs.getString(fileName,defaultValue: directory.path).getValue());
 	}
 
 	Future<void> saveShareFile(String fileName,{String sheetTitle,String message}) async {

@@ -12,16 +12,18 @@ dependencies:
     sdk: flutter
 
 
-
 dev_dependencies:
+  flare_flutter:
+  flutter_svg:
+  google_fonts:
+  get:
+  sa_stateless_animation:
+  supercharged:
+  cached_network_image:
   scheme_components:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
       path: "lib/packages/scheme_components/"
-  scheme_shared:
-    git:
-      url: "https://github.com/Ammonious/Scheme-Development.git"
-      path: "lib/packages/scheme_shared/"
   injectable_generator:
   build_runner:
 

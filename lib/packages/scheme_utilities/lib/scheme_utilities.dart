@@ -28,17 +28,9 @@ class SchemeUtils extends GetController {
 
 	static SchemeFileUtils get file => Get.put(SchemeFileUtils());
 	static SchemeDeviceUtils get device => Get.put(SchemeDeviceUtils());
-	static _SchemePrefs get prefs => Get.put(_SchemePrefs());
 	static SchemeAnimationUtils get animation => Get.put(SchemeAnimationUtils());
 	static SchemeFontUtils get font => Get.put(SchemeFontUtils());
 	static TransitionUtils get transition => Get.put(TransitionUtils());
 }
 
-class _SchemePrefs extends GetController {
 
-	StreamingSharedPreferences get data => _rxPrefs.value;
-	StreamingSharedPreferences _prefs;
-	get _rxPrefs => _prefs.obs;
-	Future<dynamic>	initPrefs() async => _prefs = await StreamingSharedPreferences.instance;
-
-}
