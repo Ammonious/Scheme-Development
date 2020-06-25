@@ -1,6 +1,6 @@
 class FeatherIcon {
 
-	FeatherIcon._();
+
 
 
 	static const String activity = "assets/svg_icons/feather/activity.svg";

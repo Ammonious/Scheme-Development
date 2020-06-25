@@ -642,7 +642,7 @@ packages:
       path: "../scheme_icons"
       relative: true
     source: path
-    version: "0.0.2"
+    version: "0.0.3"
   scheme_shared:
     dependency: "direct main"
     description:

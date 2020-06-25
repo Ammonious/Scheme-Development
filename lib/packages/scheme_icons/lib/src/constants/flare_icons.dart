@@ -1,6 +1,5 @@
 class FlareIcon {
 
-  FlareIcon._();
 
   /// [FlareIcon] string value is equal to the artboard located in the unicons.flr.
   static const String filter = "filter_unicon";

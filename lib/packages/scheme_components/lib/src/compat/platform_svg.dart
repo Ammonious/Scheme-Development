@@ -72,7 +72,7 @@ class PlatformSvg {
 				height: height,
 				fit: fit,
 				color: color,
-				package: Env.getPackage('scheme_icons'),
+				package: 'scheme_icons',
 				semanticsLabel: semanticsLabel);
 	}
 }

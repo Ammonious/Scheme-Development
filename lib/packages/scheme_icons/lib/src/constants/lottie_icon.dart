@@ -1,6 +1,5 @@
 class LottieIcon {
 
-  LottieIcon._();
 
 
   static const String facebook_logo = "assets/lottie_icons/facebook_logo.json";

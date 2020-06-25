@@ -1,5 +1,5 @@
 class Evericons {
-	Evericons._();
+
 
 	static const String call_no = "assets/call_no.svg";
 	static const String mapsmap_pin_location = "assets/mapsmap_pin_location.svg";

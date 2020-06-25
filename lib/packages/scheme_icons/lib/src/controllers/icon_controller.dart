@@ -49,22 +49,22 @@ class SchemeIconController extends GetController {
       asset,
       height: size,
       width: size,
-      package: Env.getPackage('scheme_icons')
+    package: 'scheme_icons'
   );
 
   get  svgMobile => SvgPicture.asset(
     asset,
     color: color,
     height: size,
-    package: Env.getPackage('scheme_icons'),
     width: size,
     colorBlendMode: BlendMode.srcIn,
+      package: 'scheme_icons'
   );
 
   get svgColorIcon => kIsWeb ? compatSvg : SvgPicture.asset(
     asset,
     height: size,
-    package: Env.getPackage('scheme_icons'),
+    package: 'scheme_icons',
     width: size,
   );
 

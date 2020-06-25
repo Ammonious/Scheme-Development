@@ -1,6 +1,6 @@
 name: scheme_icons
 description: Scheme Custom Icons
-version: 0.0.2
+version: 0.0.3
 author: Scheme Creative
 homepage: https://www.schemecreative.com
 
@@ -59,15 +59,17 @@ flutter:
     - assets/illustrations/shape/
     - assets/lottie_icons/
     - assets/rive_icons/
-    - assets/svg_icons/
     - assets/svg_icons/dope/
     - assets/svg_icons/feather/
     - assets/svg_icons/evericons/
     - assets/svg_icons/logo_icons/
     - assets/svg_icons/md_color/
+    - assets/svg_icons/pure_sugar/
+    - assets/svg_icons/lineal/
     - assets/svg_icons/twotone/
     - assets/svg_icons/round/
     - assets/svg_icons/unicons/
+    - assets/svg_icons/pure_sugar/
     - assets/svg_icons/bang/
 
 
