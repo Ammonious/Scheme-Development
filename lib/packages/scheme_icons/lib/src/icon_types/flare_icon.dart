@@ -5,14 +5,13 @@ import 'package:flare_flutter/flare_controller.dart';
 import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 import '../constants/flare_icons.dart';
-
+import 'package:scheme_theme/scheme_theme.dart';
 
 class FlareIconMap extends StatefulWidget {
   final String flareIcon;
   final double iconSize;
   final String flrPath;
   final String animation;
-  final ColorScheme colorScheme;
   final FlareIconController controller;
 
   FlareIconMap({
@@ -20,7 +19,6 @@ class FlareIconMap extends StatefulWidget {
     this.animation = 'idle',
     this.flareIcon,
     this.iconSize,
-    this.colorScheme,
                  this.controller,
   });
 
@@ -30,7 +28,7 @@ class FlareIconMap extends StatefulWidget {
 
 class _FlareIconMapState extends State<FlareIconMap>  {
 
-  FlareIconController get controller => widget.controller ?? FlareIconController(flareIcon:widget.flareIcon,defaultScheme: widget.colorScheme);
+  FlareIconController get controller => widget.controller ?? FlareIconController(flareIcon:widget.flareIcon);
   FlutterActorShape primaryShape;
   FlutterActorShape primaryTwoShape;
   FlutterActorShape accentShape;
@@ -65,12 +63,11 @@ class _FlareIconMapState extends State<FlareIconMap>  {
 
 
   setColorFills() {
-    ColorScheme colorScheme = widget.colorScheme;
 
-    Color primary = colorScheme.primary;
-    Color primaryTwo = colorScheme.primaryVariant;
-    Color accent = colorScheme.secondary;
-    Color accentTwo = colorScheme.secondaryVariant;
+    Color primary = Picaso.paint.primary;
+    Color primaryTwo = Picaso.paint.primaryVariant;
+    Color accent = Picaso.paint.secondary;
+    Color accentTwo = Picaso.paint.secondaryVariant;
 
     fills.forEach((fill) {
       if (fill.parent.name == 'primary') {
@@ -119,7 +116,7 @@ class FlareIconController extends FlareControls {
 
   @override
   bool advance(FlutterActorArtboard artboard, double elapsed) {
-    setSelectedFills(colorScheme ?? defaultScheme);
+    setSelectedFills();
     return false;
   }
 
@@ -127,12 +124,12 @@ class FlareIconController extends FlareControls {
   @override
   void setViewTransform(Mat2D viewTransform) {}
 
-  setSelectedFills( ColorScheme colorScheme) {
+  setSelectedFills() {
 
-    Color primary = colorScheme.primary;
-    Color primaryTwo = colorScheme.primaryVariant;
-    Color accent = colorScheme.secondary;
-    Color accentTwo = colorScheme.secondaryVariant;
+    Color primary = Picaso.paint.primary;
+    Color primaryTwo = Picaso.paint.primaryVariant;
+    Color accent = Picaso.paint.secondary;
+    Color accentTwo = Picaso.paint.secondaryVariant;
 
     fills.forEach((fill) {
       if (fill.parent.name == 'primary') {

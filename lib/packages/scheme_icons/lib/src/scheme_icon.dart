@@ -37,7 +37,6 @@ class SchemeIcon extends StatelessWidget {
     final model = IconViewModel(
       size: size,
       color: color,
-      colorScheme: colorScheme,
       asset: asset,
       iconData: icon,
       iconType: iconType,

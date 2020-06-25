@@ -23,7 +23,6 @@ class SchemeIconController extends GetController {
 
 class IconViewModel {
    double size;
-   ColorScheme colorScheme;
    String asset;
    IconData iconData;
    String animation;
@@ -32,7 +31,7 @@ class IconViewModel {
    bool animate;
    Color color;
 
-  IconViewModel({this.size, this.colorScheme, this.asset, this.iconData, this.animation,
+  IconViewModel({this.size, this.asset, this.iconData, this.animation,
       this.filePath, this.iconType, this.animate, this.color});
 
 
@@ -100,7 +99,6 @@ class IconViewModel {
       );
 
   get _flareIcon => FlareIconMap(
-        colorScheme: colorScheme,
         flareIcon: asset,
         iconSize: size,
         flrPath: filePath,

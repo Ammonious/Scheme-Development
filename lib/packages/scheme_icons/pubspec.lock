@@ -604,16 +604,16 @@ packages:
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: "8d468a142d91e7e4f915e0fc1055c235d72f686d"
+      resolved-ref: "19604a2bdcca06e39d8defbf69b99b00fba30e9e"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
   scheme_theme:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: "8d468a142d91e7e4f915e0fc1055c235d72f686d"
+      resolved-ref: "19604a2bdcca06e39d8defbf69b99b00fba30e9e"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -622,7 +622,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: "8d468a142d91e7e4f915e0fc1055c235d72f686d"
+      resolved-ref: "19604a2bdcca06e39d8defbf69b99b00fba30e9e"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
