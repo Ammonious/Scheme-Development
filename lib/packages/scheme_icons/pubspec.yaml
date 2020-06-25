@@ -20,6 +20,10 @@ dev_dependencies:
   sa_stateless_animation:
   supercharged:
   cached_network_image:
+  scheme_shared:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_shared/"
   scheme_theme:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"

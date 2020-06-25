@@ -69,7 +69,7 @@ class IconViewModel {
     asset,
     height: size,
     width: size,
-    package: 'scheme_icon'
+    package: 'sheme_icons'
   );
 
   get  svgMobile => SvgPicture.asset(
