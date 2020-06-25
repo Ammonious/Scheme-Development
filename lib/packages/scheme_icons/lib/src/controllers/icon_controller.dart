@@ -8,7 +8,7 @@ import 'package:scheme_components/scheme_components.dart';
 import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_icons/src/icon_types/flare_icon.dart';
 import 'package:supercharged/supercharged.dart';
-
+import 'package:scheme_shared/scheme_shared.dart';
 class SchemeIconController extends GetController {
   static SchemeIconController get to => Get.put(SchemeIconController());
 
@@ -129,30 +129,6 @@ class IconViewModel {
 
   IconViewModel({this.size, this.asset, this.iconData, this.animation,
       this.filePath, this.iconType, this.animate, this.color});
-
-
-
-  iconView(iconType) {
-    switch (iconType) {
-      case SchemeIconType.icon:
-        return _icon;
-      case SchemeIconType.svg:
-        return _svgIcon;
-      case SchemeIconType.image:
-        if (asset != null && (asset.contains('http') || asset.contains('www'))) return _urlIcon;
-        return _imageIcon;
-      case SchemeIconType.flare:
-        return _flareIcon;
-      case SchemeIconType.lottie:
-        return _lottieIcon;
-      case SchemeIconType.color:
-        return _svgColorIcon;
-      case SchemeIconType.flip:
-        return flipIcon;
-      default:
-        return SizedBox.shrink();
-    }
-  }
 
 
 }
