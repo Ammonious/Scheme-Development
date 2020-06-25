@@ -8,11 +8,6 @@ environment:
   sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-
-
-dev_dependencies:
   flare_flutter:
   flutter_svg:
   google_fonts:
@@ -32,6 +27,12 @@ dev_dependencies:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
       path: "lib/packages/scheme_components/"
+  flutter:
+    sdk: flutter
+
+
+
+dev_dependencies:
   injectable_generator:
   build_runner:
 

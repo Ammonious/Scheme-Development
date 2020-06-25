@@ -53,56 +53,17 @@ class SchemeIcon extends StatelessWidget {
       builder: (_) {
         switch (iconType) {
           case SchemeIconType.icon:
-            return Icon(icon, size: size, color: color);
+            return get.icon;
           case SchemeIconType.svg:
-            return kIsWeb ? ColorFiltered(
-              colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-              child: SvgPicture.asset(
-                asset,
-                color: color,
-                height: size,
-                package: Env.getPackage('scheme_icons'),
-                width: size,
-                colorBlendMode: BlendMode.srcIn,
-              ),
-            ) : PlatformSvg.asset(
-                asset,
-                height: size,
-                width: size,
-                package: Env.getPackage('scheme_icons')
-            );
+            return kIsWeb ? get.svgMobile : get.compatSvg;
           case SchemeIconType.image:
             if (asset != null && (asset.contains('http') || asset.contains('www')))
-              return CachedNetworkImage(
-              imageUrl: asset,
-              useOldImageOnUrlChange: true,
-              color: color,
-              height: size,
-              width: size,
-            );
-            return  Image.asset(asset, color: color, height: size, width: size);
+              return get.urlIcon;
+            return  get.imageIcon;
           case SchemeIconType.flare:
-            return FlareIconMap(
-              flareIcon: asset,
-              iconSize: size,
-              flrPath: filePath,
-              animation: animation,
-            );
+            return get.flareIcon;
           case SchemeIconType.lottie:
-            return SizedBox(
-              height: size + 8,
-              width: size + 8,
-              child: SchemeLottie.asset(
-                src: asset,
-                height: size + 8,
-                width: size + 8,
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                animate: animate,
-                repeat: false,
-                package: 'scheme_icons',
-              ),
-            ); // LottieBuilder.asset(
+            return get.lottieIcon; // LottieBuilder.asset(
           case SchemeIconType.color:
             return SvgPicture.asset(
               asset,
@@ -111,15 +72,7 @@ class SchemeIcon extends StatelessWidget {
               width: size,
             );
           case SchemeIconType.flip:
-            return CustomAnimation(
-              duration: Duration(milliseconds: 350),
-              tween: (0.0).tweenTo(1.0),
-              control: SchemeIconController.to.control,
-              builder: (context, child, progress) => Rotation3d(
-                rotationY: 180.0 * progress,
-                child: get.getFlipIcon(),
-              ),
-            );
+            return get.flipIcon;
           default:
             return SizedBox.shrink();
         }

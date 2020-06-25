@@ -121,7 +121,7 @@ packages:
     source: hosted
     version: "7.1.0"
   cached_network_image:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: cached_network_image
       url: "https://pub.dartlang.org"
@@ -148,6 +148,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+  cli_util:
+    dependency: transitive
+    description:
+      name: cli_util
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   clock:
     dependency: transitive
     description:
@@ -197,6 +204,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.6"
+  console:
+    dependency: transitive
+    description:
+      name: console
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   convert:
     dependency: transitive
     description:
@@ -267,6 +281,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
   file:
     dependency: transitive
     description:
@@ -296,7 +317,7 @@ packages:
     source: hosted
     version: "2.3.4"
   flare_flutter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flare_flutter
       url: "https://pub.dartlang.org"
@@ -371,7 +392,7 @@ packages:
     source: hosted
     version: "0.2.3"
   flutter_svg:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"
@@ -404,7 +425,7 @@ packages:
     source: hosted
     version: "0.7.1"
   get:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: get
       url: "https://pub.dartlang.org"
@@ -425,7 +446,7 @@ packages:
     source: hosted
     version: "1.2.0"
   google_fonts:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -824,7 +845,7 @@ packages:
     source: hosted
     version: "1.1.1"
   sa_stateless_animation:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: sa_stateless_animation
       url: "https://pub.dartlang.org"
@@ -835,34 +856,34 @@ packages:
     description:
       path: "lib/packages/scheme_automation/"
       ref: HEAD
-      resolved-ref: e8126297cb2be4d4e429b4c409252240692afb89
+      resolved-ref: "7d0f7108051453efa07323395b6ee05247fc66ab"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "1.3.2"
   scheme_components:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: "lib/packages/scheme_components/"
       ref: HEAD
-      resolved-ref: e8126297cb2be4d4e429b4c409252240692afb89
+      resolved-ref: "7d0f7108051453efa07323395b6ee05247fc66ab"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.5"
   scheme_shared:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: "lib/packages/scheme_shared/"
       ref: HEAD
-      resolved-ref: e8126297cb2be4d4e429b4c409252240692afb89
+      resolved-ref: "7d0f7108051453efa07323395b6ee05247fc66ab"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
   scheme_theme:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: "lib/packages/scheme_theme/"
       ref: HEAD
-      resolved-ref: e8126297cb2be4d4e429b4c409252240692afb89
+      resolved-ref: "7d0f7108051453efa07323395b6ee05247fc66ab"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -871,7 +892,7 @@ packages:
     description:
       path: "lib/packages/scheme_utilities/"
       ref: HEAD
-      resolved-ref: e8126297cb2be4d4e429b4c409252240692afb89
+      resolved-ref: "7d0f7108051453efa07323395b6ee05247fc66ab"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "0.0.1"
@@ -1020,8 +1041,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  string_similarity:
+    dependency: transitive
+    description:
+      name: string_similarity
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   supercharged:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: supercharged
       url: "https://pub.dartlang.org"
@@ -1147,5 +1175,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.8.0 <3.0.0"
+  dart: ">=2.8.1 <3.0.0"
   flutter: ">=1.17.0 <2.0.0"

@@ -36,14 +36,14 @@ class SchemeIconController extends GetController {
   }
 
 
-  get _icon => Icon(iconData, size: size, color: color);
+  get icon => Icon(iconData, size: size, color: color);
 
-  get _svgIcon => ColorFiltered(
+  get svgIcon => ColorFiltered(
     colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-    child: kIsWeb ? _compatSvg : svgMobile,
+    child: kIsWeb ? compatSvg : svgMobile,
   );
 
-  get _compatSvg => PlatformSvg.asset(
+  get compatSvg => PlatformSvg.asset(
       asset,
       height: size,
       width: size,
@@ -59,16 +59,16 @@ class SchemeIconController extends GetController {
     colorBlendMode: BlendMode.srcIn,
   );
 
-  get _svgColorIcon => kIsWeb ? _compatSvg : SvgPicture.asset(
+  get svgColorIcon => kIsWeb ? compatSvg : SvgPicture.asset(
     asset,
     height: size,
     package: Env.getPackage('scheme_icons'),
     width: size,
   );
 
-  get _imageIcon => Image.asset(asset, color: color, height: size, width: size);
+  get imageIcon => Image.asset(asset, color: color, height: size, width: size);
 
-  get _urlIcon => CachedNetworkImage(
+  get urlIcon => CachedNetworkImage(
     imageUrl: asset,
     useOldImageOnUrlChange: true,
     color: color,
@@ -76,14 +76,14 @@ class SchemeIconController extends GetController {
     width: size,
   );
 
-  get _flareIcon => FlareIconMap(
+  get flareIcon => FlareIconMap(
     flareIcon: asset,
     iconSize: size,
     flrPath: filePath,
     animation: animation,
   );
 
-  get _lottieIcon => SizedBox(
+  get lottieIcon => SizedBox(
     height: size + 8,
     width: size + 8,
     child: SchemeLottie.asset(
@@ -110,10 +110,10 @@ class SchemeIconController extends GetController {
 
 
   getFlipIcon() {
-    if (iconData != null) return _icon;
-    if (asset.contains('svg') && !asset.contains('md_color')) return _svgIcon;
-    if (asset.contains('md_color')) return _svgColorIcon;
-    if (asset.contains('http') || asset.contains('www')) return _urlIcon;
+    if (iconData != null) return icon;
+    if (asset.contains('svg') && !asset.contains('md_color')) return svgIcon;
+    if (asset.contains('md_color')) return svgColorIcon;
+    if (asset.contains('http') || asset.contains('www')) return urlIcon;
   }
 }
 
