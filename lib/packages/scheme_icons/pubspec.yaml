@@ -8,13 +8,13 @@ environment:
   sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
-  flare_flutter:
-  flutter_svg:
-  google_fonts:
-  get:
-  sa_stateless_animation:
-  supercharged:
-  cached_network_image:
+  flare_flutter: ^2.0.3
+  flutter_svg: ^0.18.0
+  google_fonts: ^1.1.0
+  get: ^2.14.1
+  sa_stateless_animation: ^1.0.1
+  supercharged: ^1.6.0
+  cached_network_image: ^2.2.0+1
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
@@ -61,6 +61,7 @@ flutter:
     - assets/rive_icons/
     - assets/svg_icons/
     - assets/svg_icons/dope/
+    - assets/svg_icons/feather/
     - assets/svg_icons/evericons/
     - assets/svg_icons/logo_icons/
     - assets/svg_icons/md_color/

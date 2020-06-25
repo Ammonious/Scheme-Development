@@ -49,6 +49,7 @@ class SchemeIcon extends StatelessWidget {
       animate: animate,
     );
     return GetBuilder(
+      init: SchemeIconController(),
       initState: (_) => get.initIcon(model),
       builder: (_) {
         switch (iconType) {

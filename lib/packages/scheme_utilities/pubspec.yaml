@@ -1,6 +1,6 @@
 name: scheme_utilities
 description: Scheme Utility Functions that make life easier
-version: 0.0.1
+version: 0.0.2
 author: Scheme Creative
 homepage: https://www.schemecreative.com
 
@@ -10,21 +10,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http:
-  flutter_bluetooth_serial:
-  image:
-  get:
-  path_provider:
-  intl:
-  mime_type:
-  flutter_cache_manager:
-  path:
-  device_info:
-  package_info:
-  share_extend:
-  streaming_shared_preferences:
-  quantize_dart:
-  palette_generator:
+  flutter_bluetooth_serial: ^0.2.2
+  quantize_dart: ^1.0.3
+  palette_generator: ^0.2.3
+  mime_type: ^0.3.2
+  flutter_cache_manager: ^1.4.1
+  path: ^1.7.0
+  device_info: ^0.4.2+4
+  package_info: ^0.4.1
+  path_provider: ^1.6.11
+  intl: ^0.16.1
+  share_extend: ^1.1.7
+  streaming_shared_preferences: ^1.0.1
+
+  http: ^0.12.1
+  get: ^2.14.1
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"

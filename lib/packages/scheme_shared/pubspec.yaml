@@ -1,8 +1,8 @@
 name: scheme_shared
 description: Shared code and dependencies
 version: 0.0.1
-author:
-homepage:
+author: Scheme Creative
+homepage: https://www.schemecreative.com
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -10,61 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  pedantic:
-  intl:
-  date_format:
-  equatable:
-  provider:
-  stacked:
-  stacked_hooks:
-  flutter_icons:
-  fl_chart:
-
-  badges:
-  scroll_to_index:
-  connectivity:
-  characters:
-  flutter_swiper:
-  device_preview:
-  uuid:
-  keyboard_visibility:
-  share:
-  easy_web_view:
-  lumberdash:
-  colorize_lumberdash:
-  flutter_cache_manager:
-  flutter_markdown:
-  package_info:
-  device_info:
-  mime_type:
-  share_extend:
-  quantize_dart:
-  flutter_statusbarcolor:
-  flutter_screenutil:
-  streaming_shared_preferences:
-  path_provider:
-  path:
-  hive: ^1.4.1+1
-  hive_flutter: ^0.3.0+2
-  get:
-  get_it:
-  injectable:
-  lottie:
-  url_launcher:
-  google_fonts:
-  momentum:
-  cached_network_image:
-  rxdart:
-  responsive_builder:
-  flare_flutter:
-  flutter_hooks:
-  animations:
-  sa_stateless_animation:
-  sa_multi_tween:
-  sa_anicoto:
-  flutter_svg:
-  palette_generator:
   scheme_automation:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"

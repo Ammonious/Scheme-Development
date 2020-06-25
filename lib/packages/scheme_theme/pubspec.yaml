@@ -1,8 +1,8 @@
 name: scheme_theme
 description: Scheme Theme Builder
-version: 0.0.1
-author:
-homepage:
+version: 0.0.2
+author: Scheme Creative
+homepage: https://schemecreative.com
 
 environment:
   sdk: ">=2.8.1 <3.0.0"
@@ -10,9 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  animated_theme_switcher:
-  flutter_hooks:
-  google_fonts:
+  animated_theme_switcher: ^1.0.6
+  flutter_hooks: ^0.10.0
+  google_fonts: ^1.1.0
   scheme_utilities:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
@@ -24,7 +24,6 @@ dependency_overrides:
     path: "../scheme_utilities/"
 
 dev_dependencies:
-  hive_generator:
   injectable_generator:
   build_runner:
 

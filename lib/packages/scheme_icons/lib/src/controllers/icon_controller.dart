@@ -9,6 +9,8 @@ import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_icons/src/icon_types/flare_icon.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:scheme_shared/scheme_shared.dart';
+
+
 class SchemeIconController extends GetController {
   static SchemeIconController get to => Get.put(SchemeIconController());
 

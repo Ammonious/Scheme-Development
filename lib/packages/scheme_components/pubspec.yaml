@@ -1,29 +1,29 @@
 name: scheme_components
 description: A Package Containing Scheme Widgets and Styles
 version: 0.0.5
-author:
-homepage:
+author: Scheme Creative
+homepage: https://www.schemecreative.com
 
 environment:
   sdk: ">=2.8.0 <3.0.0"
-
 dependencies:
   flutter:
     sdk: flutter
-  flutter_shine:
-  get:
-  flutter_svg:
-  sa_stateless_animation:
-  flutter_hooks:
-  streaming_shared_preferences:
-  get_it:
-  google_fonts:
-  flare_flutter:
-  url_launcher:
-  lottie:
-  palette_generator:
-  animations:
-  rxdart:
+
+  flutter_shine: ^0.0.5
+  get: ^2.14.1
+  flutter_svg: ^0.18.0
+  sa_stateless_animation: ^1.0.1
+  flutter_hooks: ^0.10.0
+  streaming_shared_preferences: ^1.0.1
+  get_it: ^4.0.2
+  google_fonts: ^1.1.0
+  flare_flutter: ^2.0.3
+  url_launcher: ^5.4.11
+  lottie: ^0.4.0+1
+  palette_generator: ^0.2.3
+  animations: ^1.1.1
+  rxdart: ^0.24.1
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"

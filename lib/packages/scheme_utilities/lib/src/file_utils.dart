@@ -6,8 +6,7 @@ import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 import 'package:share_extend/share_extend.dart';
-import 'package:intl/intl.dart';
-import 'package:image/image.dart' as i;
+import 'package:intl/intl.dart'; 
 import 'package:mime_type/mime_type.dart';
 import 'package:path/path.dart';
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
@@ -37,12 +36,11 @@ class SchemeFileUtils  extends GetController{
 		StreamingSharedPreferences prefs = await StreamingSharedPreferences.instance;
 		final file = await getImageFromNetwork(url);
 		Directory dir = await getApplicationDocumentsDirectory();
-		String pathName = p.join(dir.path, imageType);
-		i.Image image = i.decodeImage(file.readAsBytesSync());
+		String pathName = p.join(dir.path, imageType); 
 
 		await saveToPrefs(imageType, pathName);
 		return File('$pathName.png')
-			..writeAsBytesSync(i.encodePng(image));
+			..writeAsStringSync('$pathName.png');
 
 	}
 
