@@ -13,6 +13,43 @@ import 'scheme_module_builders/dialog_builder.dart' as dialog_builder;
 import 'scheme_module_builders/plugin_builder.dart' as plugin_builder;
 import 'scheme_module_builders/user_signed_builder.dart' as user_builder;
 import 'scheme_module_builders/admin_signed_builder.dart' as admin_builder;
+import 'dart:cli' as cli;
+import 'dart:ffi' as ffi;
+import 'dart:isolate' show Isolate;
+import 'package:ffi/ffi.dart';
+import 'package:yaml/yaml.dart';
+import 'package:console/console.dart';
+import 'package:args/command_runner.dart';
+import 'package:equatable/equatable.dart';
+import 'package:string_similarity/string_similarity.dart';
+
+part 'script_builder/config.dart';
+part 'script_builder/execute.dart';
+part 'script_builder/load_info.dart';
+part 'script_builder/load_definitions.dart';
+
+part 'script_builder/ffi/ffi.dart';
+part 'script_builder/ffi/get_object.dart';
+
+part 'script_builder/error/handler.dart';
+part 'script_builder/error/error_type.dart';
+
+part 'script_builder/commands/ls.dart';
+part 'script_builder/commands/run.dart';
+part 'script_builder/commands/test.dart';
+part 'script_builder/commands/build.dart';
+
+part 'script_builder/models/info.dart';
+part 'script_builder/models/error.dart';
+part 'script_builder/models/definition.dart';
+
+part 'script_builder/helpers/to_list.dart';
+part 'script_builder/helpers/make_keys.dart';
+part 'script_builder/helpers/subcommand.dart';
+part 'script_builder/helpers/deep_search.dart';
+part 'script_builder/helpers/read_pubspec.dart';
+part 'script_builder/helpers/read_yaml_file.dart';
+part 'script_builder/helpers/parse_defnintion.dart';
 
 /// deciphers which scripts to run based on the arguments provided by the user
 void decipherScript(List<String> arguments) async {

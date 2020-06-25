@@ -1,0 +1,13 @@
+name: example
+version: 0.0.1
+description: An example for scheme script builder.
+
+environment:
+  sdk: ">=2.8.1 <3.0.0"
+
+dev_dependencies:
+  scheme_automation:
+    path: ../
+  build_runner: ^1.10.0
+
+scripts: scheme.yaml

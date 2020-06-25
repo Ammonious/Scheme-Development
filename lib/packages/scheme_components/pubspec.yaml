@@ -24,8 +24,6 @@ dependencies:
   palette_generator:
   animations:
   rxdart:
-  injectable_generator:
-  build_runner:
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
@@ -45,6 +43,7 @@ dependencies:
 
 dev_dependencies:
   build_runner:
+  injectable_generator:
 
 
 flutter:

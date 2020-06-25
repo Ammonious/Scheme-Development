@@ -5,17 +5,26 @@ author: Ammon Rees<Ammon@schemecreative.com>
 homepage: https://github.com/ammonious/scheme_automation
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.8.1 <3.0.0"
+
+executables:
+  scheme:
 
 dependencies:
-  flutter:
-    sdk: flutter
+  ffi:
+  console:
+  equatable:
+  string_similarity:
   args:
   yaml:
   path:
   http:
+  cli_util:
   process_run:
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  pedantic:
+  test:
+
+
+scripts: scheme.yaml
