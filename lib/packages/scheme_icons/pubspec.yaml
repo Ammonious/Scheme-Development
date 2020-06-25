@@ -43,6 +43,7 @@ flutter:
     - assets/illustrations/shape/
     - assets/lottie_icons/
     - assets/rive_icons/
+    - assets/svg_icons/
     - assets/svg_icons/dope/
     - assets/svg_icons/evericons/
     - assets/svg_icons/logo_icons/

@@ -69,14 +69,14 @@ class IconViewModel {
     asset,
     height: size,
     width: size,
-    package: 'sheme_icons'
+    package: 'packages/scheme_icons/assets/svg_icons'
   );
 
   get  svgMobile => SvgPicture.asset(
     asset,
     color: color,
     height: size,
-    package: 'scheme_icons',
+    package: 'packages/scheme_icons/assets/svg_icons',
     width: size,
     colorBlendMode: BlendMode.srcIn,
   );
@@ -84,7 +84,7 @@ class IconViewModel {
   get _svgColorIcon => kIsWeb ? _compatSvg : SvgPicture.asset(
     asset,
     height: size,
-    package: 'scheme_icons',
+    package: 'packages/scheme_icons/assets/svg_icons',
     width: size,
   );
 

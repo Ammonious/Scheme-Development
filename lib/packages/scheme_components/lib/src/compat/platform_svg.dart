@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scheme_components/src/constants/constants.dart';
+import 'package:scheme_shared/scheme_shared.dart';
 import 'fake_html.dart' if (dart.library.html) 'dart:html' as html;
 import 'fake_ui.dart' if (dart.library.html) 'dart:ui' as ui;
 
@@ -71,7 +72,7 @@ class PlatformSvg {
 				height: height,
 				fit: fit,
 				color: color,
-				package: 'scheme_icons',
+				package: Env.getPackage('scheme_icons'),
 				semanticsLabel: semanticsLabel);
 	}
 }
