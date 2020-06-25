@@ -26,9 +26,21 @@ dependencies:
   quantize_dart:
   palette_generator:
   scheme_shared:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_shared/"
+  scheme_icons:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_icons/"
+
+
+dependency_overrides:
+  scheme_shared:
     path: "../scheme_shared/"
   scheme_icons:
     path: "../scheme_icons/"
+
 
 dev_dependencies:
   build_runner:

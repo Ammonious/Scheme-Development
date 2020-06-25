@@ -66,6 +66,12 @@ dependencies:
   flutter_svg:
   palette_generator:
   scheme_automation:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_automation/"
+
+dependency_overrides:
+  scheme_automation:
     path: "../scheme_automation/"
 
 

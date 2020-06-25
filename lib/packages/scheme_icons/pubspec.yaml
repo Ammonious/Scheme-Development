@@ -16,11 +16,32 @@ dependencies:
   supercharged:
   cached_network_image:
   scheme_shared:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_shared/"
+  scheme_theme:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_theme/"
+  scheme_utilities:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_utilities/"
+  scheme_components:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_components/"
+
+dependency_overrides:
+  scheme_shared:
     path: "../scheme_shared/"
   scheme_theme:
     path: "../scheme_theme/"
   scheme_utilities:
     path: "../scheme_utilities/"
+  scheme_components:
+    path: "../scheme_components/"
+
   flutter:
     sdk: flutter
 
