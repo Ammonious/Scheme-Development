@@ -7,12 +7,8 @@ import 'package:package_info/package_info.dart';
 
 class SchemeDeviceUtils extends GetController {
 
-	StringX<Object> get _rxVersion => _version.obs;
-	String get version => _rxVersion.value;
-	String _version = '';
-	Future<String> getVersion() async => _version =	await PackageInfo.fromPlatform().then((packageInfo) => packageInfo.version);
 
-
+Future<String> packageVersion() async => 	await PackageInfo.fromPlatform().then((packageInfo) => packageInfo.version);
 	Future<int> androidSystemVersion() async {
 		DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
 		AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
@@ -43,4 +39,15 @@ class SchemeDeviceUtils extends GetController {
 
 	final isPlatformDark =
 			WidgetsBinding.instance.window.platformBrightness == Brightness.dark;
+
+String get	devicePlatform => _getPlatform();
+String _getPlatform() {
+	if (Platform.isAndroid) {
+		return 'Android';
+	} else if (Platform.isIOS) {
+		return 'iOS';
+	}
+	return 'Android';
+}
+
 }
