@@ -65,10 +65,12 @@ flutter:
     - assets/svg_icons/logo_icons/
     - assets/svg_icons/md_color/
     - assets/svg_icons/pure_sugar/
+    - assets/svg_icons/tor/
     - assets/svg_icons/lineal/
     - assets/svg_icons/twotone/
     - assets/svg_icons/round/
-    - assets/svg_icons/unicons/
+    - assets/svg_icons/unicon_chrome/
+    - assets/svg_icons/unicon_line/
     - assets/svg_icons/pure_sugar/
     - assets/svg_icons/bang/
 
