@@ -14,7 +14,7 @@ dependencies:
   get: ^2.14.1
   flutter_svg: ^0.18.0
   sa_stateless_animation: ^1.0.1
-  flutter_hooks: ^0.10.0
+  flutter_hooks: ^0.09.0
   streaming_shared_preferences: ^1.0.1
   get_it: ^4.0.2
   google_fonts: ^1.1.0

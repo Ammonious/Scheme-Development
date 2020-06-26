@@ -20,7 +20,6 @@ dependency_overrides:
     path: "../scheme_automation/"
 
 
-dev_dependencies:
 
 flutter:
 

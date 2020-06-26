@@ -22,7 +22,6 @@ dependencies:
   intl: ^0.16.1
   share_extend: ^1.1.7
   streaming_shared_preferences: ^1.0.1
-
   http: ^0.12.1
   get: ^2.14.1
   scheme_shared:

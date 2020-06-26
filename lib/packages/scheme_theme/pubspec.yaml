@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   animated_theme_switcher: ^1.0.6
-  flutter_hooks: ^0.10.0
+  flutter_hooks: ^0.09.0
   google_fonts: ^1.1.0
   scheme_utilities:
     git:
@@ -24,8 +24,8 @@ dependency_overrides:
     path: "../scheme_utilities/"
 
 dev_dependencies:
-  injectable_generator:
-  build_runner:
+  injectable_generator: ^0.4.1
+  build_runner: ^1.10.0
 
 
 
