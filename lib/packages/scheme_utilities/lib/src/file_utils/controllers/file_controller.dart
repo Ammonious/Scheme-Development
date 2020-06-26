@@ -6,7 +6,7 @@ import 'package:path/path.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
-class SchemeFileController extends GetController {
+class SchemeFileController extends GetxController {
 	static SchemeFileController get to => Get.find();
 
 	bool loading = false;

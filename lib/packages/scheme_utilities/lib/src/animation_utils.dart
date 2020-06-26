@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SchemeAnimationUtils extends GetController with _ScrollAnimations{
+class SchemeAnimationUtils extends GetxController with _ScrollAnimations{
 
 
 

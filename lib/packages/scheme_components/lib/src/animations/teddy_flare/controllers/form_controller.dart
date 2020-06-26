@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:scheme_components/src/animations/teddy_flare/controllers/teddy_controller.dart';
 
-class FormController extends GetController {
+class FormController extends GetxController {
 	static FormController get to => Get.put(FormController());
 
 	String get password => _rxPassword.value ?? '';

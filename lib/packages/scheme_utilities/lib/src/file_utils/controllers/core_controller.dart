@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 
-class SchemeCoreController extends GetController {
+class SchemeCoreController extends GetxController {
   List<FileSystemEntity> availableStorage = List();
   List<FileSystemEntity> recentFiles = List();
 

@@ -11,7 +11,7 @@ import 'picaso_color.dart';
 /// granting quick and easy access to commonly used components.
 /// It greatly minimizes the boilerplate required to set things like colors and text styles.
 ///
-class Picaso  extends GetController{
+class Picaso  extends GetxController{
   static PicasoColor get paint => Get.put(PicasoColor());
   static Picaso get jot => Get.put(Picaso());
   static Picaso get to => Get.put(Picaso());

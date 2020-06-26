@@ -8,7 +8,7 @@ export 'src/icon_types/flare_icon.dart';
 export 'src/scheme_icon.dart';
 export 'src/constants/index.dart';
 
-class SchemeIconUtils extends GetController{
+class SchemeIconUtils extends GetxController{
 	static SchemeIconUtils get to => Get.put(SchemeIconUtils());
 
 

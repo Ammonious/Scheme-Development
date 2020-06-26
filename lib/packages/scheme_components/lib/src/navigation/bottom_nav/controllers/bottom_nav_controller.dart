@@ -3,7 +3,7 @@ import 'package:sa_stateless_animation/sa_stateless_animation.dart';
 import 'package:scheme_components/src/navigation/models/scheme_nav_constants.dart';
 import 'package:scheme_components/src/navigation/models/scheme_nav_data.dart';
 
-class SchemeNavController extends GetController {
+class SchemeNavController extends GetxController {
 
 	static SchemeNavController get to => Get.put(SchemeNavController());
 	int lastIndex;
@@ -27,7 +27,7 @@ class SchemeNavController extends GetController {
 
 	bool get isSelected => _rxIsSelected.value;
 	bool _isSelected = false;
-	BoolX get _rxIsSelected => _isSelected.obs;
+	  get _rxIsSelected => _isSelected.obs;
 
 	startAnimIfSelectedChanged(bool selected){
 		_isSelected = selected;

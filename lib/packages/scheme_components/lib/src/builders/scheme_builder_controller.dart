@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 
-class SchemeBuilderController extends GetController {
+class SchemeBuilderController extends GetxController {
 	static SchemeBuilderController get to => Get.put(SchemeBuilderController());
 
 	ScrollController scrollController;
 	double get opacity => _rxOpacity.value;
-	DoubleX get _rxOpacity => _opacity.obs;
+	  get _rxOpacity => _opacity.obs;
 	double _opacity = 0.0;
 
 	initController({bool enableScrollAnimation}){

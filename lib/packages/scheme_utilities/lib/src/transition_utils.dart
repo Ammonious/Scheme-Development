@@ -14,7 +14,7 @@ enum TransitionType {
 	zoomIn,
 }
 
-class TransitionUtils extends GetController{
+class TransitionUtils extends GetxController{
 
 	initTransitionType(TransitionType type) {
 		switch (type) {

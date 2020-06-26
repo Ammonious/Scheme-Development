@@ -24,7 +24,7 @@ export 'src/color_utils/color_extensions.dart';
 export 'src/color_utils/color_utils.dart';
 
 
-class SchemeUtils extends GetController {
+class SchemeUtils extends GetxController {
 
 	static SchemeFileUtils get file => Get.put(SchemeFileUtils());
 	static SchemeDeviceUtils get device => Get.put(SchemeDeviceUtils());

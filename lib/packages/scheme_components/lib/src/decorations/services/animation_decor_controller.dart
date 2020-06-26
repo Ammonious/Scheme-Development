@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class AnimationDecorController extends GetController {
+class AnimationDecorController extends GetxController {
 	static AnimationDecorController get to => Get.put(AnimationDecorController());
 	
 	

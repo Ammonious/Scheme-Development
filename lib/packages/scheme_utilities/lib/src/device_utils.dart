@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:package_info/package_info.dart';
 
-class SchemeDeviceUtils extends GetController {
+class SchemeDeviceUtils extends GetxController {
 
 
 Future<String> packageVersion() async => 	await PackageInfo.fromPlatform().then((packageInfo) => packageInfo.version);

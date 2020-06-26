@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 
-class ProgressSnackbar extends GetController {
+class ProgressSnackbar extends GetxController {
 	static ProgressSnackbar get to => Get.find();
   SnackPosition position;
   String title;

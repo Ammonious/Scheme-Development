@@ -14,7 +14,7 @@ import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
 import 'image_utils/image_cache_manager.dart';
 
-class SchemeFileUtils  extends GetController{
+class SchemeFileUtils  extends GetxController{
 
 	static SchemeFileUtils get to => Get.put(SchemeFileUtils());
 

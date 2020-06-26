@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:scheme_components/src/textfields/controllers/currency_controller.dart';
 
-class SchemeFieldController extends GetController {
+class SchemeFieldController extends GetxController {
 
   FocusNode currentFocus;
 

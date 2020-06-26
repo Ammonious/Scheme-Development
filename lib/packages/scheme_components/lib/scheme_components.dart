@@ -35,7 +35,7 @@ export 'src/scrolling/scrolling_index.dart';
 export 'src/text_views/text_index.dart';
 
 
-class SchemeComponentUtils extends GetController{
+class SchemeComponentUtils extends GetxController{
 static SchemeComponentUtils get to => Get.put(SchemeComponentUtils());
 
 

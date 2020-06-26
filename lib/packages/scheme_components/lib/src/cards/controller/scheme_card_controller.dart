@@ -5,7 +5,7 @@ import 'package:palette_generator/palette_generator.dart';
 import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
-class CardController extends GetController {
+class CardController extends GetxController {
   static CardController get to => Get.put(CardController());
 
   PaletteGenerator get palette => _rxPalette.value;

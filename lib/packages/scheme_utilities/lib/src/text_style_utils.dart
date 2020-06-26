@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-class SchemeFontUtils extends GetController{
+class SchemeFontUtils extends GetxController{
 
 
   fieldFocusChange(FocusNode currentFocus, FocusNode nextFocus) {

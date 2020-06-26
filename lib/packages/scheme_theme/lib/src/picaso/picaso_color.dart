@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
-class PicasoColor extends GetController {
+class PicasoColor extends GetxController {
 
 
   /// The main theme or brand color.

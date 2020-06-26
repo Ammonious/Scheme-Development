@@ -14,7 +14,7 @@ import 'package:supercharged/supercharged.dart';
 import 'package:scheme_shared/scheme_shared.dart';
 import 'package:flutter/services.dart';
 
-class SchemeIconController extends GetController {
+class SchemeIconController extends GetxController {
   static SchemeIconController get to => Get.put(SchemeIconController());
 
   CustomAnimationControl get control => _rxControl.value;
@@ -22,7 +22,7 @@ class SchemeIconController extends GetController {
   Rx<Object> get _rxControl => _control.obs;
   bool get animate => _rxAnimate.value;
   bool _animate;
-  BoolX get _rxAnimate => _animate.obs;
+    get _rxAnimate => _animate.obs;
   double size;
   String asset;
   IconData iconData;

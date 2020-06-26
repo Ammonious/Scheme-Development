@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart'; 
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
-class ThemeController extends RxController {
+class ThemeController extends GetxController {
 
 	static ThemeController get to => Get.find();
 

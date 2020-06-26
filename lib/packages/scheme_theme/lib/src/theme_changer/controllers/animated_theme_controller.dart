@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-class ThemeAnimController extends GetController {
+class ThemeAnimController extends GetxController {
 
 
 	ThemeData oldTheme;
