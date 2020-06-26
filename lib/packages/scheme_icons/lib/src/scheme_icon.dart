@@ -35,9 +35,10 @@ class SchemeIcon extends StatelessWidget {
       this.animate = false,
       this.color});
 
-  final SchemeIconController get = Get.put(SchemeIconController());
+
   @override
   Widget build(BuildContext context) {
+    final SchemeIconController get = SchemeIconController();
     final model = IconViewModel(
       size: size,
       color: color,

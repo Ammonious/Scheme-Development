@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sa_stateless_animation/sa_stateless_animation.dart';
@@ -9,7 +12,7 @@ import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_icons/src/icon_types/flare_icon.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:scheme_shared/scheme_shared.dart';
-
+import 'package:flutter/services.dart';
 
 class SchemeIconController extends GetController {
   static SchemeIconController get to => Get.put(SchemeIconController());
@@ -27,7 +30,7 @@ class SchemeIconController extends GetController {
   String filePath;
   SchemeIconType iconType;
   Color color;
-  initIcon(IconViewModel model){
+  initIcon(IconViewModel model) {
     size = model.size;
     asset = model.asset;
     iconData = model.iconData;
@@ -37,79 +40,71 @@ class SchemeIconController extends GetController {
     color = model.color;
   }
 
-
   get icon => Icon(iconData, size: size, color: color);
 
-  get svgIcon => ColorFiltered(
-    colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-    child: kIsWeb ? compatSvg : svgMobile,
-  );
+  get svgIcon => kIsWeb ? compatSvg : svgMobile;
 
-  get compatSvg => PlatformSvg.asset(
-      asset,
-      height: size,
-      width: size,
-    package: 'scheme_icons'
-  );
+  get compatSvg => ColorFiltered(
+        colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+        child: PlatformSvg.asset(asset, height: size, width: size, package: 'scheme_icons'),
+      );
 
-  get  svgMobile => SvgPicture.asset(
-    asset,
-    color: color,
-    height: size,
-    width: size,
-    colorBlendMode: BlendMode.srcIn,
-      package: 'scheme_icons'
-  );
+  get svgMobile => ColorFiltered(
+        colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+        child: SvgPicture.asset(asset,
+            height: size, width: size, color: color ?? Colors.white, package: 'scheme_icons'),
+      );
 
-  get svgColorIcon => kIsWeb ? compatSvg : SvgPicture.asset(
-    asset,
-    height: size,
-    package: 'scheme_icons',
-    width: size,
-  );
+  get svgColorIcon => kIsWeb
+      ? compatSvg
+      : SvgPicture.asset(
+          asset,
+          height: size,
+          package: 'scheme_icons',
+          width: size,
+        );
 
   get imageIcon => Image.asset(asset, color: color, height: size, width: size);
 
   get urlIcon => CachedNetworkImage(
-    imageUrl: asset,
-    useOldImageOnUrlChange: true,
-    color: color,
-    height: size,
-    width: size,
-  );
+        imageUrl: asset,
+        useOldImageOnUrlChange: true,
+        color: color,
+        height: size,
+        width: size,
+      );
 
   get flareIcon => FlareIconMap(
-    flareIcon: asset,
-    iconSize: size,
-    flrPath: filePath,
-    animation: animation,
-  );
+        flareIcon: asset,
+        iconSize: size,
+        flrPath: filePath,
+        animation: animation,
+      );
 
   get lottieIcon => SizedBox(
-    height: size + 8,
-    width: size + 8,
-    child: SchemeLottie.asset(
-      src: asset,
-      height: size + 8,
-      width: size + 8,
-      fit: BoxFit.cover,
-      alignment: Alignment.center,
-      animate: animate,
-      repeat: false,
-      package: 'scheme_icons',
-    ),
-  ); // LottieBuilder.asset(asset);
+        height: size + 8,
+        width: size + 8,
+        child: SchemeLottie.asset(
+          src: asset,
+          height: size + 8,
+          width: size + 8,
+          fit: BoxFit.cover,
+          alignment: Alignment.center,
+          animate: animate,
+          repeat: false,
+          package: 'scheme_icons',
+        ),
+      ); // LottieBuilder.asset(asset);
 
   get flipIcon => CustomAnimation(
-    duration: Duration(milliseconds: 350),
-    tween: (0.0).tweenTo(1.0),
-    control: SchemeIconController.to.control,
-    builder: (context, child, progress) => Rotation3d(
-      rotationY: 180.0 * progress,
-      child: getFlipIcon(),
-    ),
-  );
-
+        duration: Duration(milliseconds: 350),
+        tween: (0.0).tweenTo(1.0),
+        control: SchemeIconController.to.control,
+        builder: (context, child, progress) => Rotation3d(
+          rotationY: 180.0 * progress,
+          child: getFlipIcon(),
+        ),
+      );
 
   getFlipIcon() {
     if (iconData != null) return icon;
@@ -120,17 +115,22 @@ class SchemeIconController extends GetController {
 }
 
 class IconViewModel {
-   double size;
-   String asset;
-   IconData iconData;
-   String animation;
-   String filePath;
-   SchemeIconType iconType;
-   bool animate;
-   Color color;
+  double size;
+  String asset;
+  IconData iconData;
+  String animation;
+  String filePath;
+  SchemeIconType iconType;
+  bool animate;
+  Color color;
 
-  IconViewModel({this.size, this.asset, this.iconData, this.animation,
-      this.filePath, this.iconType, this.animate, this.color});
-
-
+  IconViewModel(
+      {this.size,
+      this.asset,
+      this.iconData,
+      this.animation,
+      this.filePath,
+      this.iconType,
+      this.animate,
+      this.color});
 }
