@@ -13,6 +13,7 @@ class SchemeCardOne extends StatelessWidget {
   final Color ovalOneColor;
   final Color ovalTwoColor;
   final double height;
+  final double width;
   final Widget content;
   final Widget bottomLeftDecoration;
   final EdgeInsets padding;
@@ -25,7 +26,7 @@ class SchemeCardOne extends StatelessWidget {
       this.content,
       this.ovalTwoColor = Colors.pink,
       this.bottomLeftDecoration,
-      this.padding, this.onTap});
+      this.padding, this.onTap, this.width});
 
 
 
@@ -38,8 +39,8 @@ class SchemeCardOne extends StatelessWidget {
       builder: (s) => Material(
         color: Colors.transparent,
         child: Container(
-          width: screenWidth,
-          height: height,
+          width: width ?? screenWidth,
+          height: height ?? 150,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
               boxShadow: liftedShadow,

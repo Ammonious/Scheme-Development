@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:device_info/device_info.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:package_info/package_info.dart';
@@ -24,8 +25,9 @@ Future<String> packageVersion() async => 	await PackageInfo.fromPlatform().then(
 
 	}
 
-	darkModeSupported() async {
+Future<bool>darkModeSupported() async  {
 		bool supported = false;
+		if(kIsWeb) return false;
 		if (Platform.isAndroid) {
 			int androidVersion = await androidSystemVersion();
 			supported = androidVersion >= 29;
