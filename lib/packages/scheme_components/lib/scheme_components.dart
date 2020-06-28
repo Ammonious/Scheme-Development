@@ -33,7 +33,8 @@ export 'src/sheets/scheme_bottom_sheets.dart';
 export 'src/loading/loader_index.dart';
 export 'src/scrolling/scrolling_index.dart';
 export 'src/text_views/text_index.dart';
-
+export 'src/images/index.dart';
+export 'src/containers/index.dart';
 
 class SchemeComponentUtils extends GetxController{
 static SchemeComponentUtils get to => Get.put(SchemeComponentUtils());

@@ -1,6 +1,6 @@
 name: scheme_components
 description: A Package Containing Scheme Widgets and Styles
-version: 0.0.5
+version: 0.0.6
 author: Scheme Creative
 homepage: https://www.schemecreative.com
 
@@ -24,6 +24,10 @@ dependencies:
   palette_generator: ^0.2.3
   animations: ^1.1.1
   rxdart: ^0.24.1
+  scheme_automation:
+    git:
+      url: "https://github.com/Ammonious/Scheme-Development.git"
+      path: "lib/packages/scheme_automation/"
   scheme_shared:
     git:
       url: "https://github.com/Ammonious/Scheme-Development.git"
@@ -42,6 +46,8 @@ dependencies:
       path: "lib/packages/scheme_utilities/"
 
 dependency_overrides:
+  scheme_automation:
+    path: "../scheme_automation/"
   scheme_shared:
     path: "../scheme_shared/"
   scheme_theme:

@@ -11,6 +11,7 @@ import 'icon_types/flare_icon.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scheme_icons/src/icon_types/flare_icon.dart';
 import 'package:supercharged/supercharged.dart';
+
 enum SchemeIconType { icon, svg, image, flare, lottie, color, flip }
 
 class SchemeIcon extends StatelessWidget {
@@ -35,46 +36,27 @@ class SchemeIcon extends StatelessWidget {
       this.animate = false,
       this.color});
 
-
   @override
   Widget build(BuildContext context) {
-    final SchemeIconController get = SchemeIconController();
-    final model = IconViewModel(
-      size: size,
-      color: color,
-      asset: asset,
-      iconData: icon,
-      iconType: iconType,
-      animation: animation,
-      filePath: filePath,
-      animate: animate,
-    );
     return GetBuilder(
       init: SchemeIconController(),
-      initState: (_) => get.initIcon(model),
       builder: (_) {
         switch (iconType) {
           case SchemeIconType.icon:
-            return get.icon;
+            return Icon(icon, size: size, color: color);
           case SchemeIconType.svg:
-            return kIsWeb ? get.svgMobile : get.compatSvg;
+            return kIsWeb ? svgMobile : compatSvg;
           case SchemeIconType.image:
-            if (asset != null && (asset.contains('http') || asset.contains('www')))
-              return get.urlIcon;
-            return  get.imageIcon;
+            if (asset != null && (asset.contains('http') || asset.contains('www'))) return urlIcon;
+            return imageIcon;
           case SchemeIconType.flare:
-            return get.flareIcon;
+            return flareIcon;
           case SchemeIconType.lottie:
-            return get.lottieIcon; // LottieBuilder.asset(
+            return lottieIcon; // LottieBuilder.asset(
           case SchemeIconType.color:
-            return SvgPicture.asset(
-              asset,
-              height: size,
-              package: Env.getPackage('scheme_icons'),
-              width: size,
-            );
+            return svgColorIcon;
           case SchemeIconType.flip:
-            return get.flipIcon;
+            return flipIcon;
           default:
             return SizedBox.shrink();
         }
@@ -82,7 +64,75 @@ class SchemeIcon extends StatelessWidget {
     );
   }
 
+  get svgIcon => kIsWeb ? compatSvg : svgMobile;
 
+  get compatSvg => ColorFiltered(
+        colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+        child: PlatformSvg.asset(asset, height: size, width: size, package: 'scheme_icons'),
+      );
+
+  get svgMobile => ColorFiltered(
+        colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+        child: SvgPicture.asset(asset,
+            height: size, width: size, color: color ?? Colors.white, package: 'scheme_icons'),
+      );
+
+  get svgColorIcon => kIsWeb
+      ? compatSvg
+      : SvgPicture.asset(
+          asset,
+          height: size,
+          package: 'scheme_icons',
+          width: size,
+        );
+
+  get imageIcon => Image.asset(asset, color: color, height: size, width: size);
+
+  get urlIcon => CachedNetworkImage(
+        imageUrl: asset,
+        useOldImageOnUrlChange: true,
+        color: color,
+        height: size,
+        width: size,
+      );
+
+  get flareIcon => FlareIconMap(
+        flareIcon: asset,
+        iconSize: size,
+        flrPath: filePath,
+        animation: animation,
+      );
+  get lottieIcon => SizedBox(
+        height: size + 8,
+        width: size + 8,
+        child: SchemeLottie.asset(
+          src: asset,
+          height: size + 8,
+          width: size + 8,
+          fit: BoxFit.cover,
+          alignment: Alignment.center,
+          animate: animate,
+          repeat: false,
+          package: 'scheme_icons',
+        ),
+      ); // LottieBuilder.
+
+  get flipIcon => CustomAnimation(
+        duration: Duration(milliseconds: 350),
+        tween: (0.0).tweenTo(1.0),
+        control: SchemeIconController.to.control,
+        builder: (context, child, progress) => Rotation3d(
+          rotationY: 180.0 * progress,
+          child: getFlipIcon(),
+        ),
+      );
+
+  getFlipIcon() {
+    if (icon != null) return Icon(icon, size: size, color: color);
+    if (asset.contains('svg') && !asset.contains('md_color')) return svgIcon;
+    if (asset.contains('md_color')) return svgColorIcon;
+    if (asset.contains('http') || asset.contains('www')) return urlIcon;
+  }
 
   SchemeIcon.flare({
     this.size = 24,
@@ -129,6 +179,4 @@ class SchemeIcon extends StatelessWidget {
     this.color = Colors.black,
     this.animate = false,
   }) : this.iconType = SchemeIconType.flip;
-
-
 }

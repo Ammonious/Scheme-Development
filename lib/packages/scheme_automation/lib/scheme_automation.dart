@@ -54,7 +54,7 @@ part 'script_builder/helpers/parse_defnintion.dart';
 /// deciphers which scripts to run based on the arguments provided by the user
 void decipherScript(List<String> arguments) async {
 
-  ArgParser parser = ArgParser(allowTrailingOptions: true);
+  final parser = ArgParser(allowTrailingOptions: true);
   parser.addFlag('help', abbr: 'h', negatable: false, help: "Usage help");
   addFlag(parser, 'build-auth');
   addFlag(parser, 'build-firestore');
@@ -66,7 +66,7 @@ void decipherScript(List<String> arguments) async {
   addFlag(parser, 'build-admin');
   addFlag(parser, 'build-user');
 
-  ArgResults argResults = parser.parse(arguments);
+  final argResults = parser.parse(arguments);
 
   helpCheck(parser,argResults);
 

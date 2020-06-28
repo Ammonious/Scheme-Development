@@ -311,7 +311,7 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "3.1.0"
   get_it:
     dependency: transitive
     description:
@@ -681,7 +681,7 @@ packages:
     description:
       path: "lib/packages/scheme_automation/"
       ref: HEAD
-      resolved-ref: "83dd22b62002230a75fcf0c59428ea125afea8f7"
+      resolved-ref: "56107ef6e272e6f3c6b88e4d6ea4090128ecabca"
       url: "https://github.com/Ammonious/Scheme-Development.git"
     source: git
     version: "1.3.2"
@@ -691,7 +691,7 @@ packages:
       path: "../scheme_components"
       relative: true
     source: path
-    version: "0.0.5"
+    version: "0.0.6"
   scheme_shared:
     dependency: "direct main"
     description:

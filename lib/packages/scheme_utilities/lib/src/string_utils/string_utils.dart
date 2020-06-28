@@ -2,283 +2,135 @@
 
 import 'dart:convert';
 
-extension StringExtension on String {
+/// An instance of text to be re-cased.
+class ReCase {
+	final RegExp _upperAlphaRegex = new RegExp(r'[A-Z]');
+	final RegExp _symbolRegex = new RegExp(r'[ ./_\-]');
 
-	
+	String originalText;
+	List<String> _words;
+
+	ReCase(String text) {
+		this.originalText = text;
+		this._words = _groupIntoWords(text);
+	}
+
+	List<String> _groupIntoWords(String text) {
+		StringBuffer sb = new StringBuffer();
+		List<String> words = [];
+		bool isAllCaps = !text.contains(RegExp('[a-z]'));
+
+		for (int i = 0; i < text.length; i++) {
+			String char = new String.fromCharCode(text.codeUnitAt(i));
+			String nextChar = (i + 1 == text.length
+					? null
+					: new String.fromCharCode(text.codeUnitAt(i + 1)));
+
+			if (_symbolRegex.hasMatch(char)) {
+				continue;
+			}
+
+			sb.write(char);
+
+			bool isEndOfWord = nextChar == null ||
+					(_upperAlphaRegex.hasMatch(nextChar) && !isAllCaps) ||
+					_symbolRegex.hasMatch(nextChar);
+
+			if (isEndOfWord) {
+				words.add(sb.toString());
+				sb.clear();
+			}
+		}
+
+		return words;
+	}
+
+	/// camelCase
+	String get camelCase => _getCamelCase();
+
+	/// CONSTANT_CASE
+	String get constantCase => _getConstantCase();
+
+	/// Sentence case
+	String get sentenceCase => _getSentenceCase();
+
+	/// snake_case
+	String get snakeCase => _getSnakeCase();
+
+	/// dot.case
+	String get dotCase => _getSnakeCase(separator: '.');
+
+	/// param-case
+	String get paramCase => _getSnakeCase(separator: '-');
+
+	/// path/case
+	String get pathCase => _getSnakeCase(separator: '/');
+
+	/// PascalCase
+	String get pascalCase => _getPascalCase();
+
+	/// Header-Case
+	String get headerCase => _getPascalCase(separator: '-');
+
+	/// Title Case
+	String get titleCase => _getPascalCase(separator: ' ');
+
+	String _getCamelCase({String separator: ''}) {
+		List<String> words = this._words.map(_upperCaseFirstLetter).toList();
+		words[0] = words[0].toLowerCase();
+
+		return words.join(separator);
+	}
+
+	String _getConstantCase({String separator: '_'}) {
+		List<String> words = this._words.map((word) => word.toUpperCase()).toList();
+
+		return words.join(separator);
+	}
+
+	String _getPascalCase({String separator: ''}) {
+		List<String> words = this._words.map(_upperCaseFirstLetter).toList();
+
+		return words.join(separator);
+	}
+
+	String _getSentenceCase({String separator: ' '}) {
+		List<String> words = this._words.map((word) => word.toLowerCase()).toList();
+		words[0] = _upperCaseFirstLetter(words[0]);
+
+		return words.join(separator);
+	}
+
+	String _getSnakeCase({String separator: '_'}) {
+		List<String> words = this._words.map((word) => word.toLowerCase()).toList();
+
+		return words.join(separator);
+	}
+
+	String _upperCaseFirstLetter(String word) {
+		return '${word.substring(0, 1).toUpperCase()}${word.substring(1).toLowerCase()}';
+	}
 }
 
-///
-/// Helper class for String operations
-///
-class StringUtils {
-	static AsciiCodec asciiCodec = AsciiCodec();
+extension StringReCase on String {
 
-	///
-	/// Returns the given string or the default string if the given string is null
-	///
-	static String defaultString(String str, {String defaultStr = ''}) {
-		return str ?? defaultStr;
-	}
+	String get camelCase => ReCase(this).camelCase;
 
-	///
-	/// Checks if the given String [s] is null or empty
-	///
-	static bool isNullOrEmpty(String s) =>
-			(s == null || s.isEmpty) ? true : false;
+	String get constantCase => ReCase(this).constantCase;
 
-	///
-	/// Checks if the given String [s] is not null or empty
-	///
-	static bool isNotNullOrEmpty(String s) => !isNullOrEmpty(s);
+	String get sentenceCase => ReCase(this).sentenceCase;
 
-	///
-	/// Transfers the given String [s] from camcelCase to upperCaseUnderscore
-	/// Example : helloWorld => HELLO_WORLD
-	///
-	static String camelCaseToUpperUnderscore(String s) {
-		var sb = StringBuffer();
-		var first = true;
-		s.runes.forEach((int rune) {
-			var char = String.fromCharCode(rune);
-			if (isUpperCase(char) && !first) {
-				sb.write('_');
-				sb.write(char.toUpperCase());
-			} else {
-				first = false;
-				sb.write(char.toUpperCase());
-			}
-		});
-		return sb.toString();
-	}
+	String get snakeCase => ReCase(this).snakeCase;
 
-	///
-	/// Transfers the given String [s] from camcelCase to lowerCaseUnderscore
-	/// Example : helloWorld => hello_world
-	///
-	static String camelCaseToLowerUnderscore(String s) {
-		var sb = StringBuffer();
-		var first = true;
-		s.runes.forEach((int rune) {
-			var char = String.fromCharCode(rune);
-			if (isUpperCase(char) && !first) {
-				sb.write('_');
-				sb.write(char.toLowerCase());
-			} else {
-				first = false;
-				sb.write(char.toLowerCase());
-			}
-		});
-		return sb.toString();
-	}
+	String get dotCase => ReCase(this).dotCase;
 
-	///
-	/// Checks if the given string [s] is lower case
-	///
-	static bool isLowerCase(String s) {
-		return s == s.toLowerCase();
-	}
+	String get paramCase => ReCase(this).paramCase;
 
-	///
-	/// Checks if the given string [s] is upper case
-	///
-	static bool isUpperCase(String s) {
-		return s == s.toUpperCase();
-	}
+	String get pathCase => ReCase(this).pathCase;
 
-	///
-	/// Checks if the given string [s] contains only ascii chars
-	///
-	static bool isAscii(String s) {
-		try {
-			asciiCodec.decode(s.codeUnits);
-		} catch (e) {
-			return false;
-		}
-		return true;
-	}
+	String get pascalCase => ReCase(this).pascalCase;
 
-	///
-	/// Capitalize the given string [s]
-	/// Example : world => World, WORLD => World
-	///
-	static String capitalize(String s) {
-		return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
-	}
+	String get headerCase => ReCase(this).headerCase;
 
-	///
-	/// Reverse the given string [s]
-	/// Example : hello => olleh
-	///
-	static String reverse(String s) {
-		return String.fromCharCodes(s.runes.toList().reversed);
-	}
-
-	///
-	/// Counts how offen the given [char] apears in the given string [s].
-	/// The value [caseSensitive] controlls whether it should only look for the given [char]
-	/// or also the equivalent lower/upper case version.
-	/// Example: Hello and char l => 2
-	///
-	static int countChars(String s, String char, {bool caseSensitive = true}) {
-		var count = 0;
-		s.codeUnits.toList().forEach((i) {
-			if (caseSensitive) {
-				if (i == char.runes.first) {
-					count++;
-				}
-			} else {
-				if (i == char.toLowerCase().runes.first ||
-						i == char.toUpperCase().runes.first) {
-					count++;
-				}
-			}
-		});
-		return count;
-	}
-
-	///
-	/// Checks if the given string [s] is a digit.
-	///
-	/// Will return false if the given string [s] is empty.
-	///
-	static bool isDigit(String s) {
-		if (s.isEmpty) {
-			return false;
-		}
-		if (s.length > 1) {
-			for (var r in s.runes) {
-				if (r ^ 0x30 > 9) {
-					return false;
-				}
-			}
-			return true;
-		} else {
-			return s.runes.first ^ 0x30 <= 9;
-		}
-	}
-
-	///
-	/// Compares the given strings [a] and [b].
-	///
-	static bool equalsIgnoreCase(String a, String b) =>
-			(a == null && b == null) ||
-					(a != null && b != null && a.toLowerCase() == b.toLowerCase());
-
-	///
-	/// Checks if the given [list] contains the string [s]
-	///
-	static bool inList(String s, List<String> list, {bool ignoreCase = false}) {
-		for (var l in list) {
-			if (ignoreCase) {
-				if (equalsIgnoreCase(s, l)) {
-					return true;
-				}
-			} else {
-				if (s == l) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-
-	///
-	/// Checks if the given string [s] is a palindrome
-	/// Example :
-	/// aha => true
-	/// hello => false
-	///
-	static bool isPalindrome(String s) {
-		for (var i = 0; i < s.length / 2; i++) {
-			if (s[i] != s[s.length - 1 - i]) return false;
-		}
-		return true;
-	}
-
-	///
-	/// Replaces chars of the given String [s] with [replace].
-	///
-	/// The default value of [replace] is *.
-	/// [begin] determines the start of the 'replacing'. If [begin] is null, it starts from index 0.
-	/// [end] defines the end of the 'replacing'. If [end] is null, it ends at [s] length divided by 2.
-	/// If [s] is empty or consists of only 1 char, the method returns null.
-	///
-	/// Example :
-	/// 1234567890 => *****67890
-	/// 1234567890 with begin 2 and end 6 => 12****7890
-	/// 1234567890 with begin 1 => 1****67890
-	///
-	static String hidePartial(String s,
-			{int begin = 0, int end, String replace = '*'}) {
-		var buffer = StringBuffer();
-		if (s.length <= 1) {
-			return null;
-		}
-		if (end == null) {
-			end = (s.length / 2).round();
-		} else {
-			if (end > s.length) {
-				end = s.length;
-			}
-		}
-		for (var i = 0; i < s.length; i++) {
-			if (i >= end) {
-				buffer.write(String.fromCharCode(s.runes.elementAt(i)));
-				continue;
-			}
-			if (i >= begin) {
-				buffer.write(replace);
-				continue;
-			}
-			buffer.write(String.fromCharCode(s.runes.elementAt(i)));
-		}
-		return buffer.toString();
-	}
-
-	///
-	/// Add a [char] at a [position] with the given String [s].
-	///
-	/// The boolean [repeat] defines whether to add the [char] at every [position].
-	/// If [position] is greater than the length of [s], it will return [s].
-	/// If [repeat] is true and [position] is 0, it will return [s].
-	///
-	/// Example :
-	/// 1234567890 , '-', 3 => 123-4567890
-	/// 1234567890 , '-', 3, true => 123-456-789-0
-	///
-	static String addCharAtPosition(String s, String char, int position,
-			{bool repeat = false}) {
-		if (!repeat) {
-			if (s.length < position) {
-				return s;
-			}
-			var before = s.substring(0, position);
-			var after = s.substring(position, s.length);
-			return before + char + after;
-		} else {
-			if (position == 0) {
-				return s;
-			}
-			var buffer = StringBuffer();
-			for (var i = 0; i < s.length; i++) {
-				if (i != 0 && i % position == 0) {
-					buffer.write(char);
-				}
-				buffer.write(String.fromCharCode(s.runes.elementAt(i)));
-			}
-			return buffer.toString();
-		}
-	}
-
-	///
-	/// Splits the given String [s] in chunks with the given [chunkSize].
-	///
-	static List<String> chunk(String s, int chunkSize) {
-		var chunked = <String>[];
-		for (var i = 0; i < s.length; i += chunkSize) {
-			var end = (i + chunkSize < s.length) ? i + chunkSize : s.length;
-			chunked.add(s.substring(i, end));
-		}
-		return chunked;
-	}
+	String get titleCase => ReCase(this).titleCase;
 }
