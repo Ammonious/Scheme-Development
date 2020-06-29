@@ -30,6 +30,7 @@ class DynamicCachingImage extends StatelessWidget {
         width: width ?? screenWidth,
         fadeInCurve: Curves.easeInOut,
         fit: fit ?? BoxFit.contain,
+
         image: _DynamicCachingImage(imageId: imageId, imageUrl: url), placeholder: AssetImage('assets/other/placeholder.png',package: 'scheme_components'),
       ),
     );

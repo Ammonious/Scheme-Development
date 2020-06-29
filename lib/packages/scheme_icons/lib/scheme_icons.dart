@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 export 'src/icon_types/flare_icon.dart';
 export 'src/scheme_icon.dart';
-export 'src/constants/index.dart';
+export 'src/icon_maps/index.dart';
 
 class SchemeIconUtils extends GetxController{
 	static SchemeIconUtils get to => Get.put(SchemeIconUtils());

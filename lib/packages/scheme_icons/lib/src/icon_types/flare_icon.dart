@@ -4,7 +4,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
-import '../constants/flare_icons.dart';
+import '../icon_maps/flare_icons.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
 class FlareIconMap extends StatefulWidget {

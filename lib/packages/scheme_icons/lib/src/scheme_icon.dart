@@ -6,7 +6,7 @@ import 'package:sa_stateless_animation/sa_stateless_animation.dart';
 import 'package:scheme_components/scheme_components.dart';
 import 'package:scheme_icons/src/controllers/icon_controller.dart';
 import 'package:scheme_shared/scheme_shared.dart';
-import 'constants/flare_icons.dart';
+import 'icon_maps/flare_icons.dart';
 import 'icon_types/flare_icon.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scheme_icons/src/icon_types/flare_icon.dart';

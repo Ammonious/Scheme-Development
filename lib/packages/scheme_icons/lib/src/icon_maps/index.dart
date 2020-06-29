@@ -9,6 +9,7 @@ export 'dope_icons.dart';
 export 'logo_icons.dart';
 export 'flare_icons.dart';
 export 'lottie_icon.dart';
+export 'plaid_icons.dart';
 export 'lineal_icons.dart';
 export 'feather_icons.dart';
 export 'bang_icon_paths.dart';

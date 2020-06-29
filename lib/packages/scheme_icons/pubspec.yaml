@@ -73,6 +73,7 @@ flutter:
     - assets/svg_icons/unicon_line/
     - assets/svg_icons/pure_sugar/
     - assets/svg_icons/bang/
+    - assets/svg_icons/plaid/
 
 
   fonts:

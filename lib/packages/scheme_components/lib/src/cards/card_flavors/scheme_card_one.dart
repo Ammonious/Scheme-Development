@@ -18,6 +18,7 @@ class SchemeCardOne extends StatelessWidget {
   final Widget bottomLeftDecoration;
   final EdgeInsets padding;
   final Function onTap;
+  final EdgeInsets margin;
   SchemeCardOne(
       {Key key,
       this.backgroundColor = Colors.white,
@@ -26,7 +27,7 @@ class SchemeCardOne extends StatelessWidget {
       this.content,
       this.ovalTwoColor = Colors.pink,
       this.bottomLeftDecoration,
-      this.padding, this.onTap, this.width});
+      this.padding, this.onTap, this.width, this.margin});
 
 
 
@@ -41,12 +42,12 @@ class SchemeCardOne extends StatelessWidget {
         child: Container(
           width: width ?? screenWidth,
           height: height ?? 150,
+          margin: margin ?? EdgeInsets.zero,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
               boxShadow: liftedShadow,
               color: backgroundColor,
               borderRadius: BorderRadius.circular(20)),
-          margin: EdgeInsets.symmetric(horizontal: screenWidth / 25, vertical: screenWidth / 30),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Stack(
