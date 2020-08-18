@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:scheme_components/src/hooks/currency_controller_hook.dart';
-import 'package:scheme_components/src/textfields/card_textfield.dart';
-import 'package:scheme_components/src/textfields/controllers/scheme_textfield_controller.dart';
+import 'package:scheme_components/src/text_field/card_textfield.dart';
+import 'package:scheme_components/src/text_field/controllers/scheme_textfield_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
 import 'package:get/get.dart';

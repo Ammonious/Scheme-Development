@@ -93,7 +93,7 @@ class SchemeButton extends StatelessWidget {
   schemeButton() {
     switch (schemeBtnStyle) {
       case SchemeBtnStyle.gradient:
-        return SchemeGradientBtn(
+        return GradientButton(
           onTap: () => onTap(),
           label: label,
           height: height,

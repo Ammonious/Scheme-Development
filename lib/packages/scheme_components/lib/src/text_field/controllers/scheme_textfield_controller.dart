@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:scheme_components/src/textfields/controllers/currency_controller.dart';
+import 'package:scheme_components/src/text_field/controllers/currency_controller.dart';
 
 class SchemeFieldController extends GetxController {
 

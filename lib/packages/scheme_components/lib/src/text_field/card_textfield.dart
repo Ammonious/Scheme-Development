@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:scheme_components/src/textfields/controllers/focus_controller.dart';
+import 'package:scheme_components/src/text_field/controllers/focus_controller.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'controllers/currency_controller.dart';

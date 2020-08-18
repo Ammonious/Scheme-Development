@@ -8,10 +8,10 @@ environment:
   sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
-  flare_flutter: ^2.0.3
+  flare_flutter: ^2.0.4
   flutter_svg: ^0.18.0
   google_fonts: ^1.1.0
-  get: ^3.0.1
+  get: ^3.2.0
   sa_stateless_animation: ^1.0.1
   supercharged: ^1.6.0
   cached_network_image: ^2.2.0+1

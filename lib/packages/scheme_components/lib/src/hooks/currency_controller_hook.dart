@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:scheme_components/src/textfields/controllers/currency_controller.dart';
+import 'package:scheme_components/src/text_field/controllers/currency_controller.dart';
 
 /// - [TextEditingController], which this hook creates.
 CurrencyTextFieldController useCurrencyTextFieldController() => Hook.use(_CurrencyTextFieldControllerHook());

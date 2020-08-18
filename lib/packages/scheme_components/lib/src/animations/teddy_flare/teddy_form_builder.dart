@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scheme_components/scheme_components.dart';
 import 'package:scheme_components/src/animations/teddy_flare/controllers/form_controller.dart';
-import 'package:scheme_components/src/textfields/tracking_text_input.dart';
+import 'package:scheme_components/src/text_field/tracking_text_input.dart';
 
 class TeddyFormBuilder extends StatelessWidget {
   final Widget Function(String username, String password) loginButton;

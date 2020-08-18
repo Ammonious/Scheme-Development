@@ -7,7 +7,7 @@ import 'package:scheme_utilities/scheme_utilities.dart';
 import '../../scheme_components.dart';
 import 'utils/icon_with_label_view.dart';
 
-class SchemeGradientBtn extends StatelessWidget {
+class GradientButton extends StatelessWidget {
   final Function onTap;
   final String label;
   final double height;
@@ -23,7 +23,7 @@ class SchemeGradientBtn extends StatelessWidget {
   final Widget icon;
   final bool enabled;
   final IconAlignment iconAlignment;
-  SchemeGradientBtn(
+  GradientButton(
       {Key key,
      @required this.onTap,
         @required  this.icon,
