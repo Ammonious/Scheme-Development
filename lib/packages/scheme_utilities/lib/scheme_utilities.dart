@@ -24,7 +24,6 @@ export 'src/color_utils/color_extensions.dart';
 export 'src/color_utils/color_utils.dart';
 export 'src/string_utils/string_index.dart';
 export 'src/permission_utils.dart';
-export 'src/base_utilities/index.dart';
 
 class SchemeUtils extends GetxController {
 
