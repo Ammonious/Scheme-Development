@@ -4,8 +4,8 @@ import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+
 class FadingAppBar extends HookWidget {
-  final SchemeBuilderController controller = Get.find();
   final Color color;
   final List<Widget> options;
   final Widget leading;
@@ -38,58 +38,55 @@ class FadingAppBar extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-    return GetBuilder<SchemeBuilderController>(
-      init: Get.find<SchemeBuilderController>(),
-      builder: (s) {
-        double opacity = SchemeBuilderController.to.opacity != null ? s.opacity : 0.0;
-      return  Material(
-            color: Colors.transparent,
-            child: AnimatedContainer(
-              duration: normalDuration,
-              height: height != null ? height + tabHeight : appbarWithPadding + tabHeight,
-              padding: padding ?? EdgeInsets.only(top: topPadding),
-              decoration: BoxDecoration(
-                  color: color != null ? color.withOpacity(opacity) : Colors.white,
-                  boxShadow: boxShadow ??
-                      <BoxShadow>[
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.15 * opacity),
-                            offset: Offset(1.1, 1.1),
-                            blurRadius: 10.0)
-                      ]),
-              child: Column(
-                children: [
-                  Container(
-                    height: kToolbarHeight,
-                    child: Stack(
-                      children: <Widget>[
-                        Visibility(
-                          visible: leading != null,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child:
-                            enableColorOffset ? filterWrap(leading ?? SizedBox.shrink()) : leading,
+    return NotificationListener(
+      onNotification: (notification) {},
+      child: Material(
+          color: Colors.transparent,
+          child: Obx(() => AnimatedContainer(
+                duration: normalDuration,
+                height: height != null ? height + tabHeight : appbarWithPadding + tabHeight,
+                padding: padding ?? EdgeInsets.only(top: topPadding),
+                decoration: BoxDecoration(
+                    color: color != null ? color.withOpacity(opacity) : Colors.white,
+                    boxShadow: boxShadow ??
+                        <BoxShadow>[
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.15 * opacity),
+                              offset: Offset(1.1, 1.1),
+                              blurRadius: 10.0)
+                        ]),
+                child: Column(
+                  children: [
+                    Container(
+                      height: kToolbarHeight,
+                      child: Stack(
+                        children: <Widget>[
+                          Visibility(
+                            visible: leading != null,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: enableColorOffset
+                                  ? colorizer(leading ?? SizedBox.shrink())
+                                  : leading,
+                            ),
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: Visibility(
-                            visible: title != null,
-                            child: enableColorOffset ? filterWrap(title ?? SizedBox.shrink()) : title,
+                          Align(
+                            alignment: Alignment.center,
+                            child: Visibility(
+                              visible: title != null,
+                              child:
+                                  enableColorOffset ? colorizer(title ?? SizedBox.shrink()) : title,
+                            ),
                           ),
-                        ),
-                        Align(
-                            alignment: Alignment.centerRight,
-                            child: enableColorOffset ? filterWrap(trailingWidget) : trailingWidget)
-                      ],
+                          Align(
+                              alignment: Alignment.centerRight,
+                              child: enableColorOffset ? colorizer(trailingWidget) : trailingWidget)
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ));
-      }
+                  ],
+                ),
+              ))),
     );
   }
 
@@ -102,7 +99,8 @@ class FadingAppBar extends HookWidget {
               )
             : trailing != null ? trailing : SizedBox.shrink(),
       );
-  filterWrap(Widget child) {
+
+  colorizer(Widget child) {
     return ColorFiltered(
       child: child,
       colorFilter: ColorFilter.mode(colorOffset ?? color.textColor, BlendMode.srcIn),

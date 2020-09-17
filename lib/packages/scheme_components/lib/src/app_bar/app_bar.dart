@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scheme_components/src/app_bar/app_bar_types/fading_app_bar.dart';
+import 'package:scheme_components/src/app_bar/controllers/app_bar_controller.dart';
 import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
-class SchemeAppBar extends StatelessWidget {
+class SchemeAppBar extends GetView<AppBarController> {
+
   SchemeAppBarStyle style;
   Color color;
   List<Widget> options;
@@ -13,7 +16,6 @@ class SchemeAppBar extends StatelessWidget {
   Widget trailing;
   EdgeInsets padding;
   double height;
-  SchemeBuilderController controller;
   Function(double offset) onScroll;
   Color iconColor;
   List<BoxShadow> boxShadow;
@@ -23,9 +25,8 @@ class SchemeAppBar extends StatelessWidget {
   SchemeAppBar._internal(
   {this.title,
     this.boxShadow,
-    this.controller,
     this.iconColor,
-    this.enableColorOffset,
+    this.enableColorOffset = false,
     this.color,
     this.options,
     this.leading,
@@ -48,9 +49,8 @@ class SchemeAppBar extends StatelessWidget {
     this.onScroll,
     this.title,
     this.boxShadow,
-    this.controller,
     this.iconColor,
-    this.enableColorOffset,
+    this.enableColorOffset = false,
     this.color,
     this.options,
     this.leading,
@@ -84,6 +84,7 @@ class SchemeAppBar extends StatelessWidget {
       color: Colors.transparent,
     );
   }
+
 
 }
 
