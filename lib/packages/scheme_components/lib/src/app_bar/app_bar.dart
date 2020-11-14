@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scheme_components/src/app_bar/app_bar_types/fading_app_bar.dart';
-import 'package:scheme_components/src/app_bar/controllers/app_bar_controller.dart';
 import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_icons/scheme_icons.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 
-class SchemeAppBar extends GetView<AppBarController> {
+class SchemeAppBar extends StatelessWidget {
 
   SchemeAppBarStyle style;
   Color color;

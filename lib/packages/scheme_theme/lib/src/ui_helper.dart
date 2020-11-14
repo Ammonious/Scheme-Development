@@ -23,7 +23,8 @@ schemeGradient({Color color, Color colorOne, Color colorTwo, Alignment begin, Al
       colors: [
         cOne,
         cTwo,
-      ]);
+      ]
+     );
 }
 
 enum GradientType { radial, linear, sweep }

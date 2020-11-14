@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scheme_components/src/app_bar/controller/app_bar_controller.dart';
 import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 import 'package:scheme_utilities/scheme_utilities.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class FadingAppBar extends HookWidget {
+class FadingAppBar extends GetView<AppBarController> {
   final Color color;
   final List<Widget> options;
   final Widget leading;
@@ -19,6 +20,7 @@ class FadingAppBar extends HookWidget {
   final double tabHeight;
   final bool enableColorOffset;
   final Color colorOffset;
+
   FadingAppBar({
     Key key,
     this.onScroll,
@@ -39,19 +41,24 @@ class FadingAppBar extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return NotificationListener(
-      onNotification: (notification) {},
+      onNotification: controller.onNotification,
       child: Material(
           color: Colors.transparent,
           child: Obx(() => AnimatedContainer(
                 duration: normalDuration,
-                height: height != null ? height + tabHeight : appbarWithPadding + tabHeight,
+                height: height != null
+                    ? height + tabHeight
+                    : appbarWithPadding + tabHeight,
                 padding: padding ?? EdgeInsets.only(top: topPadding),
                 decoration: BoxDecoration(
-                    color: color != null ? color.withOpacity(opacity) : Colors.white,
+                    color: color != null
+                        ? color.withOpacity(controller.opacity.value)
+                        : Colors.white,
                     boxShadow: boxShadow ??
                         <BoxShadow>[
                           BoxShadow(
-                              color: Colors.black.withOpacity(0.15 * opacity),
+                              color: Colors.black
+                                  .withOpacity(0.15 * controller.opacity.value),
                               offset: Offset(1.1, 1.1),
                               blurRadius: 10.0)
                         ]),
@@ -74,13 +81,16 @@ class FadingAppBar extends HookWidget {
                             alignment: Alignment.center,
                             child: Visibility(
                               visible: title != null,
-                              child:
-                                  enableColorOffset ? colorizer(title ?? SizedBox.shrink()) : title,
+                              child: enableColorOffset
+                                  ? colorizer(title ?? SizedBox.shrink())
+                                  : title,
                             ),
                           ),
                           Align(
                               alignment: Alignment.centerRight,
-                              child: enableColorOffset ? colorizer(trailingWidget) : trailingWidget)
+                              child: enableColorOffset
+                                  ? colorizer(trailingWidget)
+                                  : trailingWidget)
                         ],
                       ),
                     ),
@@ -97,13 +107,16 @@ class FadingAppBar extends HookWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: options ?? [],
               )
-            : trailing != null ? trailing : SizedBox.shrink(),
+            : trailing != null
+                ? trailing
+                : SizedBox.shrink(),
       );
 
   colorizer(Widget child) {
     return ColorFiltered(
       child: child,
-      colorFilter: ColorFilter.mode(colorOffset ?? color.textColor, BlendMode.srcIn),
+      colorFilter:
+          ColorFilter.mode(colorOffset ?? color.textColor, BlendMode.srcIn),
     );
   }
 }

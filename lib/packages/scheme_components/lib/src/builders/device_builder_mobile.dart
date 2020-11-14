@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:scheme_components/src/app_bar/controllers/app_bar_controller.dart';
 import 'package:scheme_components/src/builders/scheme_builder_controller.dart';
 import 'package:scheme_theme/scheme_theme.dart';
 

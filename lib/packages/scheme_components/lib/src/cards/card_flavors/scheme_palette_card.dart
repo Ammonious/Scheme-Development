@@ -34,7 +34,7 @@ class SchemePaletteCard extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Stack(
-              overflow: Overflow.clip,
+              clipBehavior: Clip.antiAlias,
               children: <Widget>[
             Positioned.fill(
             child: ShaderMask(blendMode: BlendMode.srcOver,

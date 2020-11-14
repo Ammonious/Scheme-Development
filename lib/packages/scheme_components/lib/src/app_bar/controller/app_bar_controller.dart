@@ -14,5 +14,11 @@ class AppBarController extends GetxController {
 
   }
 
+  onNotification(Notification notification){
+    if(notification is ScrollNotification){
+      return true;
+    }
+     return false;
+  }
 
 }
